@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form method="post" action="save.php">
+	    <label>性别:</label>
+	    <label for="gender1">男</label>
+	    <input type="radio" id="gender1" name="gender">
+	    <label for="gender2">女</label>
+	    <input type="radio" id="gender2" name="gender">
+	    <label for="gender3">不告诉你</label>
+	    <input type="radio" id="gender3" name="gender">
+	    <hr>
+用 户 名:
+<input type="text" name="username" placeholder="请输入你的手机号">
+<input type="submit" value="确定" name="sub">
+<br><br>
+登录密码:
+<input type="password" name="pass" >
+<input type="reset" value="取消" name="res">
+<hr />
+<label>你喜欢哪些歌手?</label><br>
+	<label for="s1">周杰伦</label>
+	<input type="checkbox" id="s1" name="singer1">
+	<label for="s2">陈奕迅</label>
+	<input type="checkbox" id="s2" name="singer2">
+	<label for="s3">那英</label>
+	<input type="checkbox" id="s3" name="singer3" checked>
+	<label for="s4">刘德华</label>
+	<input type="checkbox" id="s4" name="singer4">
+	<label for="s5">霍建华</label>
+	<input type="checkbox" id="s5" name="singer5">
+	<hr>
+	<label>出生日期:</label>
+	<select name="year">
+		<option selected="selected">1990年</option>
+		<option>1991年</option>
+		<option>1992年</option>
+		<option>1993年</option>
+		<option>1994年</option>
+		<option>1995年</option>
+	</select>
+	<select name="month">
+		<option selected="selected">1月</option>
+		<option>2月</option>
+		<option>3月</option>
+		<option>4月</option>
+		<option>5月</option>
+		<option>6月</option>
+		<option>7月</option>
+	</select>
+	<select name="day">
+		<option selected="selected">1号</option>
+		<option>2号</option>
+		<option>3号</option>
+		<option>4号</option>
+		<option>5号</option>
+		<option>6号</option>
+		<option>7号</option>
+	</select>
+	<hr>
+	<label>你喜欢哪些水果?</label><br>
+	<select name="fruit" multiple>
+		<option>榴莲</option>
+		<option>橘子</option>
+		<option>香蕉</option>
+		<option>苹果</option>
+		<option>李子</option>
+	</select>
+	<hr>
+	<label>入职申请书:</label>
+	<textarea name="sub" cols="30" rows="6">请输入你想说的...</textarea>
+	</form>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>switch</title>
+<script type="text/JavaScript">
+var myweek=7;//赋予星期几变量
+switch(myweek)
+{
+    case 1:
+      document.write("今天出去玩儿!");
+      break;
+    case 2:
+      document.write("今天做作业!");
+      break;
+     case 3:
+         document.write("今天去考察其他企业!");
+         break;
+    case 4:
+        document.write("今天休息一天!");
+        break;
+    case 5:
+        adocument.write("今天晚上有聚会哦!");
+        break;
+    case 6:
+        document.write("今天开临时股东大会1");
+        break;
+    case 7:
+        alert("今天公司放假哦!");
+        break;
+    default:
+	alert("傻逼,搞错日期啦!")
+ }
+</script>
+<style type="text/css">
+table tr td,th{border:1px solid #00F}
+
+</style>
+</head>
+<body>
+<form method="post" action="save.php">
+<label>用 户 名:</label>
+<input type="text" placeholder="请输入用户名" name="username"><br/>
+<label>登录密码:</label>
+<input type="password" vaule="" name="pass">
+<input type="submit" value="确定" name="submit">
+<input type="reset" value="取消" name="reset">
+<hr/>
+<label>硕士论文申请:</label>
+<textarea rows="5" cols="15">请输入内容...</textarea>
+<input type="submit" value="提交" name="submit">
+<input type="reset" value="取消" name="reset">
+<hr/>
+<label>你喜欢下面什么水果?</label><br/>
+<label for="f1">香蕉</label>
+<input type="radio" id="f1" name="fruit">香蕉
+<input type="radio" value="苹果" name="fruit">苹果
+<input type="radio" value="芒果" name="fruit">芒果
+<input type="radio" value="葡萄" name="fruit">葡萄
+</form>
+<hr/>
+<label>你喜欢下面哪些明星?</label><br/>
+<label for="s1">成龙</label>
+<input type="checkbox" id="s1" name="star1">
+<label for="s2">李连杰</label>
+<input type="checkbox" id="s2" name="star2">
+<label for="s3">周星驰</label>
+<input type="checkbox" id="s3" name="star3">
+<label for="s4">baby</label>
+<input type="checkbox" id="s4" name="star4">
+<hr/>
+<label>你这次来传智培训什么学科?</label>
+<select>
+<option value="PHP">PHP</option>
+<option value="web前端开发" selected>web前端开发</option>
+<option value="Java">Java</option>
+<option value="UI设计">UI设计</option>
+</select>
+<hr/>
+<label>你想学哪些学科?</label>
+<select multiple>
+<option value="php">php</option>
+<option value="web前端开发" selected>web前端开发</option>
+<option value="Java">Java</option>
+<option value="UI设计">UI设计</option>
+<option value="unknown">还在考虑中</option>
+</select>
+</form>
+<hr/>
+<table summary="年度销售表">
+<caption>年度销售表</caption>
+<tbody>
+<tr>
+<th>年份</th>
+<th>销售额</th>
+<th>销售数量</th>
+<th>备注</th>
+</tr>
+<tr>
+<th>2012</th>
+<th>100w</th>
+<th>300</th>
+<th>无</th>
+</tr>
+<tr>
+<th>2013</th>
+<th>180w</th>
+<th>450</th>
+<th>无</th>
+</tr>
+<tr>
+<th>2014</th>
+<th>150w</th>
+<th>350</th>
+<th>无</th>
+</tr>
+</tbody>
+</table>
+<hr/>
+<script type="text/JavaScript">
+var num=1;
+for (num=1;num<=10;num++)
+{
+    document.write("打出第"+num+"个球!"+"<br/>");
+}
+var mysum,sum=1;
+for(mysum=1;mysum<=10;mysum++)
+{
+   sum=sum*mysum
+}
+document.write("最后结果是:"+sum+"<br/>");
+
+
+var myweek=5 ;
+switch(myweek)
+{
+    case 1:
+        document.write("今天星期一")
+        break;
+    case 2:
+        document.write("今天星期二");
+        break;
+    case 3:
+        document.write("今天是星期三");
+        break;
+    case 4:
+        document.write("今天是星期四");
+        break;
+    case 5:
+    case 6:    
+    case 7:    
+         document.write("这三天休假啊,不上班的.")   
+         break;
+         default:
+         alert("傻逼,输入的数字只能是1-7,你再仔细看看")
+}
+
+
+var mysum=1,sum=0;
+for(mysum=1;mysum<=10;mysum++)
+{
+    if(mysum=5)
+    {break;}
+    sum=sum+mysum;
+}
+document.write("最后的输出值应该是:"+sum)
+
+
+
+</script>
+</body>
+</html>
