@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数和对象</title>
+</head>
+<body>
+<script>
+    //封装常用的代码;
+    /*function fn(){
+     document.write("写了好多代码"+"<br />");
+     document.write("做了好多事儿");
+     }
+     fn();*/
+
+    //给函数添加参数:形参和实参;
+
+    /*function fn(msg){
+     document.write(msg);
+     }
+     fn("搜狗浏览器");
+     fn("谷歌浏览器就是棒棒的");*/
+
+    //求x-y所有数的总和;
+    /*function getSum(x,y){
+     var sum = 0;
+     for(var i = x;i<=y;i++){
+     sum +=i;
+     }
+     return sum;//返回参数值
+     }*/
+    //document.write(getSum(2,3));
+    //document.write(getSum(1,100));
+
+    //求x-y之间所有数的乘积;
+    /*function getPro(x, y) {
+     var pro = 1;
+     for (var i = x; i <= y; i++) {
+     //pro = pro*i;
+     pro *= i;
+     }
+     return pro;
+     }
+     document.write(getPro(2, 5));*/
+
+    //求x-y之间所有数的和
+    /*function getSum(x,y){
+     var sum = 0;
+     for(var i = x; i<=y;i++){
+     sum +=i;
+     }
+     return sum;
+     }
+     //document.write(getSum(1,5));;
+     document.write(getSum(1,4)+100);*/
+
+    //求任意两个数中的最大值;
+    /*function getMax(x,y){
+     return x>y?x:y;
+     }*/
+    //alert(getMax(1,5));
+
+    //求任意3个数中的最大值
+    /*function getMax2(x,y,z){
+     return getMax(getMax,z);
+     }
+     document.write(getMax2(1,3,5));*/
+
+    //求任意数组中的最大值;
+    /*function getMax(arr){
+     var max = arr[0];
+     for(var i = 0;i<arr.length;i++){
+     if(max<arr[i]){
+     max = arr[i];
+     }
+     }
+     return max;
+     }
+     document.write(getMax([3,5,6,8,22,7,55,1,0]));*/
+
+    //求任意数组中的最小值;
+    /*unction getMin(arr){
+     var min = arr[0];
+     for(var i = 0;i<arr.length;i++){
+     if(min>arr[i]){
+     min = arr[i];
+     }
+     }
+     return min;
+     }
+     //var arr = [1,5,6,2,3,8,0,-5]
+     //document.write(getMin(arr))
+     document.write(getMin([1,5,6,2,3,8,0,-5]));*/
+
+    //翻转任意数组，返回一个新的数组
+    /*function getRev(arr) {
+        var newArr = [];
+        for (var i = arr.length - 1; i >= 0; i--) {
+            newArr[newArr.length] = arr[i];
+        }
+        return newArr;
+    }
+    console.log(getRev([1, 2, 3, 4, 5, 6]));*/
+
+//对任意数组从大到小排序;
+    /*function getPai(arr){
+     for(var i = 0; i<arr.length-1;i++){
+     for(var j = 0;j<arr.length-1-i;j++){
+     if(arr[j]<arr[j+1]){
+     var temp = arr[j];
+     arr[j] = arr[j+1];
+     arr[j+1] = temp;
+     }
+     }
+     }
+     return arr;
+     }
+     document.write(getPai([1,2,3,4,5,6]));*/
+
+    //函数的互相调用;
+    /*function fn1(){
+        document.write("我是fn1");
+    }
+    function fn2(){
+        document.write("我是fn2");
+        fn1();
+    }
+    fn2();*/
+
+/*function fn2(){
+    return 1;//如果return没有返回值,那么调用函数时的结果为undefined;
+}
+    var num = fn2()+2;
+    document.write(num);*/
+
+//函数两种定义方式:
+    //函数声明
+    /*var a = 10;
+    document.write(a);
+    //document.write(fn1(1,3));
+    function fn1(a,b){
+        return a+b;
+    }*/
+    //函数表达式(匿名函数);
+
+
+
+    /*var fn = function (a,b) {
+        return a+b;
+    };*/
+    //document.write(fn(1,3));
+    //var a = 10;
+
+//匿名函数;
+    //console.log(fn1(2,4,6));//对于匿名函数,不能提前输出;
+    /*ar fn1 = function(a,b,c){
+        return (a>b?a:b)>c?(a>b?a:b):c;
+    };
+    console.log(fn1(2,4,6));
+*/
+    /*var h = 0;//全局变量
+    function fn(a,b){
+         b = 10;//全局变量
+        var b = 10;//局部变量
+        //console.log(a+b);
+        document.write(b);
+    }
+    fn();*/
+
+    //递归案例,注意写递归的时候一定要加终止条件,不然就是个死循环,死递归;
+/*var i = 0;
+function fn1(){
+    document.write("你是我的小苹果,后面跟上哦!"+"<br />");
+    i++;
+    if(i<10){
+        fn1();
+    }
+}
+    fn1();*/
+
+    //回调函数:能被当作参数传递的函数被称为回调函数;
+    /*function diaoSi(){
+        console.log("屌丝会搬砖挣钱");
+        return 100;
+    }
+    function nvShen(disoSi){
+        var money = 0;
+        money = disoSi();
+        console.log(money);
+    }
+    nvShen(diaoSi);*/
+
+//创建对象;
+    //var student = new Object();
+//    student.name = "小明";
+//    student.age = 18;
+//    student.hobbit = "basketball";
+//    student.attack = function () {
+//        document.write(this.name+"打怪");
+//    }
+    /*var student = {name:"小明",age:18,attack:function(){
+        document.write(this.name+"打怪")
+    }}*/
+
+//     判断一个数是否是质数
+// 求n以内的质数
+function getZhi(n){
+	for(var i = 1;i<=n;i++){
+		for(var j = 1;j<=9;j++)
+			if(i%)
+	}
+}
+
+
+
+// 求n的阶乘
+// 求1!+2!+3!+...+n!
+
+
+
+
+
+// 求斐波那契数列（Fibonacci）中的第n个数
+// 1 1 2 3 5 8 13 21 ...
+
+
+
+
+
+
+
+// 判断某年是否是闰年
+// 输入某年某月某日，判断这一天是这一年的第几天
+// 今天到2016年11月11日还有多少天
+
+</script>
+</body>
+</html>

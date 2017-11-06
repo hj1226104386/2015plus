@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="common.js"></script>
+</head>
+<body>
+<script>
+    //冒泡排序
+    /*var arr = [2,5,68,8,21,0,1];
+     for(var  i = 0;i<arr.length-1;i++){
+     for(var j = 0;j<arr.length-1-i;j++){
+     if(arr[j]>arr[j+1]){
+     var temp = arr[j];
+     arr[j] = arr[j+1];
+     arr[j+1] = temp;
+     }
+     }
+     }
+     document.write(arr);*/
+    //任意x-y之间所有数的乘积;
+    /*function getPro(x,y){
+     var pro =1;
+     for(var i = x;i<=y;i++){
+     pro = pro * i;
+     }
+     alert("所有数的乘积是:"+pro);
+     }
+     getPro(1,5);*/
+
+    //函数返回值
+    /*function getPro(x,y){
+     var pro = 1;
+     for(var i = x; i<=y;i++){
+     pro = pro * i;
+     }
+     return pro;
+     }
+     var sum = getPro(1,2) +100;
+     document.write(sum);*/
+
+    //    求任意半径的圆的面积
+    /*function getArea(r){
+     var area = 3.14*r*r;
+     return area;
+     }
+     document.write("圆的面积为:"+getArea(5));*/
+
+    //    求任意半径的圆的周长
+    /*function getGirth(r){
+     var girth = 3.14*r*2;
+     return girth;
+     }
+     document.write("任意半径的圆的周长为:"+getGirth(3));*/
+
+    //    求任意2个数中的最大值
+    /*function getMax(x,y){
+     return x>y?x:y
+     }
+     document.write("两个数的最大值为:"+getMax(115,20)+"<br />");*/
+
+    //    求任意3个数中的最大值******
+    //传统方法
+    /*function getMax2(a, b, c) {
+        return (a > b ? a : b) > c ? (a > b ? a : b) : c
+    }
+document.write("三个数的最大值为:"+getMax2(5,8,11));*/
+    //函数互相套用的方法;
+    /*function getMax2(x,y,z){
+         return getMax(getMax,z);
+    }
+document.write(getMax2(5,8,15));*/
+
+    //    求任意数组中的最大值
+    /*function getMax(arr){
+        var max = arr[0];
+        for(var i = 0;i<arr.length;i++){
+            if(max<arr[i]){
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+document.write(getMax([5,8,7,6,54]));*/
+
+    //    求任意数组中的最小值
+    /*function getMin(arr){
+     var min = arr[0];
+     for(var i = 0;i<arr.length;i++){
+     if(min>arr[i]){
+     min = arr[i];
+     }
+     }
+     return min;
+     }
+     var newarr = [5,8,9,10];
+     document.write(getMin(newarr));*/
+
+    //    翻转任意数组，返回一个新的数组
+
+    /*function getFanZhuan(arr){
+        var newarr = [];
+        for(var i = arr.length-1;i>=0;i--){
+            newarr[newarr.length] = arr[i];
+        }
+        return newarr;
+    }
+    document.write(getFanZhuan([5,8,6,4,8]));*/
+
+
+    //    对任意数组从小到大排序
+
+
+
+//函数相互套用之调试;
+    /*function fn1(){
+        console.log("小公主,很爱你哦");
+        fn2();
+    }
+    fn1();
+    function fn2(){
+        console.log("哈哈,我也是");
+    }*/
+
+    //递归==>函数自身调用自身的编程技巧;
+    /*var i = 0;
+    function story(){
+        document.write("跟着我左手右手一个慢动,后面跟上节奏!"+"<br />");
+        if(i<10){
+            story();
+        }
+    }
+    story();*/
+//函数回调;????????
+/*function diaoSi(){
+    document.write("屌丝会搬砖挣钱");
+    return 100;
+}
+    function nvShen(fn){
+        var money = fn();
+        document.write(money);
+    }
+    nvShen(diaoSi);*/
+
+    /*var student = new Object();
+    student.name = "小明";
+    student.age = 88;
+    student.gender = 1;
+    student.score = 80;
+    student.sayHi = function(){
+        document.write("大家好,"+"我是"+this.name);
+    };*/
+
+    //字面量对象
+    var student = {
+        name:"小明",
+        age:18,
+        gender:0,
+        score:86,
+        sayHi:function(){
+        document.write("大家好,"+"我是"+this.name)},
+        habbit:"basketball"};
+    document.write(student.name);
+
+    //用forin遍历对象,只能用forin
+    for(var key in student{
+        document.write(student);
+    }
+
+
+    //JSON ==>javascript object notition 这种方法在属性上加双引号,因此属性名中间可以有空格
+    /*var student = {
+        "user name":"小明"
+    }*/
+</script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        body{
+            background-color: pink;
+        }
+        #box1 {
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;;
+            background-color: lawngreen;
+            position: absolute;
+            top: 60%;
+            left: 42%;
+            margin-left: -50px;
+            border-radius: 30px 30px 10px 30px;
+            padding-top: 5px;
+        }
+        #box {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            background-color: purple;
+            position: absolute;
+            cursor:pointer;
+            color: lawngreen;
+            padding-top: 20px;
+        }
+        #btn {
+            position: absolute;
+            top: 80%;
+            left: 43%;
+            width: 200px;
+            height: 50px;
+            font-size:25px;
+            background-color: pink;
+            margin: 50px auto;
+        }
+        .show {
+            display: block;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">奔跑吧启明兄</button>
+<div id="box">走你,来抓我呀</div>
+<div id="box1" class="hidden">来啊,互相伤害吧!haha</div>
+<script>
+function $(id){return document.getElementById(id)};
+var btn = $("btn");
+var box = $("box");
+var box1 = $("box1");
+var box2 = $("box2");
+var box3 = $("box3");
+//给btn注册点击事件
+btn.onclick = function () {
+    //buffAnimate(box,"borderRadius",50)
+    //buffAnimate(box,{"borderRadius":50,"width":50,"top":300})
+    //buffAnimate(box,{"borderRadius":50,"width":50,"top":300,"opacity":0});
+    box1.className = "show";
+    setTimeout(function () {
+        box1.className = "hidden";
+    },8000);
+    timer =setInterval(play,700);
+
+}
+
+
+box.onmouseover= function () {
+    box.innerHTML = "￣へ￣哇偶,被你抓到了!哈哈";
+    box.style.color = "red";
+    box.style.opacity = 1;
+    box.style.width = "80px";
+    box.style.height= "80px";
+    box.style.backgroundColor = "orange";
+    clearInterval(timer);
+}
+box.onmouseout = function () {
+        clearInterval(timer);
+        box.innerHTML = "来呀,快追我哦";
+    box.style.backgroundColor = "purple";
+        timer =setInterval(play,1000);
+    }
+
+
+function play(){
+        var radius = parseInt(Math.random()*100);
+        var w = parseInt(Math.random()*150);
+        var h = parseInt(Math.random()*150);
+        var opaci = Math.random();
+        var topdist = parseInt(Math.random()*1000);
+        var leftdist = parseInt(Math.random()*1000);
+        buffAnimate(box,{"borderRadius":radius,"width":w,"left":leftdist,"height":h,"top":topdist,"opacity":opaci})
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  //封装缓动框架的思路;
+//封装获取计算后的样式属性兼容方法
+//封装缓动动画函数方法;
+//封装能获取单一属性样式的方法;
+//封装能获取多个计算后属性的方法,加入json对象方法实现获取多个;
+//解决有些属性无法到达目标值的问题
+//添加回调函数
+//添加透明度和层级
+
+
+    //封装缓动动画的方法
+    function buffAnimate(obj,json,fn){
+        clearInterval(obj.timer);
+        obj.timer= setInterval(function () {
+            var flag = true;
+            for(var k in json){//k为属性名  json[k]为属性值
+                if(k==="opacity"){
+                    var leader = getStyle(obj,k)*100;//getstyle获取到的是带单位的属性值,不能直接计算,要转换;
+                    var target = json[k]*100;
+                    var step = (target-leader)/10;
+                    step = step>0?Math.ceil(step):Math.floor(step);
+                    leader = leader + step;
+                    obj.style[k] = leader/100;
+                }
+                if(k==="zIndex"){
+                    obj.style.zIndex = json[k];
+                }
+                var leader = parseInt(getStyle(obj,k))||0;//getstyle获取到的是带单位的属性值,不能直接计算,要转换;
+                var target = json[k];
+                var step = (target-leader)/10;
+                step = step>0?Math.ceil(step):Math.floor(step);
+                leader = leader + step;
+                obj.style[k] = leader + "px";
+                if(target !==leader){
+                    flag =false;
+                }
+            }
+            if(flag){
+                clearInterval(obj.timer)
+                if(fn){
+                    fn();
+                }
+            }
+        },15)
+    }
+
+    //封装获取计算后的样式属性的兼容方法;
+    function getStyle(obj,attr){
+        if(window.getComputedStyle){
+            return window.getComputedStyle(obj,null)[attr];
+        }else {
+            return obj.currentStyle[attr];
+        }
+    }
+</script>
+</body>
+</html>

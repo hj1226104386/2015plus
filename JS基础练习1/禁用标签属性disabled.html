@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text" id="txt"/>
+<input type="button" value="禁用文本框" id="btn"/>
+<input type="button" value="解除禁用" id="btn1"/>
+<script>
+    //要做事,先找人,找到btn和txt.
+    var btn = document.getElementById("btn");
+    var btn1 = document.getElementById("btn1");
+    var txt = document.getElementById("txt");
+    //注册点击事件;
+    btn.onclick = function () {
+        txt.disabled = true;
+    }
+    btn1.onclick = function () {
+        txt.disabled = false;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #main {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background:rgba(0,0,0,.5);
+            position: fixed;
+            z-index: 999;
+        }
+        #login {
+            display: none;
+            width: 400px;
+            height: 250px;
+            background:white;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin:-125px 0 0 -200px;
+            z-index: 1000;
+        }
+        #login span {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            font-size: 15px;
+            color: black;
+            font-weight: bold;
+            background:skyblue;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+        }
+        #reg　{
+            display: block;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        #reg:hover {
+            color: red;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #pic {
+            width: 606px;
+            height: 360px;
+            border:2px solid orange;
+            position: relative;
+        }
+        div #a1 {
+            display: inline-block;
+            width: 606px;
+            height: 360px;
+            background:url("img/pr2.jpg") no-repeat;
+        }
+        div #cancle {
+            width: 20px;
+            height: 20px;
+            background:skyblue;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right:10px;
+            cursor: pointer;
+        }
+        #cancle:hover {
+            border:1px solid red;
+        }
+        .pic2,.pic3 {
+            float: left;
+            width: 300px;
+            height: 1000px;
+            background:blue;
+            margin-right: 50px;;
+        }
+        #show {
+            width: 50px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            background:skyblue;
+            border:1px solid blue;
+            font-size: 10px;
+            color: red;
+            cursor: pointer;
+            position: fixed;
+            top: 30px;
+            right: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="main"></div>
+    <div id="login">
+        <span id="sp1">×</span>
+            <span>用户名:</span>
+            <input type="text"/><br/>
+            <span>登录密码:</span>
+            <input type="password"/>
+        sdfaddaf
+    </div>
+    <a href="#" id="reg">点击注册</a>
+    <div id="pic">
+        <a href="#" id="a1"></a>
+        <div id="cancle">×</div>
+    </div>
+    <div class="pic2"></div>
+    <div class="pic3"></div>
+    <div id="show">弹出图片</div>
+
+    <script type="text/javascript">
+        var cancle = document.getElementById("cancle");
+        var show = document.getElementById("show");
+        var reg = document.getElementById("reg");
+        var sp1 = document.getElementById("sp1");
+        cancle.onclick = function(){
+            pic.style.display = "none";
+        }
+        show.onclick = function(){
+            pic.style.display = "block";
+        }
+        reg.onclick = function(){
+            main.style.display = "block";
+            login.style.display = "block";
+        }
+        sp1.onclick = function(){
+            main.style.display = "none";
+            login.style.display = "none";
+        }
+    </script>
+</body>
+</html>

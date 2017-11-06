@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .main{
+            width: 500px;
+        }
+        .main #pic {
+            width: 500px;
+            height: 200px;
+            background-color: blue;
+            position: relative;
+        }
+        #pic #bt {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            font:400 20px/20px "MicrosoftYahei";
+            background-color: #fff;
+            cursor: pointer;
+            position: absolute;
+            top:10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+<!--<img id="demo" src="img/cat.png"  alt=""/>
+<button id="btn">点击换图</button>-->
+<!--<a href="http://www.baidu.com">a标签默认跳转行为</a>
+<a href="http://www.baidu.com" onclick="return getAge()">阻止a标签默认跳转行为</a>-->
+<!--<button id="btn">我是小公主,快点我哦</button>-->
+<div class="main">
+    <div id="pic">
+        <div id="bt">×</div>
+    </div>
+    <button id="btn1">金色</button>
+    <button id="btn2">粉色</button>
+    <button id="btn3">绿色</button>
+    <button id="btn4">橙色</button>
+    <button id="btn5">显示</button>
+</div>
+<script>
+    var btn1 = document.getElementById("btn1");
+    var btn2 = document.getElementById("btn2");
+    var btn3 = document.getElementById("btn3");
+    var btn4 = document.getElementById("btn4");
+    var btn5 = document.getElementById("btn5");
+    var bt = document.getElementById("bt");
+    btn1.onclick = function () {
+        pic.style.background = "gold";
+    };
+    btn2.onclick = function () {
+        pic.style.background = "pink";
+    };
+    btn3.onclick = function () {
+        pic.style.background = "green";
+    };
+    btn4.onclick = function () {
+        pic.style.background = "orange";
+    };
+    bt.onclick = function () {
+        pic.style.display = "none";
+    }
+    btn5.onclick = function(){
+        pic.style.display = "block";
+    }
+    /*var btn = document.getElementById("btn");
+    btn.onmouseover = function () {
+        confirm("丢类楼姆");
+    }*/
+    /*function getAge(age){
+        var age = prompt("请输入你的年龄");
+        if(age>=18){
+            confirm("欢迎访问本站");
+        }
+        else{
+            alert("未满18岁禁止访问哦");
+            return false;
+        }
+    }*/
+    /*var demo = document.getElementById("demo");
+    var btn = document.getElementById("btn");*/
+    /*btn.onclick = function () {
+        demo.src = "img/tiger.png";
+    }*/
+    //demo.src = "img/tiger.png";
+    //console.log(demo.src);
+    //console.dir(demo);
+    /*demo.onmouseover = function () {
+        demo.src="img/tiger.png";
+    }
+    demo.onmouseout = function () {
+        demo.src = "img/cat.png";
+    }
+    btn.onclick = function () {
+        demo.src = "img/tiger.png";
+    }*/
+</script>
+</body>
+</html>

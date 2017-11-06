@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*var sum = 0;
+	for(var i = 1;i<101;i++){
+		if(i%3 !==0){
+			sum +=i;
+			if(sum>2000){
+				document.write(sum);
+				break;
+			}
+		}
+	}*/
+
+//1-100之间能被3整数的数字，存到数组中
+	/*var newarr = [];
+	for(var i = 1;i<101;i++){
+		if (i%3 ===0) {
+			newarr[newarr.length]=i;
+		}
+	}
+	document.write(newarr);*/
+
+	//求一组数中的所有数的和 和 平均值
+/*var sum = 0;
+var arr = [55, 3, 6, 7, 8, 3, 1];
+for(var i = 0;i<arr.length;i++){
+	sum = sum +arr[i];
+	
+}
+document.write("最后的总和为:"+sum+"<br />");
+document.write("平均数为:"+sum/arr.length)*/
+
+//求一组数中的最大值
+/*var arr = [55, 3, 6, 7, 8, 3, 1];
+var max = arr[0];
+for(var i = 0;i<arr.lenght;i++){
+	if(max<arr[i]){
+		max = arr[i];
+	}
+}
+document.write("数组中最大的值为:"+max);*/
+
+//求一组数中的最小值及其索引
+/*var arr = [55, 3, 6, 7, 8, 3, 1];
+var min = arr[0];
+for(var i = 0;i<arr.length;i++){
+	if(min>arr[i]){
+		min = arr[i];
+		var minIndex = i;
+	}
+}
+document.write("最小值为:"+min+"<br />");
+document.write("其索引号是:"+minIndex);*/
+
+//求一组数中的最大值和最小值以及所在位置
+/*var arr = [55, 3, 6, 7, 8, 3, 1];
+var max = arr[0];
+var maxIndex = 0;
+var min = arr[0];
+var minIndex = 0;
+for(var i = 0 ;i<arr.length;i++){
+	if(max<arr[i]){
+		max = arr[i];
+		maxIndex = i;
+	}
+	else if(min>arr[i]){
+		min = arr[i];
+		minIndex = i;
+	}
+}
+document.write("数组的最大值为:"+max+"索引号是:"+maxIndex+"<br />");
+document.write("数组中的最小值为:"+min+"其索引号是:"+minIndex);*/
+
+
+//将字符串数组用|或其他符号分割
+/*var arr = ["a", "bb", "ccc", "dddd"];
+var str = arr[0];
+for(var i = 1;i<arr.length;i++){
+	str = str+ "|"+arr[i];
+}
+document.write(str);*/
+
+//黄金分割数经典案例
+/*var num1 = 1;
+var num2 = 1;
+var num3;
+for(var i = 3;i<=12;i++){
+	num3 = num1 +num2 ;
+	num1 = num2;
+	num2 = num3;
+}
+document.write(num3);*/
+
+
+//求一个字符串数组中每项的长度，并把长度的数值存储到新的数组中
+/*var arr = ["a", "bb", "ccc", "dddd"];
+var newarr = [];
+for(var i = 0;i<arr.length;i++){
+	newarr[newarr.length]=arr[i].length;
+}
+document.write(newarr);*/
+
+//翻转数组
+/*var arr = ["a", "bb", "ccc", "dddd"];
+var newarr = [];
+for(var i = arr.length-1;i>=0;i--){
+newarr[newarr.length]=arr[i];
+}
+console.log(newarr);*/
+
+//冒泡排序
+/*var arr = [55, 3, 6, 7, 8, 3, 1];
+for(var i = 0;i<arr.length-1;i++){
+	for(var j = 0;j<arr.length-1;j++){
+		if(arr[j]>arr[j+1]){
+			var temp = arr[j];
+			arr[j] = arr[j+1];
+			arr[j+1] = temp;
+		}
+	}
+}
+document.write(arr);*/
+
+/*var ans = prompt("小公主你爱我吗?","输入y或者n");
+for(var i = 1;i>=1;i++){
+	if(ans==="y"){
+		confirm("其实我也爱我自己啦,哈哈,么么哒");
+		break;
+	}
+	else if(ans==="n"){
+		ans = prompt("你确定你不爱我吗?","输入y或者n");
+	}
+	else {
+		alert("输入有误哦,能认真点看吗?");
+		ans = prompt("快说,你爱我吗?","输入y或者n");
+	}
+}*/
+
+//求一组数的最大值及其索引;
+/*var arr = [ 3, 6, ,55,7, 8, 3, 1];
+var max = arr[0];
+var maxIndex = 0;
+for(var i = 0;i<arr.length;i++){
+	if(max<arr[i]){
+		max = arr[i];
+		maxIndex = --i;
+	}
+}
+document.write("最大值为:"+max+",其索引号为:"+maxIndex);*/
+
+//黄金分割数的案例;
+/*var num1 = 1;
+var num2 = 1;
+var num3 ;
+for(var i = 3; i<=12;i++){
+	num3 = num1 + num2;
+	var temp = num3;
+	num1 = num2;
+	num2 = temp;
+}
+document.write(num3);*/
+
+//冒泡排序案例
+/*var arr = [ 3, 6 ,55,7, 8, 3, 1];
+for(var i = 0 ;i<arr.length-1;i++){
+	for(var j = 0; j<arr.length-1;j++){
+		if(arr[j]>arr[j+1]){
+			var temp = arr[j];
+			arr[j]=arr[j+1];
+			arr[j+1]=temp;
+		}
+	}
+}
+document.write(arr);*/
+
+//批量添加值到数组;
+/*var arr = [];
+for(var i = 1;i<=30;i++){
+	arr[arr.length]=1;
+}
+document.write(arr);*/
+
+//冒泡排序案例2,从大到小排序;
+/*var arr = [5,4,8,45,99,2,0,48,63,21,6,9];
+for(var i = 0;i <arr.length-1;i++){
+	for(var j = 0;j <arr.length-1;j++){
+		if(arr[j]<arr[j+1]){
+			var temp = arr[j];
+			arr[j]=arr[j+1];
+			arr[j+1] = temp;
+		}
+	}
+}
+document.write(arr);*/
+
+//冒泡排序
+/*var arr = [5,6,7,1,55,88];
+for(var i = 0;i<arr.length-1;i++){
+	for(var j = 0;j<arr.length-1-i;j++){
+		if(arr[j]>arr[j+1]){
+			var temp = arr[j];
+			arr[j] = arr[j+1];
+			arr[j+1] = temp;
+		}
+	}
+}
+document.write(arr);*/
+
+//任意x-y之间所有数的乘积;
+/*function getPro(x,y){
+	var pro = 1;
+	for(var i = x;i<=y;i++){
+		pro *=i;
+	}
+	return pro;
+}
+document.write(getPro(2,5));*/
+
+//    求任意2个数中的最大值
+/*function getMax(x,y){
+	return x>y?x:y;
+}
+document.write(getMax(5,9)+"<br />");*/
+
+//    求任意3个数中的最大值
+//方法一:
+/*function getMax(x,y,z){
+	return (x>y?x:y)>z?(x>y?x:y):z;
+}
+document.write(getMax(5,1,9));*/
+//方法二:
+/*function getMax2(x,y,z){
+	return getMax(getMax,z);
+}
+document.write(getMax2(7,6,4));*/
+
+//   求任意数组中的最大值
+/*function getMax(arr){
+	var max = arr[0];
+	for(var i =0;i<arr.length;i++){
+		if(max<arr[i]){
+			max = arr[i];
+		}
+	}
+	return max;
+}
+document.write(getMax([5,6,4,2,1,0,8,64]))*/
+
+//    求任意数组中的最小值
+/*function getMin(arr){
+	var min = arr[0];
+	for(var i = 0;i<arr.length;i++){
+		if(min>arr[i]){
+			min = arr[i];
+		}
+	}
+	return min;
+}
+document.write(getMin([5,6,4,2,1,0,8,64]));*/
+
+//    翻转任意数组，返回一个新的数组
+/*function getRev(arr){
+	var newArr = [];
+	for(var i =arr.length-1;i>=0;i--){
+		newArr[newArr.length] = arr[i];
+	}
+	return newArr;
+}
+document.write(getRev([5,6,4,2,1,0,8,64]));*/
+
+//冒泡排序
+/*function getPai(arr){
+	for(var i = 0;i<=arr.length-1;i++){
+		for(var j = 0;j<arr.length-1-i;j++){
+			if(arr[j]>arr[j+1]){
+				var temp = arr[j];
+				arr[j]  = arr[j+1];
+				arr[j+1]= temp;
+			}
+		}
+		
+	}
+	return arr;
+}
+document.write(getPai([5,6,4,2,1,0,8,64]));*/
+
+
+</script>
+</body>
+</html>

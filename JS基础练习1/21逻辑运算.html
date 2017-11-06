@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    // 短路运算 返回决定当前表达式值的那个项目
+
+    // && 且 要求比较严格 必须两个都是true结果才是true
+    // console.log(true && true);//true
+    // console.log("" && "后面");
+    // console.log(false && true);//false
+    // console.log(NaN && "后面");
+    // console.log(true && false);//false
+    // console.log("前面" && "");
+    // console.log(false && false);//false
+    // console.log(null && undefined);
+    // || 或 要求比较宽松 只要有true就是true
+    // console.log(true || true);//true
+    // console.log("前面" || "后面");
+    // console.log(false || true);//true
+    // console.log("" || "后面");
+    // console.log(true || false);//true
+    // console.log("前面" || "");
+    // console.log(false || false);//false
+    // console.log(null || undefined);//false
+
+// var age =5;
+// alert(age>=18?"恭喜你成年了":"未成年人不允许进入消费");
+	
+	// var num = "你是我的小苹果吗?"
+	// document.write("变量值中字符的个数为:"+num.length);
+
+	// var a = 30,b = 45;//用三元运算符比较两个数的大小
+	// document.write(a>b?a:b);
+
+	// var a = 23, b = 40,c = 11;//用三元运算符比较三个数的大小
+	// document.write((a>b?a:b)>c?(a>b?a:b):c);
+
+	// var a = 123;//用.toString方法将其他数据类型转换成字符型;
+	// a = a.toString();
+	// document.write(a);
+
+	// document.write(1/0);//除运算的特殊情况;
+
+	/*while(true){
+		var msg = prompt("你爱我吗? y/n");
+		if(msg==="y"){
+			confirm("我也很爱我自己,哈哈!")
+			break;
+		}
+	}*/
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width: 606px;
+			height: 360px;
+			border:2px solid orange;
+			position: relative;
+		}
+		div #pic {
+			display: inline-block;
+			width: 606px;
+			height: 360px;
+			background: url(img/pr1.jpg) no-repeat;
+		}
+		#one,#two,#three,#four {
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			color: black;
+			background:skyblue;
+			opacity: 0.5;
+			position: absolute;
+		}
+		#one {
+			top:330px;
+			left: 260px;
+			background:orange;
+		}
+		#two {
+			top:330px;
+			left: 280px;
+		}
+		#three {
+			top:330px;
+			left: 300px;
+		}
+		#four {
+			top:330px;
+			left: 320px;
+		}
+		#one:hover {
+			background:orange;
+		}
+		#two:hover{
+			background: orange;
+		}
+		#three:hover{
+			background: orange;
+		}
+		#four:hover{
+			background: orange;
+		}
+	</style>
+	
+</head>
+<body>
+	<div>
+			<a href="#" id="one"></a>
+			<a href="#" id="two"></a>
+			<a href="#" id="three"></a>
+			<a href="#" id="four"></a>
+			<a href="#" id="pic"></a>
+	</div>
+	<script type="text/javascript">
+		var one = document.getElementById("one");
+		var two = document.getElementById("two");
+		one.onmouseover = function(){
+			pic.style.background = "url(img/pr1.jpg)";
+		}
+		two.onmouseover = function(){
+			pic.style.background = "url(img/pr2.jpg)";
+		}
+		three.onmouseover = function(){
+			pic.style.background = "url(img/pr3.jpg)";
+		}
+		four.onmouseover = function(){
+			pic.style.background = "url(img/pr4.jpg)";
+		}
+	</script>
+</body>
+</html> 

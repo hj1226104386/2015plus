@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <script type="text/javascript">
+	 	// var a=8;
+	 	// a= --a + a--
+	 	// var age=prompt("请输入你的年龄:")
+	 	//     confirm("你确定年龄没有错误吗?")
+	 	// if(age>=16){
+	 	// 	alert("你好,欢迎光临!")
+	 	// }
+	 	// else {
+	 	// 	alert("不好意思哦,这里不允许未成年人进入消费!")
+	 	// }
+	 	// var a=1;
+	 	// a *=8;
+	 	// document.write(a);
+	 	// var a ;
+	 	// a = Boolean(a)
+	 	// document.write(a);
+	 	// var a=undefined;
+	 	// a = !!a;
+	 	// document.write(a);
+	 	// var date=prompt("请输入今天是星期几,得知今天安排","只能填写数字1-7哦");
+	 	// date = +date;
+	 	// if(date>300){
+	 	// 	document.write("今天我们全天上班哦")
+	 	// }
+	 	// else if(date>200){
+	 	// 	document.write("今天全体出游哦!")
+	 	// }
+	 	// else if(date>100){
+	 	// 	document.write("今天全体出游哦!")
+	 	// }
+	 	// else{
+	 	// 	alert("今天周末休息啊笨蛋")
+	 	// }
+	 	// var date=prompt("请输入今天是星期几","只能输入数字1-7哦!")
+	 	// date = +date;
+	 	// switch(date){
+	 	// 	case 1 :
+	 	// 	case 2 :
+	 	// 	case 3 :
+	 	// 	case 4 :
+	 	// 		document.write("今天正常上班啦");
+	 	// 		break;
+	 	// 	case 5 :
+	 	// 		alert("今天集体春游!");
+	 	// 		break;
+	 	// 	case 6 :
+	 	// 		alert("今天加班一天");
+	 	// 		break;
+	 	// 	case 7 :
+	 	// 		alert("今天终于休息啦,我要好好睡一觉");
+	 	// 		break;
+	 	// 	default :
+	 	// 		alert("傻逼,日期输入错误啦")
+	 	// 		break;
+	 	// }
+	 	// 三元运算符
+	 	// var age=prompt("请输入你的年龄:");
+	 	// 	age = +age;
+	 	//  age<18?alert("不好意思,本会所禁止未成年人进入消费!"):alert("你好,欢迎光临!");
+	 	// var a=prompt("请输入长:")
+	 	// var b=prompt("请输入宽:")
+	 	// a = +a;
+	 	// b = +b;
+	 	// document.write("长方形的周长:"+(a+b)*2+"<br/>")
+	 	// document.write("长方形的面积:"+a*b)
+
+	 	// //随机生成一个0-100的整数方法:
+	 	// var num=Math.random()*100
+	 	// var num1=Math.floor(num)
+	 	// document.write("随机生成的数为:"+num1)
+	 	// var num=Math.random()*100;
+	 	// a=Math.floor(num);
+	 	// var num1=Math.random()*100;
+	 	// b=Math.floor(num1);
+	 	// var num2=Math.random()*100;
+	 	// c=Math.floor(num2);
+	 	// document.write("随机生成的三个数分别为:"+a+","+b+","+c+","+"<br/>")
+	 	// if(a>b&&a>c){
+	 	// 	document.write("三个数最大的为:"+a)
+	 	// }
+	 	// else if(b>a&&b>c){
+	 	// 	document.write("三个数最大的为:"+b)
+	 	// }
+	 	// else if(c>a&&c>b) {
+	 	// 	document.write("三个数最大的为:"+c)
+	 	// }
+
+	 	// var sum=Math.random()*20;
+	 	// a=Math.floor(sum);
+	 	// if (a<5) {
+	 	// 	document.write("坏蛋个数是"+a+"个,少于5个,自己吃掉算啦!");
+	 	// }
+	 	// else {
+	 	// 	document.write("坏蛋个数是"+a+"个,太多啦,我要退货!")
+	 	// }
+
+	 	// var a =prompt("请输入一个整数:")
+	 	// var b =prompt("请再输入一个整数:")
+	 	// a = +a;b= +b;
+	 	// b%a==0?document.write(a):document.write(b);
+
+	 	// var a =prompt("请输入一个整数:");
+	 	// var b =prompt("请再输入一个整数:");
+	 	// a = +a;b= +b;
+	 	// a+b>100?document.write("a的值为:"+a):document.write("b的值为:"+b);
+
+	 	// var a =prompt("请输入一个整数:");
+	 	// var b =prompt("请再输入一个整数:");
+	 	// a = +a;b =+b;
+	 	// b&a==0||a+b>100?document.write("a的值为:"+a):document.write("b的值为:"+b);
+
+	 	// var pass =prompt("请输入密码:");
+	 	// pass = +pass;
+	 	// if(pass==888888){
+	 	// 	alert("恭喜你,密码正确!")
+	 	// }
+	 	// else{
+	 	// 	var pass =prompt("密码错误,请再次输入密码:");
+	 	// 	pass = +pass;
+	 	// 	if(pass==888888){
+	 	// 		alert("你终于答对了,哈哈")
+	 	// 	}
+	 	// 	else{
+	 	// 		document.write("程序结束!")
+	 	// 	}
+	 	// }
+
+
+	 	// var user =prompt("请输入你的用户名:");
+	 	// var pass =prompt("请输入密码:");
+	 	// pass = +pass;
+	 	// if(user=="admin"&&pass==888888){
+	 	// 	alert("恭喜你,输入正确!")
+	 	// }
+	 	// else{
+	 	// 	var user =prompt("请再次输入你的用户名:")
+	 	// 	var pass =prompt("请再次输入密码:");
+	 	// 	pass = +pass;
+	 	// 	if(user=="admin"&&pass==888888){
+	 	// 		alert("你终于答对了,哈哈")
+	 	// 	}
+	 	// 	else{
+	 	// 		document.write("输入错误,程序结束!")
+	 	// 	}
+	 	// }
+
+	 	// var age =prompt("请输入张三的年龄:");
+	 	// var age1 =prompt("请输入李四的年龄:");
+	 	// age =+age;age1 =+age1;
+	 	// document.write("更大的年龄是:"+Math.max(age,age1));
+
+	 	// var sum =prompt("请输入你买电脑的预算:");
+	 	// sum =+sum;
+	 	// switch(sum){
+	 	// 	case 1000:
+	 	// 	case 2000:
+	 	// 	alert("您适合买二手电脑,讲真!");
+	 	// 	break;
+
+	 	// 	case 3000:
+	 	// 	case 4000:
+	 	// 	alert("您适合买台式机,讲真!");
+	 	// 	break;
+
+	 	// 	case 5000:
+	 	// 	case 6000:
+	 	// 	alert("您适合买品牌笔记本电脑,讲真!");
+	 	// 	break;
+
+	 	// 	case 7000:
+	 	// 	case 8000:
+	 	// 	case 9000:
+	 	// 	case 10000:
+	 	// 	alert("您适合买高配ThindPad,讲真!");
+	 	// 	break;
+
+	 	// 	case 11000:
+	 	// 	case 12000:
+	 	// 	case 13000:
+	 	// 	case 14000:
+	 	// 	case 15000:
+	 	// 	alert("您适合买苹果笔记本电脑，高格调人士必备,讲真!");
+	 	// 	break;
+
+	 	// 	case 16000:
+	 	// 	case 17000:
+	 	// 	case 18000:
+	 	// 	case 19000:
+	 	// 	case 20000:
+	 	// 	alert("您适合买外星人笔记本电脑，低调的奢华,讲真!");
+	 	// 	break;
+	 	// }
+
+	 	// var date=prompt("请输入今天是本周的第几天:")
+	 	// date = +date;
+	 	// switch(date){
+	 	// 	case 1:
+	 	// 	document.write("今天是本周的第一天");
+	 	// 	break;
+	 	// 	case 2:
+	 	// 	document.write("今天是本周的第二天");
+	 	// 	break;
+	 	// 	case 3:
+	 	// 	document.write("今天是本周的第三天");
+	 	// 	break;
+	 	// 	case 4:
+	 	// 	document.write("今天是本周的第四天");
+	 	// 	break;
+	 	// 	case 5:
+	 	// 	document.write("今天是本周的第五天");
+	 	// 	break;
+	 	// }
+
+	 	// var a=prompt("请输入第一个数:");
+	 	// var b=prompt("请输入第二个数:");
+	 	// var c=prompt("请输入第三个数:");
+
+	 		// var abc = 100;
+	 		// while(abc<1000){
+	 		// 	var a = Math.floor(abc/100);
+	 		// 	var b = Math.floor(abc/10)%10;
+	 		// 	var c = abc % 10;
+	 		// 	var num = Math.pow(a,3)+Math.pow(b,3)+Math.pow(c,3);
+	 		// 	if(num==abc){
+	 		// 		document.write(num);
+	 		// 	}
+	 		// 	abc++;
+	 		// }
+
+	 		// for(var i=100;i<1000;i++){
+	 		// 	var a = i%10;
+	 		// 	var b =Math.floor(i/10)%10;
+	 		// 	var c =Math.floor(i/100);
+	 		// 	if(i==Math.pow(c,3)+Math.pow(b,3)+Math.pow(a,3)){
+	 		// 		document.write(i+"<br />")
+	 		// 	}
+	 		// }
+
+	 		// var a = 1;
+	 		// while(a<=100){
+	 		// 	if(a%2 != 0){
+	 		// 		a++;
+	 		// 		continue;
+	 		// 	   }
+	 		// 	   	document.write(a+"<br />");
+	 		// 		a++;	
+	 		// }
+	 		// var a = 0;
+	 		// var b = 5;
+	 		// while(a<=10){
+	 		// 	var sum = a*b;
+	 		// 	a++;
+	 		// 	document.write(sum+"<br />");
+	 		// }
+	 		
+	 		// var a = prompt("请输入一个年龄:");
+	 		// a = +a
+	 		// if(a>=18&&a<=60){
+	 		// 	alert("输入正确!");
+	 		// }
+	 		// while(a<18||a>60){
+	 		// var	a = prompt("请输入一个年龄:");
+	 		// }
+	 		// alert("输入正确!");
+	 		// for(var i=0;i<10;i++){
+	 		// 	for(var j=0; j<=i;j++){
+	 		// 		document.write("*"+" ");
+	 		// 	}
+	 		// 	document.write("<br />");
+	 		// }
+
+	 		// for(var i=1;i<10;i++){
+	 		// 	for(var j=1; j<=i;j++){
+	 		// 		document.write(i+"*"+j+"="+i*j+"&nbsp;");
+	 		// 	}
+	 		// 	document.write("<br />");
+	 		// }
+
+	 		// for(var i=1;i<=1000;i++){
+	 		// 	if (i%7==0&&i%11==0) {
+	 		// 		document.write(i+"<br />");
+	 		// 	};
+	 		// 	i++;
+	 		// };
+	 		
+	 		// for(var abcde=10000;abcde<100000;abcde++){
+	 		// 	var a=Math.floor(abcde/10000);
+	 		// 	var b=Math.floor(abcde/1000)%10;
+	 		// 	var d=Math.floor(abcde/10)%10;
+	 		// 	var e=abcde%10;
+	 		// 	if(a==e&&b==d){
+	 		// 		document.write(abcde+"<br />");
+	 		// 	}
+	 		// }
+
+	 		// // 
+	 		// for(var i=0;i<10;i++){
+	 		// 	for(var j=0;j<=i;j++){
+	 		// 		document.write("@"+"&nbsp;");
+	 		// 	}
+	 		// 	document.write("<br />");
+	 		// }
+
+	 			// var arr=[];
+	 			// for(var i=1;i<100;i++){
+	 			// 	if(i%5==0 && i%3 != 0){
+	 			// 		document.write(i+"<br />");
+	 			// 		arr.push(i);
+	 			// 	}
+	 			// }
+	 			// alert(arr);
+
+	 			// for(var i=0;i<10;i++){
+	 			// 	for(var j=0;j<10;j++){
+	 			// 		document.write("$"+"&nbsp;");
+	 			// 	}
+	 			// 	document.write("<br />");
+	 			// }
+
+	 			// var arr=[1,2,3,4,5,6,7,8,9];
+	 			// for(var i=0;i<9;i++){
+	 			// 	if(arr[i]%3==0){
+	 			// 		document.write("第一个能被3整除的数为:"+arr[i]);
+	 			// 		break;
+	 			// 	}
+	 			// }
+
+	 			// var a = ((undefined&&"123")||(3||5));
+	 			// alert(a);
+
+	 			// var arr = [];
+	 			// for(var i=1;i<=5;i++){
+	 			// 	var age =prompt("请输入你的年龄");
+	 			// 	age = +age;
+	 			// 	if(age<0||age>100){
+	 			// 		alert("输入有误!");
+	 			// 		break;
+	 			// 	}
+	 			// 	arr.push(age);
+	 			// }
+	 			// document.write("五个人的年龄分别是:"+arr+"<br />");
+	 			// document.write("五个人的年龄平均数是:"+(arr[0]+arr[1]+arr[2]+arr[3]+arr[4])/5);
+
+	 			// for(var i=1;i>0;i++){
+	 			// 	var user = prompt("请输入用户名:");
+	 			// 	var password = prompt("请输入密码:");
+	 			// 	if(user =="admin"&&password =="888888"){
+	 			// 		alert("恭喜你,登录成功!");
+	 			// 		break;
+	 			// 	}
+	 			// 	alert("输入错误,请重新输入!");
+	 			// }
+
+	 				// var arr = [];
+	 				// var sum = 0;
+	 				// for(var i=1;i<=100;i++){
+	 				// 	sum = sum +i;
+	 				// 	if(sum>25){
+	 				// 	alert("累计值大于20,计算结束");
+	 				// 	break;
+	 				// 	}
+	 				// 	arr.push(i);
+	 				// }
+	 				// document.write(arr);
+
+	 			// 	var arr = [];
+	 			// 	var arr1 = [];
+	 			// 	var sum = 0;
+	 			// 	var sum1 = 0;
+	 			// 	for(var i=1;i<=100;i++){
+	 			// 		if(i%7==0){
+	 			// 			sum=sum+i;
+	 			// 			arr.push(i);
+	 			// 		}
+	 			// 		else{
+	 			// 			sum1=sum1+i;
+	 			// 			arr1.push(i);	
+	 			// 	}
+	 			// }	
+	 			// 	document.write("能被7整除的数有:"+arr+"<br />");
+	 			// 	document.write("能被7整除的数的总和为:"+sum+"<br />");
+	 			// 	document.write("不能被7整除的数有:"+arr1+"<br />");
+	 			// 	document.write("不能被7整除的数的总和为:"+sum1);
+
+	 				// var sum = 0;
+	 				// for(var i = 1;i<=100;i++){
+	 				// 	sum= sum+i;
+	 				// }
+	 				// document.write("0-100的累加和为:"+sum);
+
+	 				// var arr = [];
+	 				// for(var i = 1;i<=100;i++){
+	 				// 	if(i%6==0){
+	 				// 		arr.push(i);
+	 				// 	}
+	 				// }
+	 				// document.write("6的倍数有:"+arr+"<br />");
+	 				// document.write("6的倍数的个数为:"+arr.length);
+
+
+	 				// var arr = [];
+	 				// var a = 781;
+	 				// for(var i = 1;i<=781;i++){
+	 				// 	if(a%i==0){
+	 				// 		arr.push(i);
+	 				// 	}
+	 				// }
+	 				// if(arr.length>2){
+	 				// 	alert("781的因数不止2个,所以他不是质数");
+	 				// }
+	 				// document.write("781的因数有:"+arr+"<br />");
+	 				// document.write("781的因数有:"+arr.length+"个.");
+
+	 				// var a = prompt("请输入第一个数:");
+	 				// var b = prompt("请输入第二个数:");
+	 				// var c = prompt("请输入第三个数:");
+	 				// document.write(Math.max(a,b,c));
+
+	 				// for(var i = 1;i<10;i++){
+	 				// 	for(var j = 1;j<=i;j++){
+	 				// 		document.write("* ");
+	 				// 	}
+	 				// 	document.write("<br />");
+	 				// }
+	 				
+	 				// Object对象的声明,赋值及使用;
+	 				// var xiaoming = new Object();
+	 				// xiaoming.age = 19;
+	 				// xiaoming.name = "xm";
+	 				// xiaoming.gender = "男";
+	 				// xiaoming.aihao = "女";
+	 				// alert("小明的性别:"+xiaoming.gender);
+
+//	 				 数组的创建和赋值;
+//	 				var arr = ["张三"."李四","王五","马六"];
+//	 				for(var i = 0;i<arr.length;i++){
+//	 					document.write(arr[i]+"<br />");
+//	 				}
+//	 				document.write("数组的长度为:"+arr.length+"<br />");
+//	 				document.write(arr.join("*"));
+//		 			var arr = ["张三","李四","王五","赵六"];
+//		 			document.write(arr[2]);
+
+	 	</script>
+</head>
+<body>
+	
+</body>
+</html>

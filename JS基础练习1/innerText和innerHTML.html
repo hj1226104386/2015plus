@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>innerText和innerHTML的区别</title>
+</head>
+<body>
+    <div id="demo" >
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <script>
+        var demo = document.getElementById("demo");
+        setInnerText(demo,"小公主");
+//        console.log(demo.textContent);
+        /*if(typeof demo.innerText ==="string"){
+            document.write("有innerText属性");
+        }else {
+            document.write("没有innerText属性");
+        }*/
+
+        //更严谨合理的判断是否有这个属性的方法;
+        /*if(typeof demo.textContent === "string"){
+            document.write("有textContent属性");
+        }else {
+            document.write("没有textContent属性");
+        }*/
+
+        //封装兼容所有浏览器的函数;
+        /*function getInnerText(element){
+            if(typeof element.innerText === "string"){
+                document.write("有innerText属性");
+                return element.innerText;
+            }else {
+                document.write("没有innerText属性,支持textContent");
+                return element.textContent;
+            }
+        }*/
+
+        //封装设置元素内部文本代码的函数;
+        function setInnerText(element,content){
+            if(typeof element.innerText === "string"){
+                document.write("支持innerText属性");
+                element.innerText = content;
+                return element.innerText;
+            }else {
+                document.write("不支持innerText属性,支持textContent属性");
+                element.innerText = content;
+                return element.textContent;
+            }
+        }
+    </script>
+</body>
+</html>
