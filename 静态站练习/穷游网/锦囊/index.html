@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>锦囊</title>
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/CSS.css"/>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/my.js"></script>
+    <script src="js/my2.js"></script>
+
+</head>
+<body>
+<!--nav Begin-->
+<div class="nav">
+    <div class="fl">
+        <a href="../首页.html" class="logo"><img src="images/logo_116x36.png" alt="穷游logo"/></a>
+    </div>
+    <ul class="nav_item">
+        <li><a href="#">目的地</a></li>
+        <li><a href="#">锦囊</a></li>
+        <li><a href="#">行程助手</a></li>
+        <li><a href="#" class="arrow community">社区 <i><s>◇</s></i></a>
+            <div class="s_arr"></div>
+            <div class="community_down">
+                <ul>
+                    <li><a href="#"><i></i>旅行论坛 <s>></s></a></li>
+                    <li><a href="#"><i></i>旅行问答</a></li>
+                    <li><a href="#"><i></i>JNE旅行生活美学</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">最世界·自由行</a></li>
+        <li><a href="#">机票</a></li>
+        <li><a href="#">酒店</a></li>
+        <li><a href="#" class="arrow reseve">预定 <i><s>◇</s></i></a>
+            <div class="reseve_arr"></div>
+            <div class="reseve_down">
+                <ul>
+                    <li><a href="#"><i></i> 特价酒店</a></li>
+                    <li><a href="#"><i></i> 保险</a></li>
+                    <li><a href="#"><i></i> 华人旅馆</a></li>
+                    <li><a href="#"><i></i> 邮轮</a></li>
+                    <li><a href="#"><i></i> 租车</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--nav End-->
+<!--search  Begin-->
+<div class="sea_title w">
+    <img src="images/jn_title.png" alt=""/>
+    <input type="text" placeholder="搜索穷游锦囊" class="inp_search" />
+    <i class="s_logo"></i>
+    <img src="images/ic_close_g.png" alt="" class="close"/>
+</div>
+<!--search  End-->
+<!--左侧导航栏切换     Begin-->
+
+<div class="banner w">
+    <div class="navbox fl">
+        <div class="navb_item">
+            <span class="n_i_title">亚洲</span>
+            <span class="n_i_num">108</span>
+        </div>
+        <div class="navb_item">
+            <span class="n_i_title">欧洲</span>
+            <span class="n_i_num">100</span>
+        </div>
+        <div class="navb_item">
+            <span class="n_i_title">北美洲</span>
+            <span class="n_i_num">43</span>
+        </div>
+        <div class="navb_item">
+            <span class="n_i_title">南美洲</span>
+            <span class="n_i_num">15</span>
+        </div>
+        <div class="navb_item">
+            <span class="n_i_title">大洋洲</span>
+            <span class="n_i_num">24</span>
+        </div>
+        <div class="navb_item">
+            <span class="n_i_title">非洲</span>
+            <span class="n_i_num">24</span>
+        </div>
+        <div class="navb_item">
+            <span class="n_i_title">南极洲</span>
+            <span class="n_i_num">8</span>
+        </div>
+        <div class="navb_item">
+            <span class="n_i_title"> 专题锦囊</span>
+            <span class="n_i_num">21</span>
+        </div>
+        <div class="navb_item">
+            <span class="n_i_title">中国内地</span>
+            <span class="n_i_num">264</span>
+        </div>
+        <div class="erWeiMa">
+            <a href="#"><i class="s_icon"><img src="images/icon_guide_app_g.png" alt=""/></i></a>
+            <a href="#" class="tilie_text fr">穷游锦囊APP</a>
+            <img src="images/qrcode_logo.png" alt=""/>
+        </div>
+        <div class="products">
+            <div class="main" >
+                <img src="images/05.png" alt="" />
+            </div>
+            <div class="main" >
+                <img src="images/06.png" alt=""/>
+            </div>
+            <div class="main" >
+                <img src="images/07.png" alt=""/>
+            </div>
+            <div class="main" >
+                <img src="images/08.png" alt=""/>
+            </div>
+            <div class="main" >
+                <img src="images/09.png" alt=""/>
+            </div>
+            <div class="main" >
+                <img src="images/13.png" alt=""/>
+            </div>
+            <div class="main" >
+                <img src="images/10.png" alt=""/>
+            </div>
+            <div class="main" >
+                <img src="images/11.png" alt=""/>
+            </div>
+            <div class="main" >
+                <img src="images/12.png" alt=""/>
+            </div>
+        </div>
+    </div>
+<!--左侧导航栏切换     End-->
+<!--轮播图 Begin-->
+    <div class="bigbox fr" id="box">
+        <div class="screen">
+            <ul>
+                <li><img src="images/670_446(1).jpg" alt=""/></li>
+                <li><img src="images/670_446(2).jpg" alt=""/></li>
+                <li><img src="images/670_446(3).jpg" alt=""/></li>
+                <li><img src="images/670_446(4).jpg" alt=""/></li>
+                <li><img src="images/670_446.jpg" alt=""/></li>
+            </ul>
+            <ol></ol>
+        </div>
+        <div id="arr"><span id="left">&lt;</span><span id="right">&gt;</span></div>
+    </div>
+</div>
+<!--轮播图 End-->
+<!--编辑推荐（recommend）  Begin-->
+<div class="recommend w ">
+    <h3 class="r_title">编辑推荐</h3>
+    <ul class="r_content clearfix">
+        <li class="r_c_item shadow">
+            <div class="pic"><a href="#"><img src="images/260_390.jpg" alt=""/></a></div>
+            <p class="tit"><a href="#">巴西</a></p>
+            <p class="download "><input type="button" value="点击下载"/></p>
+        </li>
+        <li class="r_c_item shadow">
+            <div class="pic"><a href="#"><img src="images/260_390(1).jpg" alt=""/></a></div>
+            <p class="tit"><a href="#">纳米比亚</a></p>
+            <p class="download "><input type="button" value="点击下载"/></p>
+        </li>
+        <li class="r_c_item shadow">
+            <div class="pic"><a href="#"><img src="images/260_390(2).jpg" alt=""/></a></div>
+            <p class="tit"><a href="#">耶路撒冷</a></p>
+            <p class="download "><input type="button" value="点击下载"/></p>
+        </li>
+        <li class="r_c_item shadow">
+            <div class="pic"><a href="#"><img src="images/260_390(3).jpg" alt=""/></a></div>
+            <p class="tit"><a href="#">曼谷</a></p>
+            <p class="download "><input type="button" value="点击下载"/></p>
+        </li>
+        <li class="r_c_item shadow">
+            <div class="pic"><a href="#"><img src="images/260_390(4).jpg" alt=""/></a></div>
+            <p class="tit"><a href="#">雅典</a></p>
+            <p class="download "><input type="button" value="点击下载"/></p>
+        </li>
+        <li class="r_c_item noborder shadow">
+            <div class="pic"><a href="#"><img src="images/260_390(5).jpg" alt=""/></a></div>
+            <p class="tit"><a href="#">斯里兰卡</a></p>
+            <p class="download "><input type="button" value="点击下载"/></p>
+        </li>
+    </ul>
+</div>
+
+<!--编辑推荐  End-->
+<!--全部锦囊 B-->
+<div class="content w">
+    <h3 class="r_title ">全部锦囊</h3>
+    <ul class="con_main clearfix">
+        <li class="con_item">
+        <div class="pic">
+            <a href="#"><img src="images/260_390(6).jpg" alt=""/></a>
+            <div class="pic_mask">
+                <a href="#">
+                    <input type="button" value="点击下载"class="c_download"/>
+                    <p class="pic_msg"><a href="#">苏黎世</a></p>
+                    <p class="pic_msg"><a href="#">瑞士</a></p>
+                    <p class="pic_msg"><a href="#">2016-09-30更新</a></p>
+                </a>
+            </div>
+        </div>
+    </li>
+        <li class="con_item">
+            <div class="pic">
+                <a href="#"><img src="images/260_390(11).jpg" alt=""/></a>
+                <div class="pic_mask">
+                    <a href="#">
+                        <input type="button" value="点击下载"class="c_download"/>
+                        <p class="pic_msg"><a href="#">布列塔尼</a></p>
+                        <p class="pic_msg"><a href="#">法国</a></p>
+                        <p class="pic_msg"><a href="#">2016-09-30更新</a></p>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="con_item">
+            <div class="pic">
+                <a href="#"><img src="images/260_390(7).jpg" alt=""/></a>
+                <div class="pic_mask">
+                    <a href="#">
+                        <input type="button" value="点击下载"class="c_download"/>
+                        <p class="pic_msg"><a href="#">温哥华</a></p>
+                        <p class="pic_msg"><a href="#">加拿大</a></p>
+                        <p class="pic_msg"><a href="#">2016-09-30更新</a></p>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="con_item">
+            <div class="pic">
+                <a href="#"><img src="images/260_390(8).jpg" alt=""/></a>
+                <div class="pic_mask">
+                    <a href="#">
+                        <input type="button" value="点击下载"class="c_download"/>
+                        <p class="pic_msg"><a href="#">新墨西哥州</a></p>
+                        <p class="pic_msg"><a href="#">美国</a></p>
+                        <p class="pic_msg"><a href="#">2016-09-30更新</a></p>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="con_item">
+            <div class="pic">
+                <a href="#"><img src="images/260_390(9).jpg" alt=""/></a>
+                <div class="pic_mask">
+                    <a href="#">
+                        <input type="button" value="点击下载"class="c_download"/>
+                        <p class="pic_msg"><a href="#">卢瓦尔河谷</a></p>
+                        <p class="pic_msg"><a href="#">法国</a></p>
+                        <p class="pic_msg"><a href="#">2016-09-30更新</a></p>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="con_item">
+        <div class="pic">
+            <a href="#"><img src="images/260_390(10).jpg" alt=""/></a>
+            <div class="pic_mask">
+                <a href="#">
+                    <input type="button" value="点击下载"class="c_download"/>
+                    <p class="pic_msg"><a href="#">法国阿尔卑斯</a></p>
+                    <p class="pic_msg"><a href="#">法国</a></p>
+                    <p class="pic_msg"><a href="#">2016-09-30更新</a></p>
+                </a>
+            </div>
+        </div>
+    </li>
+        <li class="con_item">
+            <div class="pic">
+                <a href="#"><img src="images/260_390(12).jpg" alt=""/></a>
+                <div class="pic_mask">
+                    <a href="#">
+                        <input type="button" value="点击下载"class="c_download"/>
+                        <p class="pic_msg"><a href="#">台北</a></p>
+                        <p class="pic_msg"><a href="#">港澳台</a></p>
+                        <p class="pic_msg"><a href="#">2016-09-30更新</a></p>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="con_item">
+            <div class="pic">
+                <a href="#"><img src="images/260_390(13).jpg" alt=""/></a>
+                <div class="pic_mask">
+                    <a href="#">
+                        <input type="button" value="点击下载"class="c_download"/>
+                        <p class="pic_msg"><a href="#">佛罗伦萨</a></p>
+                        <p class="pic_msg"><a href="#">意大利</a></p>
+                        <p class="pic_msg"><a href="#">2016-09-29更新</a></p>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="con_item">
+            <div class="pic">
+                <a href="#"><img src="images/260_390(14).jpg" alt=""/></a>
+                <div class="pic_mask">
+                    <a href="#">
+                        <input type="button" value="点击下载"class="c_download"/>
+                        <p class="pic_msg"><a href="#">马达加斯加</a></p>
+                        <p class="pic_msg"><a href="#">马达加斯加</a></p>
+                        <p class="pic_msg"><a href="#">2016-09-29更新</a></p>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="con_item">
+            <div class="pic">
+                <a href="#"><img src="images/260_390(15).jpg" alt=""/></a>
+                <div class="pic_mask">
+                    <a href="#">
+                        <input type="button" value="点击下载"class="c_download"/>
+                        <p class="pic_msg"><a href="#">里斯本</a></p>
+                        <p class="pic_msg"><a href="#">葡萄牙</a></p>
+                        <p class="pic_msg"><a href="#">2016-09-30更新</a></p>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="con_item">
+            <div class="pic">
+                <a href="#"><img src="images/260_390(16).jpg" alt=""/></a>
+                <div class="pic_mask">
+                    <a href="#">
+                        <input type="button" value="点击下载"class="c_download"/>
+                        <p class="pic_msg"><a href="#">北海道美食</a></p>
+                        <p class="pic_msg"><a href="#">日本</a></p>
+                        <p class="pic_msg"><a href="#">2016-09-30更新</a></p>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="con_item">
+            <div class="pic">
+                <a href="#"><img src="images/260_390(17).jpg" alt=""/></a>
+                <div class="pic_mask">
+                    <a href="#">
+                        <input type="button" value="点击下载"class="c_download"/>
+                        <p class="pic_msg"><a href="#">马耳他</a></p>
+                        <p class="pic_msg"><a href="#">马耳他</a></p>
+                        <p class="pic_msg"><a href="#">2016-09-29更新</a></p>
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!--全部锦囊 E-->
+
+<!--页脚 B-->
+<div class="foot">
+    <p class="text">穷游锦囊是穷游网推出的原创旅游指南，致力于为旅行者提供实用的自助游攻略，包括美食购物、交通住宿、路线推荐、自驾路书、当地特色体验等，是出境游必不可少的旅游攻略。</p>
+    <div class="w">
+        <ul class="fo_service clearfix">
+            <li><a href="#">穷游简介</a></li>
+            <li><a href="#">合作伙伴</a></li>
+            <li><a href="#">加入我们</a></li>
+            <li><a href="#">新手上路</a></li>
+            <li><a href="#">使用帮助</a></li>
+            <li><a href="#">网站地图</a></li>
+            <li><a href="#">会员条款</a></li>
+            <li><a href="#">社区指南</a></li>
+            <li><a href="#">版权声明</a></li>
+            <li><a href="#">免责声明</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+        <p class="copyright">2004-2016 © 穷游网® qyer.com All rights reserved. Version v5.57 京ICP备12003524号 京公网安备11010102001935号 京ICP证140673号</p>
+        <p class="link">友情链接<span>游多多旅游攻略 &nbsp;|</span><span>超级自由行&nbsp;|</span><span>自助游攻略</span></p>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<!--页脚 E-->
+
+</body>
+</html>

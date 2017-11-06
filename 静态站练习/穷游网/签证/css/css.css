@@ -1,0 +1,919 @@
+/*topnav B*/
+.topnav {
+    width: 100%;
+    /*height: 33px;*/
+    background-color: #323232;
+    font: 700 14px/30px "Microsoft YaHei";
+}
+
+.topnav a {
+    color: #C0C0C0;
+}
+
+.topnav a:hover {
+    color: #10B03A;
+}
+
+.tLeft {
+    width: 750px;
+    /*background-color: pink;*/
+    margin-left: 14px;
+}
+
+.tLeft .tLli {
+    float: left;
+    color: #C0C0C0;
+}
+
+.tLeft .tLli a {
+    padding: 0 16px;
+}
+
+.tLeft .green {
+    color: #10B03A;
+}
+
+.tLeft .tLli a img {
+    width: 58px;
+    height: 18px;
+}
+
+#commu {
+    position: relative;
+}
+
+.xiasanjiao {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid #323232;
+    border-left: 4px solid #323232;
+    border-right: 4px solid #323232;
+    border-bottom: 5px solid white;
+    display: none;
+}
+
+.comfirstA {
+    position: relative;
+    z-index: 1;
+}
+
+.comfirstA i, .reserveSpan1 i {
+    font-size: 30px;
+    position: absolute;
+    top: -16px;
+    left: 0px;
+}
+
+.comfirstA s, .reserveSpan1 s {
+    width: 18px;
+    height: 15px;
+    position: absolute;
+    top: 7px;
+    left: 45px;
+    overflow: hidden;
+}
+
+#reserve .reserveSpan1 s {
+    top: 12px;
+    left: 30px;
+}
+
+#commu .community {
+    width: 185px;
+    height: 103px;
+    padding-top: 10px;
+    border: 1px solid #F6F6F6;
+    border-radius: 3px;
+    background-color: white;
+    position: absolute;
+    font-family: "Hiragino Sans GB";
+    display: none;
+    z-index: 1;
+}
+
+#commu .community .communA {
+    display: block;
+    width: 165px;
+    line-height: 30px;
+    color: #636363;
+    padding: 0;
+    padding-left: 20px;
+}
+
+#commu .community i {
+    margin-left: 5px;
+}
+
+#commu .community a:hover {
+    color: #636363;
+    background-color: #E3FAE1;
+}
+
+.tourforum {
+    width: 610px;
+    height: 352px;
+    background-color: white;
+    padding: 0 20px;
+}
+
+.tourforum thead tr {
+    height: 43px;
+    line-height: 43px;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.allforum {
+    float: right;
+}
+
+#commu .allforum a:hover {
+    padding: 0px;
+    background-color: white;
+    color: #10B03A;
+}
+
+.tourforum {
+    color: #636363;
+    border: 1px solid #F6F6F6;
+    border-radius: 3px;
+    position: absolute;
+    top: 0px;
+    left: 186px;
+    display: none;
+}
+
+.tourforum a {
+    color: #636363;
+}
+
+.tourforum tbody tr {
+    border-bottom: 1px dashed #EDEDED;
+}
+
+.tourforum .toptd1 {
+    padding: 5px 0;
+    width: 95px;
+}
+
+.tourforum .toptd2 a {
+    display: inline-block;
+    padding: 5px 5px 0;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 3px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+#reserve {
+    position: relative;
+}
+
+#reserve span:hover {
+    color: #10B03A;
+}
+
+#reserve .xiasanjiao {
+    left: 11px;
+}
+
+.reserveBox {
+    width: 125px;
+    padding-top: 10px;
+    border: 1px solid #F6F6F6;
+    border-radius: 3px;
+    background-color: white;
+    position: absolute;
+    font-family: "Hiragino Sans GB";
+    display: none;
+    z-index: 1;
+}
+
+.reserveBox a {
+    display: block;
+    width: 94px;
+    line-height: 30px;
+    color: #636363;
+    padding: 0;
+    padding-left: 20px;
+}
+
+.reserveBox a:hover {
+    color: #636363;
+    background-color: #E3FAE1;
+
+}
+
+.tRight {
+    width: 300px;
+    height: 30px;
+    /*background-color: yellow;*/
+}
+
+.tRight li {
+    color: #C0C0C0;
+    padding: 0 7px;
+    float: left;
+}
+
+.tRight .topsearch, .imformSearch i {
+    margin-top: 8px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url("../imgs/inputicons.png") no-repeat 0 -306px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.imformSearch i {
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    right: 25px;
+}
+
+.tRfristli {
+    position: relative;
+}
+
+.tRight input {
+    /*width: 260px;*/
+    width: 0px;
+    height: 20px;
+    background-color: white;
+    border-radius: 3px;
+    position: absolute;
+    top: 5px;
+    /*left: -235px;*/
+    left: 25px;
+    font-size: 14px;
+    /*padding-left: 5px;*/
+    padding-left: 0px;
+    display: none;
+}
+
+.tRight .shu {
+    margin-top: 8px;
+    display: block;
+    width: 1px;
+    height: 13px;
+    background: url("../imgs/line2.png") no-repeat;
+}
+
+/*topnav E*/
+/*search B*/
+.toplogo {
+    /*width: 236px;*/
+    height: 88px;
+    /*background-color: pink;*/
+}
+
+.toplogo img {
+    margin: 29px 60px 0 0;
+    width: 118px;
+    height: 30px;
+}
+
+.sCenter {
+    width: 690px;
+    height: 100%;
+    /*background-color: green;*/
+}
+
+.sCbor {
+    margin-top: 24px;
+    background-color: #F0F0F0;
+    width: 683px;
+    height: 40px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.sCseach {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url("../imgs/inputicons.png") no-repeat 0 -306px;
+    position: absolute;
+    top: 12px;
+    left: 15px;
+}
+
+.sCbor input {
+    margin-left: 35px;
+    width: 620px;
+    height: 100%;
+    font-size: 14px;
+    background-color: #F0F0F0;
+}
+
+.mycollect {
+    width: 210px;
+    height: 100%;
+    margin-right: 25px;
+    /*background-color: blue;*/
+    font-size: 12px;
+    color: #BBB;
+}
+
+.mycollect ul {
+    margin-top: 32px;
+    height: 26px;
+    /*background-color: #10B03A;*/
+}
+
+.mycollect li {
+    float: left;
+    padding: 0 12px;
+}
+
+.mycollect a {
+    color: #BFBFBF;
+}
+
+.mycollect .myfc {
+    border-right: 1px solid #BFBFBF;
+}
+
+.mycollect i {
+    display: inline-block;
+    width: 19px;
+    height: 18px;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+.order {
+    background: url("../imgs/dingdan.png") no-repeat;
+}
+
+.collext {
+    background: url("../imgs/shoucang.png") no-repeat;
+}
+
+/*search E*/
+/*nav B*/
+.nav {
+    /*height: 52px;*/
+    /*background-color: #ac7cff;*/
+    padding-left: 2px;
+}
+
+.nav li {
+    float: left;
+    padding: 0 8px;
+}
+
+.nav a {
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    color: #323232;
+    font: 400 14px/51px "Microsoft YaHei";
+    border-bottom: 2px solid white;
+}
+
+.nav a:hover {
+    color: #12AF7E;
+    border-bottom: 2px solid #12AF7E;
+}
+
+/*nav e*/
+/*main B*/
+.main {
+    height: 460px;
+    background-color: #f0ff73;
+    border-top: 2px solid #12AF7E;
+    position: relative;
+}
+
+/*carousel B*/
+.carousel {
+    overflow: hidden;
+}
+
+.carousel ul {
+    width: 19999px;
+    position: relative;
+}
+
+.carousel li {
+    float: left;
+}
+
+.carousel li img {
+    width: 1920px;
+    height: 460px;
+}
+
+.arrowsleft, .arrowsright {
+    width: 38px;
+    height: 70px;
+    font: 400 70px/70px "consolas";
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    cursor: pointer;
+    color: white;
+}
+
+.arrowsleft {
+    /*background: url("../imgs/zuo.png");*/
+    left: 20px;
+}
+
+.arrowsright {
+    /*background: url("../imgs/you.png");*/
+    right: 20px;
+}
+
+.littlenav {
+    position: relative;
+    left: 70%;
+    bottom: 15px;
+    z-index: 1;
+}
+
+.littlenav i {
+    float: left;
+    width: 40px;
+    height: 5px;
+    background-color: black;
+    opacity: 0.5;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.littlenav .chick {
+    background-color: #ff7107;
+}
+
+/*carousel e*/
+.imform {
+    width: 244px;
+    /*height: 389px;*/
+    background-color: #ffffff;
+    position: absolute;
+    top: 10px;
+    left: 460px;
+}
+
+.imform .imformSearch {
+    margin: 10px 0 15px 15px;
+    position: relative;
+
+}
+
+.imform input {
+    width: 184px;
+    height: 36px;
+    border-radius: 18px;
+    font-size: 14px;
+    padding: 0 15px;
+    background-color: #F5F5F5;
+}
+
+.imform li {
+    margin-top: 3px;
+    padding-left: 15px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.imform h3 {
+    color: #323232;
+    font: 700 16px/24px "Microsoft YaHei";
+}
+
+.imform a {
+    display: inline-block;
+    margin-right: 22px;
+    line-height: 18px;
+    font-size: 14px;
+    color: #636363;
+}
+
+.imform a:hover {
+    color: #12AF7E;
+    text-decoration: underline;
+}
+
+.imformUlli1, .imformUlli2 {
+    position: relative;
+}
+
+.imformUlli1:hover, .imformUlli2:hover {
+    background-color: #f0f0f0;
+}
+
+.imformUlli1 i, .imformUlli2 i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -10px;
+    color: #00c29f;
+    font: 400 25px "consolas";
+}
+
+.imformUlli1:hover i, .imformUlli2:hover i {
+    color: #c0c0c0;
+}
+
+#imUlliBox1, #imUlliBox2 {
+    width: 300px;
+    height: 240px;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 0px;
+    left: 244px;
+    padding: 0 25px;
+    display: none;
+}
+
+#imUlliBox1 h2, #imUlliBox2 h2 {
+    width: 100%;
+    border-bottom: 1px solid #ececec;
+    font: 700 22px/52px "Microsoft YaHei";
+    color: #323232;
+    margin-bottom: 20px;
+}
+
+/*main e*/
+/*nations B*/
+.nabgc {
+    background-color: #F5F5F5;
+}
+
+.bigbox {
+    width: 976px;
+    padding: 0 92px;
+}
+
+.nations {
+
+}
+
+.nHead {
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.nHead p {
+    font: 400 28px/50px "Microsoft YaHei";
+    color: #323232;
+    padding-left: 15px;
+}
+
+.nImages {
+    margin-top: 30px;
+    height: 484px;
+    /*background-color: pink;*/
+}
+
+.nBox {
+    width: 232px;
+    margin-bottom: 30px;
+    position: relative;
+    float: left;
+    margin-right: 9px;
+}
+
+.nBox img {
+    width: 232px;
+    height: 154px;
+}
+
+.tophei {
+    width: 232px;
+    height: 154px;
+    background-color: #000;
+    opacity: 0.5;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    display: none;
+}
+
+.nBox span {
+    width: 116px;
+    height: 40px;
+    position: absolute;
+    top: 57px;
+    left: 57px;
+    border: 1px solid #fff;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    display: none;
+}
+
+.nBotton {
+    height: 58px;
+    background-color: white;
+}
+
+.nBotton s {
+    font: 400 22px/58px "Microsoft YaHei";
+    color: #323232;
+    float: left;
+    margin-left: 12px;
+}
+
+.nBotton em {
+    float: right;
+    margin-right: 12px;
+}
+
+.nBotton i {
+    color: #FF7466;
+    font: 400 22px/58px "Microsoft YaHei";
+}
+
+.flag .icon {
+    float: left;
+    width: 100px;
+    margin-right: 62px;
+    overflow: hidden;
+}
+
+.flag .icon img {
+    width: 98px;
+    height: 65px;
+    border: 1px solid #EBEBEB;
+}
+
+.flag .name {
+    line-height: 45px;
+    text-align: center;
+    color: #323232;
+}
+
+.fCourse {
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.fCourse ul {
+    width: 1200px;
+}
+
+.fCourse li {
+    float: left;
+    width: 75px;
+    text-align: center;
+    margin-right: 109px;
+    /*width: 186px;*/
+    position: relative;
+}
+
+.fCourse i {
+    display: block;
+    width: 26px;
+    height: 26px;
+    background-color: #9989ff;
+}
+
+.fCourse s {
+    display: block;
+    font: 400 16px/28px "Microsoft YaHei";
+}
+
+.fCourse em {
+    position: absolute;
+    right: -55px;
+    top: 0px;
+    font: 400 28px "consolas";
+}
+
+/*accordion B*/
+.aBox {
+    height: 363px;
+    background-color: #91ffd2;
+    position: relative;
+    left: -92px;
+    overflow: hidden;
+}
+
+.aUl {
+    width: 300%;
+    height: 363px;
+}
+
+.aUl li {
+    float: left;
+    position: absolute;
+}
+
+/*accordion e*/
+.buttonnav ul {
+    margin-top: 70px;
+    width: 1500px;
+}
+
+.buttonnav li {
+    float: left;
+}
+
+.buttonnav i {
+    display: inline-block;
+    width: 1px;
+    height: 18px;
+    background-color: #E3DFDF;
+    vertical-align: top;
+}
+
+.buttonnav a {
+    padding: 34px;
+    color: #575757;
+    font: 400 18px "Microsoft YaHei";
+}
+
+.buttonnav a:hover {
+    color: #10B03A;
+    text-decoration: underline;
+}
+
+.safeguard ul {
+    padding: 100px 0;
+    width: 1200px;
+}
+
+.safeguard li {
+    float: left;
+    width: 350px;
+    height: 56px;
+}
+
+.sLi1 {
+    background: url("../imgs/foot-feature.png") no-repeat 0 0;
+}
+
+.sLi2 {
+    margin-left: 60px;
+    background: url("../imgs/foot-feature.png") no-repeat 0 -56px;
+}
+
+.sLi3 {
+    margin-left: 60px;
+    background: url("../imgs/foot-feature.png") no-repeat 0 -112px;
+}
+
+.safeguard h3 {
+    margin-left: 60px;
+    display: block;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 5px;
+}
+
+.safeguard p {
+    margin-left: 60px;
+    display: block;
+    color: #989595;
+    font-size: 12px;
+}
+
+/*nations e*/
+/*foot B*/
+.footbgc {
+    background-color: #333;
+}
+
+.foot {
+    padding-top: 45px;
+    color: #BBBBBB;
+}
+
+.AD {
+    float: left;
+    width: 755px;
+}
+
+.AD img {
+    vertical-align: top;
+}
+
+.AD p {
+    margin-left: 25px;
+    display: inline-block;
+    font-size: 14px;
+    width: 540px;
+    line-height: 26px;
+}
+
+.share {
+    float: right;
+    font-size: 18px;
+    line-height: 48px;
+    color: #ececec;
+    width: 325px;
+}
+
+.share li {
+    margin-left: 10px;
+    float: left;
+}
+
+.bottom {
+    margin: 50px 0;
+}
+
+.bP1 {
+    font-size: 14px;
+    color: #c0c0c0;
+}
+
+.bP1 a {
+    color: #BBBBBB;
+}
+
+.bP1 a:hover {
+    text-decoration: underline;
+}
+
+.bP1 span {
+    margin: 0 18px;
+}
+
+.bP2 {
+    font-size: 12px;
+    line-height: 26px;
+}
+
+/*foot e*/
+/*down B*/
+.down {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    color: #D7CAA4;
+}
+
+.downbgc {
+    height: 70px;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.downtop {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -400px;
+}
+
+.downtop img {
+    margin-right: 10px;
+}
+
+.downtop .downinp1 {
+    background-color: #DA371F;
+    margin-right: 10px;
+}
+
+.downtop .downinp2 {
+    background-color: #2B8FC8;
+    margin-right: 10px;
+}
+
+.downtop span {
+    text-decoration: underline;
+    color: #D7CAA4;
+    margin-right: 10px;
+}
+
+.downtop a {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: #5FA678;
+    border-radius: 3px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    opacity: 0.9;
+}
+
+.downtop a:hover, .downinp2:hover, .downinp1:hover {
+    opacity: 1;
+}
+
+.downclose {
+    width: 31px;
+    height: 29px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    border: 1px solid white;
+    font-size: 28px;
+    text-align: center;
+    line-height: 29px;
+}
+
+/*down e*/

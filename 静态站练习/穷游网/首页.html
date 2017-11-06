@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>穷游网首页</title>
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/mycss.css"/>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/commontool.js"></script>
+    <script src="js/myjs.js"></script>
+</head>
+<body>
+<!--头部部分S-->
+<div id="head">
+<div class="head-top">
+    <div class="head-top-left fl">
+        <div class="titlepic fl"><a href="#"></a></div>
+        <ul class="lis">
+            <li><a href="#">目的地</a></li>
+            <li><a href="锦囊/index.html">锦囊</a></li>
+            <li><a href="机酒自由行/index.html">机酒自由行</a></li>
+            <li id="community" class="community"> <a href="#">社区<i class="commu"><s>◇</s></i></a>
+            </li>
+            <li><a href="最世界自由行/freedom.html">最世界·自由行<s class="adsale"></s></a></li>
+            <li><a href="签证/index-Q.html">签证</a></li>
+            <!-- <li><a href="#">酒店</a></li> -->
+            <li id="book"><a href="#">预订<i class="commu"><s>◇</s></i></a></li>
+        </ul>
+        <div class="community-div hide">
+            <ul>
+                <li><span class="c1"></span>旅行论坛</li>
+                <li><span class="c2"></span>旅行问答</li>
+                <li><span class="c3"></span>JNE旅行生活美学</li>
+            </ul>
+        </div>
+        <div class="book-div hide">
+            <ul>
+                <li><span class="c4"></span>特价酒店</li>
+                <li><span class="c5"></span>保险</li>
+                <li><span class="c6"></span>华人旅馆</li>
+                <li><span class="c7"></span>游轮</li>
+                <li><span class="c8"></span>租车</li>
+            </ul>
+        </div>
+    </div>
+    <div class="head-top-right fr">
+        <div class="search">
+            <input id="ss" type="text" class="fr"/>
+        </div>
+        <a class="suosou" href="#"><img src="images/sousuo.png" alt=""/></a>
+        <div class="line fl"></div>
+        <ul>
+            <li><a href="#"><img src="images/qq2.png" alt=""/></a></li>
+            <li><a href="#"><img src="images/weibo2.png" alt=""/></a></li>
+            <li><a href="#"><img src="images/weixin2.png" alt=""/></a></li>
+        </ul>
+        <div class="link">
+            <a href="#">注册</a>
+            <a href="#">登录</a>
+        </div>
+    </div>
+</div>
+    <div class="head-search">
+        <div class="head-search-t">
+            <ul>
+                <li><a href="#">目的地</a></li>
+                <li><a href="#">做行程</a></li>
+                <li><a href="#">买折扣</a></li>
+                <li><a href="#">订酒店</a></li>
+            </ul>
+        </div>
+        <div class="head-search-b">
+            <input class="inp1" type="text" placeholder="意大利"/>
+            <input class="inp2" type="button" value="搜索"/>
+        </div>
+        <div class="bg"></div>
+    </div>
+    <div id="arr">
+        <div id="arrleft" class="fl"><img src="images/left.png" alt=""/></div>
+        <div id="arrright" class="fr"><img src="images/right.png" alt=""/></div>
+    </div>
+</div>
+<!--头部轮播图部分S-->
+<div id="screen" class="rotation">
+    <ul>
+        <li>
+            <a href="#"><img src="images/title03.jpg" alt=""/></a>
+            <div class="describe">
+                <p class="d1">
+                    >穷游锦囊 | 安娜普尔纳地区徒步
+                </p>
+                <p class="d2">雪山、河谷与多样人文，在安娜普尔纳地区用脚步串联。</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/title02.jpg" alt=""/></a>
+            <div class="describe">
+                <p class="d1">
+                    穷游锦囊 | 曼谷周边
+                </p>
+                <p class="d2">这里有曾经辉煌古都的遗迹、壮阔的自然风光，也有安静的海边小镇、热情奔放的不夜城。</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/title01.jpg" alt=""/></a>
+            <div class="describe">
+                <p class="d1">【俄罗斯游记攻略】我心中的诗与远方 俄罗斯行迹</p>
+                <p class="d2">扑朔迷离2008</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/title04.jpg" alt=""/></a>
+            <div class="describe">
+                <p class="d1">
+                    【欧洲游记攻略】重返意法 说走就走的旅行
+                </p>
+                <p class="d2">金色乌鸦</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="images/title05.jpg" alt=""/></a>
+            <div class="describe">
+                <p class="d1">
+                    【摩洛哥游记攻略】北非谍影 一路惊喜摩洛哥
+                </p>
+                <p class="d2">Bobbee</p>
+            </div>
+        </li>
+    </ul>
+
+</div>
+<!--头部轮播图部分E-->
+<!--头部部分E-->
+<!--猜你感兴趣部分S-->
+<div id="interest" class="banxin">
+    <div class="i-top">
+        <a href=""><i></i>换一换</a>
+        <h1>猜你感兴趣</h1>
+    </div>
+    <div id="i-b" class="i-b">
+        <ul>
+            <li>
+                <div class="i-b-t">
+                    <a href="#"><img src="images/i-01.jpg" alt=""/></a>
+                    <div class="midpic">
+                        <i><img src="images/游记.png" alt=""/></i>
+                        <div></div>
+                        <span>微锦囊</span>
+                    </div>
+                    <div class="i-b-mask"></div>
+                </div>
+                <div class="i-b-b">
+                    <a href="#">
+                        <div class="subtitle">
+                            <p>【经典必游】泰国清迈经典美莎(玛莎)大象营+兰花园半日游</p>
+                        </div>
+                        <div class="bottom">
+                            <i>清迈</i>
+                            <span><em>120</em>元起</span>
+                        </div>
+                    </a>
+                    <div class="move">
+                        <div class="i-b-b">
+                            <a href="#">
+                                <div class="subtitle">
+                                    <p>【经典必游】泰国清迈经典美莎(玛莎)大象营+兰花园半日游</p>
+                                </div>
+                                <div class="bottom">
+                                    <i>清迈</i>
+                                    <span><em>120</em>元起</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="support"></div>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <div class="i-b-t">
+                    <a href="#"><img src="images/i-02.jpg" alt=""/></a>
+                    <div class="midpic">
+                        <i><img src="images/景点.png" alt=""/></i>
+                        <div></div>
+                        <span>景点</span>
+                    </div>
+                    <div class="i-b-mask"></div>
+                </div>
+                <div class="i-b-b">
+                    <a href="#">
+                        <div class="subtitle">
+                            <p>【圣诞/元旦/春节假期】上海/广州往返欧洲多地10-15天含税机票</p>
+                        </div>
+                        <div class="bottom">
+                            <i>法兰西...</i>
+                            <span><em>2999</em>元起</span>
+                        </div>
+                    </a>
+                    <div class="move">
+                        <div class="i-b-b">
+                            <a href="#">
+                                <div class="subtitle">
+                                    <p>【圣诞/元旦/春节假期】上海/广州往返欧洲多地10-15天含税机票</p>
+                                </div>
+                                <div class="bottom">
+                                    <i>法兰西...</i>
+                                    <span><em>2999</em>元起</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="support"></div>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <div class="i-b-t">
+                    <a href="#"><img src="images/i-03.jpg" alt=""/></a>
+                    <div class="midpic">
+                        <i><img src="images/景点.png" alt=""/></i>
+                        <div></div>
+                        <span>景点</span>
+                    </div>
+                    <div class="i-b-mask"></div>
+                </div>
+                <div class="i-b-b">
+                    <a href="#">
+                        <div class="subtitle">
+                            <p>看不到人海的甘米银</p>
+                        </div>
+                        <div class="bottom">
+                            <i>rere8282</i>
+                            <span>推荐了5个目的地</span>
+                        </div>
+                    </a>
+                    <div class="move">
+                        <div class="i-b-b">
+                            <a href="#">
+                                <div class="subtitle">
+                                    <p>看不到人海的甘米银</p>
+                                </div>
+                                <div class="bottom">
+                                    <i>rere8282</i>
+                                    <span>推荐了5个目的地</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="support"></div>
+                    </div>
+                </div>
+
+            </li>
+            <li class="login">
+                <h2>让我们更懂你</h2>
+                <p class="account">拥有穷游账号,获得更准确的推荐</p>
+                <input class="nowlogin" type="button" value="立即注册"/>
+                <p class="have">已有账号?<a href="#"> 登录</a></p>
+                <div class="loginstyle">
+                    <a href="#">使用邮箱登录</a>
+                    <a  href="#"><i></i></a>
+                    <a href="#"><s class="log-s"></s></a>
+                    <a href="#"><em></em></a>
+                </div>
+
+            </li>
+            <li>
+                <div class="i-b-t">
+                    <a href="#"><img src="images/i-04.jpg" alt=""/></a>
+                    <div class="midpic">
+                        <i><img src="images/城市.png" alt=""/></i>
+                        <div></div>
+                        <span>城市</span>
+                    </div>
+                    <div class="i-b-mask"></div>
+                </div>
+                <div class="i-b-b">
+                    <a href="#">
+                        <div class="subtitle">
+                            <p>都灵卡斯特罗广场</p>
+                        </div>
+                        <div class="bottom">
+                            <i>都灵景点</i>
+                            <span>当地景点排名第4</span>
+                        </div>
+                    </a>
+                    <div class="move">
+                        <div class="i-b-b">
+                            <a href="#">
+                                <div class="subtitle">
+                                    <p>都灵卡斯特罗广场</p>
+                                </div>
+                                <div class="bottom">
+                                    <i>都灵景点</i>
+                                    <span>当地景点排名第4</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="support"></div>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <div class="i-b-t"><a href="#"><img src="images/i-05.jpg" alt=""/></a>
+                    <div class="midpic">
+                        <i><img src="images/城市.png" alt=""/></i>
+                        <div></div>
+                        <span>城市</span>
+                    </div>
+                    <div class="i-b-mask"></div>
+                </div>
+                <div class="i-b-b">
+                    <a href="#">
+                        <div class="subtitle">
+                            <p>阿讷西城堡博物馆</p>
+                        </div>
+                        <div class="bottom">
+                            <i>阿讷西景点</i>
+                            <span>当地景点排名第6</span>
+                        </div>
+                    </a>
+                    <div class="move">
+                        <div class="i-b-b">
+                            <a href="#">
+                                <div class="subtitle">
+                                    <p>阿讷西城堡博物馆</p>
+                                </div>
+                                <div class="bottom">
+                                    <i>阿讷西景点</i>
+                                    <span>当地景点排名第6</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="support"></div>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <div class="i-b-t"><a href="#"><img src="images/i-06.jpg" alt=""/></a>
+                    <div class="midpic">
+                        <i><img src="images/城市.png" alt=""/></i>
+                        <div></div>
+                        <span>城市</span>
+                    </div>
+                    <div class="i-b-mask"></div>
+                </div>
+                <div class="i-b-b">
+                    <a href="#">
+                        <div class="subtitle">
+                            <p>带孩子去远行（北海道慢心之旅）</p>
+                        </div>
+                        <div class="bottom">
+                            <i>两宝爸爸</i>
+                            <span>7793人浏览过</span>
+                        </div>
+                    </a>
+                    <div class="move">
+                        <div class="i-b-b">
+                            <a href="#">
+                                <div class="subtitle">
+                                    <p>带孩子去远行（北海道慢心之旅）</p>
+                                </div>
+                                <div class="bottom">
+                                    <i>两宝爸爸</i>
+                                    <span>7793人浏览过</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="support"></div>
+                    </div>
+                </div>
+
+            </li>
+            <li class="last">
+                <div class="i-b-t"><a href="#"><img src="images/i-07.jpg" alt=""/></a>
+                    <div class="midpic">
+                        <i><img src="images/折扣.png" alt=""/></i>
+                        <div></div>
+                        <span>折扣</span>
+                    </div>
+                    <div class="i-b-mask"></div>
+                </div>
+                <div class="i-b-b">
+                    <a href="#">
+                        <div class="subtitle">
+                            <p>【对世界上瘾】记忆中的美好，暖心比利时（完结，8k字+150图）</p>
+                        </div>
+                        <div class="bottom">
+                            <i>laurie_hou</i>
+                            <span>7358人浏览过</span>
+                        </div>
+                    </a>
+                    <div class="move">
+                        <div class="i-b-b">
+                            <a href="#">
+                                <div class="subtitle">
+                                    <p>【对世界上瘾】记忆中的美好，暖心比利时（完结，8k字+150图）</p>
+                                </div>
+                                <div class="bottom">
+                                    <i>laurie_hou</i>
+                                    <span>7358人浏览过</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="support"></div>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</div>
+<!--猜你感兴趣部分E-->
+<!--立即注册模态框部分S-->
+<div id="frame">
+    <div class="regester">
+        <div class="reg-top">
+            <span class="cr">注册</span>
+            <span class="sc">×</span>
+        </div>
+        <div class="reg-type">
+            <h3 class="ry3 fl">邮箱注册</h3>
+            <h3 class="rs3 fr">手机注册</h3>
+        </div>
+        <div class="reg-content hideA">
+            <div>
+                <input class="r-inp1" type="text" placeholder="输入用于登录的邮箱地址"/>
+            </div>
+            <span class="r-sp1"></span>
+            <div class="reg-pic clearfix">
+                <input class="r-inp2" type="text" placeholder="图片识别码"/>
+                <i></i>
+            </div>
+            <span class="r-sp2"></span>
+            <div class="reg-code clearfix">
+                <input class="r-inp3" type="text" placeholder="输入邮件中的验证码"/>
+                <input class="r-inp4" type="button" value="发送验证码"/>
+            </div>
+            <span class="r-sp3"></span>
+            <div class="reg-name">
+                <input class="r-inp5" type="text" placeholder="起一个具有辨识度的用户名"/>
+                <span>注:用户名暂不支持更改</span>
+            </div>
+            <input class="r-inp6" type="password" placeholder="输入8-16位密码,需包含字母及数字"/>
+            <span class="r-sp5"></span>
+            <input class="r-inp7" type="button" value="注册"/>
+            <div class="reg-over">
+                <p class="fl">已有穷游账号? <a href="#">登录</a></p>
+                <p class="fr">同意<a href="#">会员条款</a>和<a href="#">免责声明</a></p>
+            </div>
+        </div>
+        <div class="reg-content hideB hide">
+            <div class="reg-phone">
+                <select name="" id="">
+                    <option value="86" selected>86</option>
+                    <option value="51">51</option>
+                    <option value="51">37</option>
+                    <option value="51">609</option>
+                </select>
+                <input class="r-inp8" type="text" placeholder="输入用于登录的手机号码"/>
+
+            </div>
+            <span class="r-sp1"></span>
+            <div class="reg-pic clearfix">
+                <input class="r-inp2" type="text" placeholder="图片识别码"/>
+                <i></i>
+            </div>
+            <span class="r-sp2"></span>
+            <div class="reg-code clearfix">
+                <input class="r-inp3" type="text" placeholder="输入短信中的验证码"/>
+                <input class="r-inp4" type="button" value="发送验证码"/>
+            </div>
+            <span class="r-sp3"></span>
+            <div class="reg-name">
+                <input class="r-inp5" type="text" placeholder="起一个具有辨识度的用户名"/>
+                <span>注:用户名暂不支持更改</span>
+            </div>
+            <div>
+                <input class="r-inp6" type="password" placeholder="输入8-16位密码,需包含字母及数字"/>
+            </div>
+            <span class="r-sp5"></span>
+            <input class="r-inp7" type="button" value="注册"/>
+            <div class="reg-over">
+                <p class="fl">已有穷游账号? <a href="#">登录</a></p>
+                <p class="fr">同意<a href="#">会员条款</a>和<a href="#">免责声明</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--立即注册模态框部分E-->
+<!--最世界自由行部分S-->
+<div class="fligt banxin">
+    <img src="images/123.jpg" alt=""/>
+</div>
+<div class="zyworld">
+    <h2 class="zytitle"><img src="images/zworld-title.png" alt=""/></h2>
+    <div id="zyw_tp" class="zw-top banxin">
+        <ul>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/01.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr ">
+                    <h2>香港/澳门直飞帕劳5/6天<br />自由行(多酒店可选/赠中文</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">自由行</a>
+                        <span>2016/01-2017/01</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">2599</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/02.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr ">
+                    <h2>泰国普吉岛原始森林嗨翻天<br />飞跃自由行</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">嗨玩乐</a>
+                        <span>2015/04-2016/04</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">280</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/03.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr">
+                    <h2>元旦特惠,天津直飞<br />大畈6-7天往返含税机票</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">机票</a>
+                        <span>2016/08-2017/01</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">699</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/04.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr ">
+                    <h2>台湾花莲花东纵谷拼车一<br />日游(1人成行)</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">嗨玩乐</a>
+                        <span>2016/01-2017/01</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">130</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/05.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr ">
+                    <h2>圣诞/元旦/春节假期<br />上海/广州往返欧洲多地</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">机票</a>
+                        <span>2015/04-2016/04</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">2999</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/06.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr">
+                    <h2>快捷方便-泰国清迈至<br />拜县单程/往返电子车票</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">嗨玩乐</a>
+                        <span>2016/08-2017/01</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">31</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/01.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr ">
+                    <h2>香港/澳门直飞帕劳5/6天<br />自由行(多酒店可选/赠中文</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">自由行</a>
+                        <span>2016/01-2017/01</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">2599</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/02.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr ">
+                    <h2>泰国普吉岛原始森林嗨翻天<br />飞跃自由行</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">嗨玩乐</a>
+                        <span>2015/04-2016/04</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">280</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/03.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr">
+                    <h2>元旦特惠,天津直飞<br />大畈6-7天往返含税机票</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">机票</a>
+                        <span>2016/08-2017/01</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">699</s>元起</p>
+                </div>
+            </a></li>
+        </ul>
+    </div>
+    <div id="zyw_bm" class="zw-bottom banxin">
+        <ul>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/04.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr ">
+                    <h2>台湾花莲花东纵谷拼车一<br />日游(1人成行)</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">嗨玩乐</a>
+                        <span>2016/01-2017/01</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">130</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/05.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr ">
+                    <h2>圣诞/元旦/春节假期<br />上海/广州往返欧洲多地</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">机票</a>
+                        <span>2015/04-2016/04</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">2999</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/06.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr">
+                    <h2>快捷方便-泰国清迈至<br />拜县单程/往返电子车票</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">嗨玩乐</a>
+                        <span>2016/08-2017/01</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">31</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/01.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr ">
+                    <h2>香港/澳门直飞帕劳5/6天<br />自由行(多酒店可选/赠中文</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">自由行</a>
+                        <span>2016/01-2017/01</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">2599</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/02.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr ">
+                    <h2>泰国普吉岛原始森林嗨翻天<br />飞跃自由行</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">嗨玩乐</a>
+                        <span>2015/04-2016/04</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">280</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/03.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr">
+                    <h2>元旦特惠,天津直飞<br />大畈6-7天往返含税机票</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">机票</a>
+                        <span>2016/08-2017/01</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">699</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/04.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr ">
+                    <h2>台湾花莲花东纵谷拼车一<br />日游(1人成行)</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">嗨玩乐</a>
+                        <span>2016/01-2017/01</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">130</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/05.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr ">
+                    <h2>圣诞/元旦/春节假期<br />上海/广州往返欧洲多地</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">机票</a>
+                        <span>2015/04-2016/04</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">2999</s>元起</p>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="zwpic-t-l fl"><img src="images/06.jpg" alt=""/></div>
+                <div class="zwpic-t-r fr">
+                    <h2>快捷方便-泰国清迈至<br />拜县单程/往返电子车票</h2>
+                    <div class="date clearfix">
+                        <a class="date-a fl" href="#">嗨玩乐</a>
+                        <span>2016/08-2017/01</span>
+                    </div>
+                    <p class="fr"><s class="zw-s">31</s>元起</p>
+                </div>
+            </a></li>
+        </ul>
+    </div>
+    <div class="checkmore"><a href="#">查看更多折扣</a></div>
+</div>
+<!--最世界自由行部分E-->
+<!--热门游记与话题部分S-->
+<div class="hotpoint ">
+    <div class="hotmiddle banxin">
+        <div class="ht-title">热门游记与话题</div>
+        <div id="ht_content" class="ht-content banxin">
+            <ul id="ht_c_ul">
+                <li>
+                    <ul id="ht_screen">
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/001.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n1.jpg" alt=""/>
+                                        </div>
+                                        <span>LriKuang_忠义</span>
+                                    </div>
+                                    <p class="ht-user-describe">热辣夏日多姿多彩日本大暴走(金<br />泽-2016濑户内艺术季-镰仓</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/002.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n2.jpg" alt=""/>
+                                        </div>
+                                        <span>苏一璐</span>
+                                    </div>
+                                    <p class="ht-user-describe">首尔五日徒步游(赏首尔夜景,吃韩<br />国传统料理,MBC World韩流</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/003.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n3.jpg" alt=""/>
+                                        </div>
+                                        <span>传智播客</span>
+                                    </div>
+                                    <p class="ht-user-describe">完结-永远的日不落帝国-惊喜与失<br />落同在(伦敦,爱丁堡,蒸汽</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht-li-last1 ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/004.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n4.jpg" alt=""/>
+                                        </div>
+                                        <span>扑朔迷离2008</span>
+                                    </div>
+                                    <p class="ht-user-describe">对世界上瘾-写一首赞歌,献给我心<br />中的诗和远方-俄罗斯17</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                        <a href="#">
+                            <div class="ht-c-t"><img src="images/005.jpg" alt=""/></div>
+                            <div class="ht-c-c">
+                                <div class="ht-userpic">
+                                    <div class="ht-u-mask">
+                                        <img src="images/n5.jpg" alt=""/>
+                                    </div>
+                                    <span>我的小公主</span>
+                                </div>
+                                <p class="ht-user-describe">君士坦丁堡之梦,星月国的环游记(<br />海量美图倾情呈现)</p>
+                            </div>
+                        </a>
+                    </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/006.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n6.jpg" alt=""/>
+                                        </div>
+                                        <span>我的小哥哥</span>
+                                    </div>
+                                    <p class="ht-user-describe">醉美新西兰-15人的14天 南岛<br />大环线自驾,友情之旅 亲子之旅</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/007.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n7.jpg" alt=""/>
+                                        </div>
+                                        <span>小公主么么哒</span>
+                                    </div>
+                                    <p class="ht-user-describe">漫游.华欣--迷人曼谷,梦幻华欣</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht-li-last2 ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/008.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n8.jpg" alt=""/>
+                                        </div>
+                                        <span>焖面走你2008</span>
+                                    </div>
+                                    <p class="ht-user-describe">关于申请塔吉克斯坦电子签详细攻<br />略</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/009.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n1.jpg" alt=""/>
+                                        </div>
+                                        <span>LriKuang_忠义</span>
+                                    </div>
+                                    <p class="ht-user-describe">热辣夏日多姿多彩日本大暴走(金<br />泽-2016濑户内艺术季-镰仓</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/010.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n2.jpg" alt=""/>
+                                        </div>
+                                        <span>苏一璐</span>
+                                    </div>
+                                    <p class="ht-user-describe">首尔五日徒步游(赏首尔夜景,吃韩<br />国传统料理,MBC World韩流</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/011.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n3.jpg" alt=""/>
+                                        </div>
+                                        <span>传智播客</span>
+                                    </div>
+                                    <p class="ht-user-describe">完结-永远的日不落帝国-惊喜与失<br />落同在(伦敦,爱丁堡,蒸汽</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht-li-last1 ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/012.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n4.jpg" alt=""/>
+                                        </div>
+                                        <span>扑朔迷离2008</span>
+                                    </div>
+                                    <p class="ht-user-describe">对世界上瘾-写一首赞歌,献给我心<br />中的诗和远方-俄罗斯17</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/013.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n5.jpg" alt=""/>
+                                        </div>
+                                        <span>我的小公主</span>
+                                    </div>
+                                    <p class="ht-user-describe">君士坦丁堡之梦,星月国的环游记(<br />海量美图倾情呈现)</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/014.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n6.jpg" alt=""/>
+                                        </div>
+                                        <span>我的小哥哥</span>
+                                    </div>
+                                    <p class="ht-user-describe">醉美新西兰-15人的14天 南岛<br />大环线自驾,友情之旅 亲子之旅</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/015.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n7.jpg" alt=""/>
+                                        </div>
+                                        <span>小公主么么哒</span>
+                                    </div>
+                                    <p class="ht-user-describe">漫游.华欣--迷人曼谷,梦幻华欣</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht-li-last2 ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/016.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n8.jpg" alt=""/>
+                                        </div>
+                                        <span>焖面走你2008</span>
+                                    </div>
+                                    <p class="ht-user-describe">关于申请塔吉克斯坦电子签详细攻<br />略</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/001.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n1.jpg" alt=""/>
+                                        </div>
+                                        <span>LriKuang_忠义</span>
+                                    </div>
+                                    <p class="ht-user-describe">热辣夏日多姿多彩日本大暴走(金<br />泽-2016濑户内艺术季-镰仓</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/002.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n2.jpg" alt=""/>
+                                        </div>
+                                        <span>苏一璐</span>
+                                    </div>
+                                    <p class="ht-user-describe">首尔五日徒步游(赏首尔夜景,吃韩<br />国传统料理,MBC World韩流</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/003.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n3.jpg" alt=""/>
+                                        </div>
+                                        <span>传智播客</span>
+                                    </div>
+                                    <p class="ht-user-describe">完结-永远的日不落帝国-惊喜与失<br />落同在(伦敦,爱丁堡,蒸汽</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht-li-last1 ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/004.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n4.jpg" alt=""/>
+                                        </div>
+                                        <span>扑朔迷离2008</span>
+                                    </div>
+                                    <p class="ht-user-describe">对世界上瘾-写一首赞歌,献给我心<br />中的诗和远方-俄罗斯17</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/005.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n5.jpg" alt=""/>
+                                        </div>
+                                        <span>我的小公主</span>
+                                    </div>
+                                    <p class="ht-user-describe">君士坦丁堡之梦,星月国的环游记(<br />海量美图倾情呈现)</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/006.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n6.jpg" alt=""/>
+                                        </div>
+                                        <span>我的小哥哥</span>
+                                    </div>
+                                    <p class="ht-user-describe">醉美新西兰-15人的14天 南岛<br />大环线自驾,友情之旅 亲子之旅</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/007.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n7.jpg" alt=""/>
+                                        </div>
+                                        <span>小公主么么哒</span>
+                                    </div>
+                                    <p class="ht-user-describe">漫游.华欣--迷人曼谷,梦幻华欣</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht-li-last2 ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/008.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n8.jpg" alt=""/>
+                                        </div>
+                                        <span>焖面走你2008</span>
+                                    </div>
+                                    <p class="ht-user-describe">关于申请塔吉克斯坦电子签详细攻<br />略</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/009.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n1.jpg" alt=""/>
+                                        </div>
+                                        <span>LriKuang_忠义</span>
+                                    </div>
+                                    <p class="ht-user-describe">热辣夏日多姿多彩日本大暴走(金<br />泽-2016濑户内艺术季-镰仓</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/010.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n2.jpg" alt=""/>
+                                        </div>
+                                        <span>苏一璐</span>
+                                    </div>
+                                    <p class="ht-user-describe">首尔五日徒步游(赏首尔夜景,吃韩<br />国传统料理,MBC World韩流</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/011.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n3.jpg" alt=""/>
+                                        </div>
+                                        <span>传智播客</span>
+                                    </div>
+                                    <p class="ht-user-describe">完结-永远的日不落帝国-惊喜与失<br />落同在(伦敦,爱丁堡,蒸汽</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht-li-last1 ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/012.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n4.jpg" alt=""/>
+                                        </div>
+                                        <span>扑朔迷离2008</span>
+                                    </div>
+                                    <p class="ht-user-describe">对世界上瘾-写一首赞歌,献给我心<br />中的诗和远方-俄罗斯17</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/013.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n5.jpg" alt=""/>
+                                        </div>
+                                        <span>我的小公主</span>
+                                    </div>
+                                    <p class="ht-user-describe">君士坦丁堡之梦,星月国的环游记(<br />海量美图倾情呈现)</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/014.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n6.jpg" alt=""/>
+                                        </div>
+                                        <span>我的小哥哥</span>
+                                    </div>
+                                    <p class="ht-user-describe">醉美新西兰-15人的14天 南岛<br />大环线自驾,友情之旅 亲子之旅</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/015.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n7.jpg" alt=""/>
+                                        </div>
+                                        <span>小公主么么哒</span>
+                                    </div>
+                                    <p class="ht-user-describe">漫游.华欣--迷人曼谷,梦幻华欣</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht-li-last2 ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/016.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n8.jpg" alt=""/>
+                                        </div>
+                                        <span>焖面走你2008</span>
+                                    </div>
+                                    <p class="ht-user-describe">关于申请塔吉克斯坦电子签详细攻<br />略</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/001.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n1.jpg" alt=""/>
+                                        </div>
+                                        <span>LriKuang_忠义</span>
+                                    </div>
+                                    <p class="ht-user-describe">热辣夏日多姿多彩日本大暴走(金<br />泽-2016濑户内艺术季-镰仓</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/002.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n2.jpg" alt=""/>
+                                        </div>
+                                        <span>苏一璐</span>
+                                    </div>
+                                    <p class="ht-user-describe">首尔五日徒步游(赏首尔夜景,吃韩<br />国传统料理,MBC World韩流</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/003.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n3.jpg" alt=""/>
+                                        </div>
+                                        <span>传智播客</span>
+                                    </div>
+                                    <p class="ht-user-describe">完结-永远的日不落帝国-惊喜与失<br />落同在(伦敦,爱丁堡,蒸汽</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht-li-last1 ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/004.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n4.jpg" alt=""/>
+                                        </div>
+                                        <span>扑朔迷离2008</span>
+                                    </div>
+                                    <p class="ht-user-describe">对世界上瘾-写一首赞歌,献给我心<br />中的诗和远方-俄罗斯17</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/005.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n5.jpg" alt=""/>
+                                        </div>
+                                        <span>我的小公主</span>
+                                    </div>
+                                    <p class="ht-user-describe">君士坦丁堡之梦,星月国的环游记(<br />海量美图倾情呈现)</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/006.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n6.jpg" alt=""/>
+                                        </div>
+                                        <span>我的小哥哥</span>
+                                    </div>
+                                    <p class="ht-user-describe">醉美新西兰-15人的14天 南岛<br />大环线自驾,友情之旅 亲子之旅</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/007.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n7.jpg" alt=""/>
+                                        </div>
+                                        <span>小公主么么哒</span>
+                                    </div>
+                                    <p class="ht-user-describe">漫游.华欣--迷人曼谷,梦幻华欣</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ht-li-last2 ht_li">
+                            <a href="#">
+                                <div class="ht-c-t"><img src="images/008.jpg" alt=""/></div>
+                                <div class="ht-c-c">
+                                    <div class="ht-userpic">
+                                        <div class="ht-u-mask">
+                                            <img src="images/n8.jpg" alt=""/>
+                                        </div>
+                                        <span>焖面走你2008</span>
+                                    </div>
+                                    <p class="ht-user-describe">关于申请塔吉克斯坦电子签详细攻<br />略</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="ht-button banxin">
+            <ul id="ht_b_ul">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="ht-checkmore"><a href="#">查看更多游记</a></div>
+    </div>
+</div>
+<!--热门游记与话题部分E-->
+<!--发现穷游er部分S-->
+<div class="findqy">
+    <div class="findqy-mid banxin">
+        <div class="findqy-top">
+            <div class="findqy-top-left fl">
+                <h1>发现穷游er</h1>
+                <a href="#"><i></i>换一换</a>
+            </div>
+            <div class="findqy-top-right fr">
+                <h1>最新目的地点评</h1>
+                <input type="button" value="我要点评"/>
+            </div>
+        </div>
+        <div class="findqy-bottom">
+            <div class="findqy-b-left fl">
+                <ul>
+                    <li>
+                        <div class="fbl-pic fl">
+                            <img src="images/h1.jpg" alt=""/>
+                        </div>
+                        <div class="fbl-describe fl">
+                                <a href="#">fangjialei007</a>
+                                <span>2粉丝</span>
+                                <p>问答探路者</p>
+                        </div>
+                        <a class="fbl-care" href="#">+关注</a>
+                    </li>
+                    <li class="mr">
+                        <div class="fbl-pic fl">
+                            <img src="images/h2.jpg" alt=""/>
+                        </div>
+                        <div class="fbl-describe fl">
+                            <a href="#">chris8955</a>
+                            <span>39粉丝</span>
+                            <p>问答探路者</p>
+                        </div>
+                        <a class="fbl-care" href="#">+关注</a>
+                    </li>
+                    <li>
+                        <div class="fbl-pic fl">
+                            <img src="images/h3.jpg" alt=""/>
+                        </div>
+                        <div class="fbl-describe fl">
+                            <a href="#">夜白残</a>
+                            <span>45粉丝</span>
+                            <p>问答探路者</p>
+                        </div>
+                        <a class="fbl-care" href="#">+关注</a>
+                    </li>
+                    <li class="mr">
+                        <div class="fbl-pic fl">
+                            <img src="images/h4.jpg" alt=""/>
+                        </div>
+                        <div class="fbl-describe fl">
+                            <a href="#">兔子墩</a>
+                            <span>5粉丝</span>
+                            <p>问答探路者</p>
+                        </div>
+                        <a class="fbl-care" href="#">+关注</a>
+                    </li>
+                    <li>
+                        <div class="fbl-pic fl">
+                            <img src="images/h6.jpg" alt=""/>
+                        </div>
+                        <div class="fbl-describe fl">
+                            <a href="#">小哥哥啊</a>
+                            <span>14粉丝</span>
+                            <p>问答探路者</p>
+                        </div>
+                        <a class="fbl-care" href="#">+关注</a>
+                    </li>
+                    <li class="mr">
+                        <div class="fbl-pic fl">
+                            <img src="images/h5.jpg" alt=""/>
+                        </div>
+                        <div class="fbl-describe fl">
+                            <a href="#">兔子墩</a>
+                            <span>5粉丝</span>
+                            <p>问答探路者</p>
+                        </div>
+                        <a class="fbl-care" href="#">+关注</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="findqy-b-right fl">
+                <ul class="findqy_b_r_ul">
+                    <li>
+                        <div class="findqy-b-r-pic fl">
+                            <img src="images/h7.jpg" alt="哈哈"/>
+                        </div>
+                        <div class="findqy-b-r-describe fl">
+                            <a href="#">麦克斯 </a><i>点评了 </i><a href="#">interchange</a>
+                            <span></span>
+                            <p>很干净现代化,虽然不大</p>
+                            <a class="findqy-b-r-d-a fr" href="#">查看全文</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="findqy-b-r-pic fl">
+                            <img src="images/h8.jpg" alt="哈哈"/>
+                        </div>
+                        <div class="findqy-b-r-describe fl">
+                            <a href="#">anthonybai </a><i>点评了 </i><a href="#">可兰岛</a>
+                            <span></span>
+                            <p>又叫格兰岛或者珊瑚岛,是芭提雅的一座离岛,每天都有很多班船从芭提雅往返,岛上有4块游玩的区域!</p>
+                            <a class="findqy-b-r-d-a fr" href="#">查看全文</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="findqy-b-r-pic fl">
+                            <img src="images/h9.jpg" alt="哈哈"/>
+                        </div>
+                        <div class="findqy-b-r-describe fl">
+                            <a href="#">小哥哥 </a><i>点评了 </i><a href="#">老司机开车</a>
+                            <span></span>
+                            <p>这里是传智播客</p>
+                            <a class="findqy-b-r-d-a fr" href="#">查看全文</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="findqy-b-r-pic fl">
+                            <img src="images/h10.jpg" alt="哈哈"/>
+                        </div>
+                        <div class="findqy-b-r-describe fl">
+                            <a href="#">任天堂 </a><i>点评了 </i><a href="#">日不落帝国</a>
+                            <span></span>
+                            <p>芭提雅的一座离岛,每天都有很多班船从芭提雅往返,岛上有4块游玩的区域,有攀岩等室外项目</p>
+                            <a class="findqy-b-r-d-a fr" href="#">查看全文</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="findqy-b-r-pic fl">
+                            <img src="images/h7.jpg" alt="哈哈"/>
+                        </div>
+                        <div class="findqy-b-r-describe fl">
+                            <a href="#">麦克斯 </a><i>点评了 </i><a href="#">interchange</a>
+                            <span></span>
+                            <p>很干净现代化,虽然不大</p>
+                            <a class="findqy-b-r-d-a fr" href="#">查看全文</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="findqy-b-r-pic fl">
+                            <img src="images/h8.jpg" alt="哈哈"/>
+                        </div>
+                        <div class="findqy-b-r-describe fl">
+                            <a href="#">anthonybai </a><i>点评了 </i><a href="#">可兰岛</a>
+                            <span></span>
+                            <p>又叫格兰岛或者珊瑚岛,是芭提雅的一座离岛,每天都有很多班船从芭提雅往返,岛上有4块游玩的区域!</p>
+                            <a class="findqy-b-r-d-a fr" href="#">查看全文</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--发现穷游er部分E-->
+<!--底部穷游app和微信号部分S-->
+<div class="foot-app">
+    <div class="foot-app-mid banxin">
+        <ul class="app-left fl">
+            <li class="app-title">穷游APP</li>
+            <li><a href="#"><img src="images/app1.png" alt=""/><span>穷游</span></a></li>
+            <li><a href="#"><img src="images/app2.png" alt=""/><span>行程助手</span></a></li>
+            <li><a href="#"><img src="images/app3.png" alt=""/><span>穷游最世界</span></a></li>
+            <li class="app-last"><a href="#"><img src="images/app4.png" alt=""/><span>穷游锦囊</span></a></li>
+        </ul>
+        <ul class="app-right fr">
+            <li class="app-title">微信号</li>
+            <li><a href="#"><img src="images/wechat1.png" alt=""/><span>穷游</span></a></li>
+            <li><a href="#"><img src="images/wechat2.png" alt=""/><span>行程助手</span></a></li>
+            <li><a href="#"><img src="images/wechat3.png" alt=""/><span>穷游最世界</span></a></li>
+            <li class="app-last"><a href="#"><img src="images/wechat4.png" alt=""/><span>穷游锦囊</span></a></li>
+        </ul>
+    </div>
+</div>
+<!--底部穷游app和微信号部分E-->
+<!--底部加入我们部分S-->
+<div class="foot-joinus">
+    <div class="foot-j-mid banxin">
+        <dl>
+            <dt>关于我们</dt>
+            <dd><a href="#">穷游简介</a></dd>
+            <dd><a href="#">联系我们</a></dd>
+            <dd><a href="#">合作伙伴</a></dd>
+        </dl>
+        <dl>
+            <dt>加入穷游</dt>
+            <dd><a href="#">招聘职位</a></dd>
+        </dl>
+        <dl>
+            <dt>网站条款</dt>
+            <dd><a href="#">会员条款</a></dd>
+            <dd><a href="#">社区指南</a></dd>
+            <dd><a href="#">版权声明</a></dd>
+            <dd><a href="#">免责声明</a></dd>
+        </dl>
+        <dl>
+            <dt>帮助中心</dt>
+            <dd><a href="#">新手上路</a></dd>
+            <dd><a href="#">使用帮助</a></dd>
+            <dd><a href="#">网站地图</a></dd>
+            <dd><a href="#">旅行工具</a></dd>
+        </dl>
+    </div>
+</div>
+<!--底部加入我们部分E-->
+<!--底部友情链接部分S-->
+<div class="foot-links clearfix">
+    <div class="foot-l-mid banxin">
+        <div class="foot-right">
+            <i></i>
+            <span>2004-2016&copy;穷游网&reg;qyer.com All rights reserved.Version v5.57&nbsp;京ICP备12003542号&nbsp;京公网安备11010102001935&nbsp;京ICP证140673号<br />穷游网为旅行者提供原创实用的出境旅行指南和旅游攻略、旅行社去和问答交流平台,并提供签证、保险、机票、酒店预订租车等服务</span>
+            <s></s>
+        </div>
+        <div class="friend-links">
+            <div class="links-title fl">友情链接</div>
+            <div class="links-content fl">
+                <ul>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                    <li><a href="#">中国交通网&nbsp;|&nbsp;</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部友情链接部分E-->
+<!--返回顶部部分S-->
+<div class="backtop">
+    <a href="javascript:;"><img src="images/top.png" alt=""/></a>
+</div>
+<!--返回顶部部分E-->
+</body>
+</body>
+</html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <title>机酒自由行</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/iconfont.css"/>
+    <link rel="stylesheet" href="css/mycss.css"/>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/myjs.js"></script>
+</head>
+<body>
+<!--顶部通栏begin-->
+<div id="head" class="head">
+    <div class="logo fl">
+        <a href="../首页.html"><img src="images/logo_116x36.png" alt="主页logo"/></a>
+    </div>
+    <div class="head_nav_l fl">
+        <ul class="head_ul">
+            <li><a href="#">目的地</a></li>
+            <li><a href="#">锦囊</a></li>
+            <li><a href="#">行程助手</a></li>
+            <li id="jiantouxia01" class="jiantouxia"><a href="#">社区<i><s>◇</s></i></a>
+                <ul class="add_one">
+                    <li><a href="#">旅行论坛</a></li>
+                    <li><a href="#">旅行问答</a></li>
+                    <li><a href="#">JNE旅行生活美学</a></li>
+                </ul>
+            </li>
+            <li><a href="#">最世界·自由行</a></li>
+            <li><a href="#">机票</a></li>
+            <li><a href="#">酒店</a></li>
+            <li id="jiantouxia02" class="jiantouxia"><a href="#">预订<i><s>◇</s></i></a>
+                <ul class="add_two">
+                    <li><a href="#">特价酒店</a></li>
+                    <li><a href="#">保险</a></li>
+                    <li><a href="#">华人旅馆</a></li>
+                    <li><a href="#">邮轮</a></li>
+                    <li><a href="#">租车</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="head_nav_r fr">
+        <ul>
+            <li><a href="#">登陆</a></li>
+            <li><a href="#">注册</a></li>
+            <li><a href="#"><i class="iconfont">&#xe600;</i></a></li>
+            <li><a href="#"><i class="iconfont">&#xe601;</i></a></li>
+            <li><a href="#"><i class="iconfont">&#xe605;</i></a></li>
+        </ul>
+    </div>
+</div>
+<!--顶部通栏end-->
+<!--搜索栏begin-->
+<div class="search">
+    <div class="banxin">
+        <div class="search_top">
+            <div class="search_l fl"><a href="#"><img src="images/search-logo.png" alt="搜索栏Logo"/></a></div>
+            <div class="search_c fl"><i class="iconfont">&#xe606;</i><input value placeholder="搜索国家、城市、产品" type="text"/>
+            </div>
+            <div class="search_r fl">
+                <ul>
+                    <li class="one"><a href="#"><i class="iconfont">&#xe603;</i>我的订单</a></li>
+                    <li><a href="#"><i class="iconfont">&#xe604;</i>我的收藏</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="search_bottom">
+            <ul>
+                <li><a href="../首页.html">首页</a></li>
+                <li><a href="#">机酒自由行</a></li>
+                <li class="wanle"><a href="#">城市玩乐</a><img src="images/wanletag.gif" alt=""/></li>
+                <li><a href="#">签证</a></li>
+                <li><a href="#">租车</a></li>
+                <li><a href="#">邮轮</a></li>
+                <li><a href="#">海岛游</a></li>
+                <li><a href="#">限时特卖</a></li>
+                <li><a href="#">特色线路</a></li>
+                <li><a href="#">CityWalk</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--搜索栏end-->
+<!--主体begin-->
+<div class="main clearfix">
+    <!--主体广告begin-->
+    <div class="banxin banner clearfix">
+        <div class="banner_l fl">
+            <ul>
+                <li class="banner_li">
+                    <h2>热门出发地</h2>
+                    <p>
+                        <a href="#">北京</a>&nbsp;
+                        <a href="#">上海</a>&nbsp;
+                        <a href="#">广深</a>&nbsp;
+                        <a href="#">西南</a>&nbsp;
+                        <a href="#">国内其他</a>
+                    </p>
+                    <i class="iconfont">&#xe602;</i>
+                    <div id="banner_add0">
+                        <div class="one clearfix">
+                            <h2>华东</h2>
+                            <ul>
+                                <li><a href="#">上海</a></li>
+                                <li><a href="#">杭州</a></li>
+                                <li><a href="#">南京</a></li>
+                                <li><a href="#">青岛</a></li>
+                            </ul>
+                        </div>
+                        <div class="two">
+                            <h2>华北</h2>
+                            <ul>
+                                <li><a href="#">北京</a></li>
+                                <li><a href="#">天津</a></li>
+                                <li><a href="#">石家庄</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="border_top banner_li">
+                    <h2>港澳台 国内</h2>
+                    <p>
+                        <a href="#">香港</a>&nbsp;
+                        <a href="#">澳门</a>&nbsp;
+                        <a href="#">台湾</a>&nbsp;
+                        <a href="#">国内其他</a>
+                    </p>
+                    <i class="iconfont">&#xe602;</i>
+                    <div id="banner_add1">
+                        <div class="one clearfix">
+                            <h2>香港 澳门</h2>
+                            <ul>
+                                <li><a href="#">上海</a></li>
+                                <li><a href="#">杭州</a></li>
+                                <li><a href="#">南京</a></li>
+                                <li><a href="#">青岛</a></li>
+                            </ul>
+                        </div>
+                        <div class="two">
+                            <h2>台湾</h2>
+                            <ul>
+                                <li><a href="#">北京</a></li>
+                                <li><a href="#">天津</a></li>
+                                <li><a href="#">石家庄</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="border_top banner_li">
+                    <h2>日本 韩国</h2>
+                    <p>
+                        <a href="#">东京</a>&nbsp;
+                        <a href="#">大阪</a>&nbsp;
+                        <a href="#">冲绳</a>&nbsp;
+                        <a href="#">首尔</a>&nbsp;
+                        <a href="#">济州岛</a>
+                    </p>
+                    <i class="iconfont">&#xe602;</i>
+                    <div id="banner_add2">
+                        <div class="one clearfix">
+                            <h2>日本</h2>
+                            <ul>
+                                <li><a href="#">上海</a></li>
+                                <li><a href="#">杭州</a></li>
+                                <li><a href="#">南京</a></li>
+                                <li><a href="#">青岛</a></li>
+                            </ul>
+                        </div>
+                        <div class="two">
+                            <h2>韩国</h2>
+                            <ul>
+                                <li><a href="#">北京</a></li>
+                                <li><a href="#">天津</a></li>
+                                <li><a href="#">石家庄</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="border_top banner_li">
+                    <h2>东南亚 南亚</h2>
+                    <p>
+                        <a href="#">泰国</a>&nbsp;
+                        <a href="#">新加坡</a>&nbsp;
+                        <a href="#">马来西亚</a>&nbsp;
+                        <a href="#">马尔代夫</a>
+                    </p>
+                    <i class="iconfont">&#xe602;</i>
+                    <div id="banner_add3">
+                        <div class="one clearfix">
+                            <h2>东南亚</h2>
+                            <ul>
+                                <li><a href="#">上海</a></li>
+                                <li><a href="#">杭州</a></li>
+                                <li><a href="#">南京</a></li>
+                                <li><a href="#">青岛</a></li>
+                            </ul>
+                        </div>
+                        <div class="two">
+                            <h2>南亚</h2>
+                            <ul>
+                                <li><a href="#">北京</a></li>
+                                <li><a href="#">天津</a></li>
+                                <li><a href="#">石家庄</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="border_top banner_li">
+                    <h2>欧洲 美洲</h2>
+
+                    <p>
+                        <a href="#">英国</a>&nbsp;
+                        <a href="#">法国</a>&nbsp;
+                        <a href="#">美国</a>&nbsp;
+                        <a href="#">加拿大</a>
+                    </p>
+                    <i class="iconfont">&#xe602;</i>
+                    <div id="banner_add4">
+                        <div class="one clearfix">
+                            <h2>欧洲</h2>
+                            <ul>
+                                <li><a href="#">上海</a></li>
+                                <li><a href="#">杭州</a></li>
+                                <li><a href="#">南京</a></li>
+                                <li><a href="#">青岛</a></li>
+                            </ul>
+                        </div>
+                        <div class="two">
+                            <h2>美洲</h2>
+                            <ul>
+                                <li><a href="#">北京</a></li>
+                                <li><a href="#">天津</a></li>
+                                <li><a href="#">石家庄</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="border_top banner_li">
+                    <h2>澳新 中东非</h2>
+
+                    <p>
+                        <a href="#">澳大利亚</a>&nbsp;
+                        <a href="#">新西兰</a>&nbsp;
+                        <a href="#">迪拜</a>&nbsp;
+                        <a href="#">帕劳</a>
+                    </p>
+                    <i class="iconfont">&#xe602;</i>
+                    <div id="banner_add5">
+                        <div class="one clearfix">
+                            <h2>澳新</h2>
+                            <ul>
+                                <li><a href="#">上海</a></li>
+                                <li><a href="#">杭州</a></li>
+                                <li><a href="#">南京</a></li>
+                                <li><a href="#">青岛</a></li>
+                            </ul>
+                        </div>
+                        <div class="two">
+                            <h2>中东非</h2>
+                            <ul>
+                                <li><a href="#">北京</a></li>
+                                <li><a href="#">天津</a></li>
+                                <li><a href="#">石家庄</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="banner_t fl">
+            <div id="mask" class="mask">
+                <ul id="topPic" class="pic">
+                    <li><img src="images/14745391962814.png" alt=""/></li>
+                    <li><img src="images/14745391574777.png" alt=""/></li>
+                </ul>
+                <ul id="topBtn" class="btn">
+                    <li><a href="javascript:;">老司机的自由行随心餐</a></li>
+                    <li><a href="javascript:;">马尔代夫降价啦</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="banner_b fl">
+            <div class="banner_b_l"><a href="#"><img src="images/14744600486302.png" alt=""/></a></div>
+            <div class="banner_b_c"><a href="#"><img src="images/14744601674330.png" alt=""/></a></div>
+            <div class="banner_b_r"><a href="#"><img src="images/14744602311892.png" alt=""/></a></div>
+        </div>
+    </div>
+    <!--主体广告end-->
+    <!--限时系列begin-->
+    <div class="banxin limit clearfix">
+        <div id="limit_l" class="limit_l fl ">
+            <div class="limit_l_t clearfix">
+                <h3>限时秒杀</h3>
+
+                <div class="time"></div>
+            </div>
+            <div class="limit_l_b shadow">
+                <a href="#"><img src="images/388x200.jpg" alt=""/></a>
+
+                <div class="link"><a href="#">上海直飞韩国首尔4-5天自由行</a></div>
+                <a class="btn" href="#">立即抢购</a>
+
+                <div class="money"><span>2099</span>元起</div>
+            </div>
+        </div>
+        <div class="limit_t fr">
+            <div class="limit_t_t">
+                <h3>限时特卖</h3>
+                <a class="fr" href="#"><i class="iconfont">&#xe607;</i>换一换</a>
+            </div>
+            <div class="limit_t_b">
+                <ul>
+                    <li class="left fl shadow">
+                        <a href="#">
+                            <img src="images/120x120%20(1).jpg" alt=""/>
+                            <h4>【拒签全退】北京/上海往返札幌/东京/大阪4-30天含税</h4>
+
+                            <div class="money"><span>1299</span>元起</div>
+                        </a>
+                    </li>
+                    <li class="right fl shadow">
+                        <a href="#">
+                            <img src="images/120x120%20(2).jpg" alt=""/>
+                            <h4>多地直飞帕劳5-7天自由行(多项酒店选择+赠接送机服务)</h4>
+
+                            <div class="money"><span>2680</span>元起</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="limit_b fr">
+            <div class="limit_b_t">
+                <h3>APP专享</h3>
+                <a class="fr" href="#"><i class="iconfont">&#xe607;</i>换一换</a>
+            </div>
+            <div class="limit_b_b">
+                <ul>
+                    <li class="left fl shadow">
+                        <a href="#">
+                            <img src="images/120x120%20(3).jpg" alt=""/>
+                            <h4>【枫叶季】北京直飞东京3-14天往返含税机票(日本航空)</h4>
+
+                            <div class="money"><span>1699</span>元起</div>
+                        </a>
+                    </li>
+                    <li class="right fl shadow">
+                        <a href="#">
+                            <img src="images/120x120%20(4).jpg" alt=""/>
+                            <h4>上海/杭州直飞首尔4天3晚/5天4晚自由行</h4>
+
+                            <div class="money"><span>1999</span>元起</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--限时系列end-->
+    <!--超值爆款begin-->
+    <div class="banxin popular clearfix">
+        <div class="title">
+            <h2>超值爆款<span>超高性价比</span></h2>
+        </div>
+        <div class="holiday">
+            <div class="holiday_t">
+                <h3>假期出行</h3>
+                <ul>
+                    <li>港澳台</li>
+                    <li>泰国</li>
+                    <li>日本</li>
+                    <li>韩国</li>
+                    <li>越南</li>
+                    <li>马尔代夫</li>
+                    <li>热门海岛</li>
+                </ul>
+                <a href="#">查看更多</a>
+            </div>
+            <div id="holidayChange">
+                <div class="holiday_b">
+                    <ul>
+                        <li class="holiday_b_1 shadow">
+                            <a href="#"><img src="images/275x185%20(1).jpg" alt=""/></a>
+
+                            <div class="mask">
+                                <div class="mask_1 fl">机+酒</div>
+                                <div class="mask_2 fl"><span>2899</span>元起</div>
+                            </div>
+                            <div><h3>【国庆】杭州直飞香港4天3晚自由行</h3></div>
+                        </li>
+                        <li class="holiday_b_2 shadow">
+                            <a href="#"><img src="images/275x185%20(2).jpg" alt=""/></a>
+
+                            <div class="mask">
+                                <div class="mask_1 fl">机票</div>
+                                <div class="mask_2 fl"><span>899</span>元起</div>
+                            </div>
+                            <div><h3>【元旦假期】北京/上海/杭州直飞香港3-5天往返含税机票</h3></div>
+                        </li>
+                        <li class="holiday_b_3 shadow">
+                            <a href="#"><img src="images/275x185%20(3).jpg" alt=""/></a>
+
+                            <div class="mask">
+                                <div class="mask_1 fl">机票</div>
+                                <div class="mask_2 fl"><span>1499</span>元起</div>
+                            </div>
+                            <div><h3>【元旦假期】上海直飞台湾台北8天往返含税机票</h3></div>
+                        </li>
+                        <li class="holiday_b_4 shadow">
+                            <a href="#"><img src="images/275x185%20(4).jpg" alt=""/></a>
+
+                            <div class="mask">
+                                <div class="mask_1 fl">机票</div>
+                                <div class="mask_2 fl"><span>2199</span>元起</div>
+                            </div>
+                            <div><h3>【圣诞/元旦】北京直飞澳门3-5天往返含税机票</h3></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="holiday_b">
+                    <ul>
+                    <li class="holiday_b_1 shadow">
+                        <a href="#"><img src="images/275x185%20(1)-1-1.jpg" alt=""/></a>
+
+                        <div class="mask">
+                            <div class="mask_1 fl">机+酒</div>
+                            <div class="mask_2 fl"><span>2899</span>元起</div>
+                        </div>
+                        <div><h3>【国庆】杭州直飞香港4天3晚自由行</h3></div>
+                    </li>
+                    <li class="holiday_b_2 shadow">
+                        <a href="#"><img src="images/275x185 (2)-1-1.jpg" alt=""/></a>
+
+                        <div class="mask">
+                            <div class="mask_1 fl">机票</div>
+                            <div class="mask_2 fl"><span>899</span>元起</div>
+                        </div>
+                        <div><h3>【元旦假期】北京/上海/杭州直飞香港3-5天往返含税机票</h3></div>
+                    </li>
+                    <li class="holiday_b_3 shadow">
+                        <a href="#"><img src="images/275x185 (3)-1-1.jpg" alt=""/></a>
+
+                        <div class="mask">
+                            <div class="mask_1 fl">机票</div>
+                            <div class="mask_2 fl"><span>1499</span>元起</div>
+                        </div>
+                        <div><h3>【元旦假期】上海直飞台湾台北8天往返含税机票</h3></div>
+                    </li>
+                    <li class="holiday_b_4 shadow">
+                        <a href="#"><img src="images/275x185 (4)-1-1.jpg" alt=""/></a>
+
+                        <div class="mask">
+                            <div class="mask_1 fl">机票</div>
+                            <div class="mask_2 fl"><span>2199</span>元起</div>
+                        </div>
+                        <div><h3>【圣诞/元旦】北京直飞澳门3-5天往返含税机票</h3></div>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="hot">
+            <div class="hot_t">
+                <h3>今日热卖</h3>
+                <ul>
+                    <li>普吉岛</li>
+                    <li>清迈</li>
+                    <li>大阪</li>
+                    <li>首尔</li>
+                    <li>沙巴</li>
+                    <li>吴哥窟</li>
+                    <li>济州岛</li>
+                    <li>印度尼西亚</li>
+                    <li>欧洲</li>
+                    <li>毛里求斯</li>
+                </ul>
+                <a href="#">查看更多</a>
+            </div>
+            <div class="hot_b">
+                <ul>
+                    <li class="hot_b_1 shadow">
+                        <a href="#"><img src="images/275x185 (1)-2.jpg" alt=""/></a>
+
+                        <div class="mask">
+                            <div class="mask_1 fl">机+酒</div>
+                            <div class="mask_2 fl"><span>2199</span>元起</div>
+                        </div>
+                        <div><h3>【国庆特价】北京/上海/杭州直飞普吉岛6-7天自由行</h3></div>
+                    </li>
+                    <li class="hot_b_2 shadow">
+                        <a href="#"><img src="images/275x185 (2)-2.jpg" alt=""/></a>
+
+                        <div class="mask">
+                            <div class="mask_1 fl">机票</div>
+                            <div class="mask_2 fl"><span>2099</span>元起</div>
+                        </div>
+                        <div><h3>北京/上海/成都/西安直飞普吉岛6-7天往返含税机票</h3></div>
+                    </li>
+                    <li class="hot_b_3 shadow">
+                        <a href="#"><img src="images/275x185 (3)-2.jpg" alt=""/></a>
+
+                        <div class="mask">
+                            <div class="mask_1 fl">机+酒</div>
+                            <div class="mask_2 fl"><span>1999</span>元起</div>
+                        </div>
+                        <div><h3>上海直飞普吉岛6天4晚自由行</h3></div>
+                    </li>
+                    <li class="hot_b_4 shadow">
+                        <a href="#"><img src="images/275x185 (4)-2.jpg" alt=""/></a>
+
+                        <div class="mask">
+                            <div class="mask_1 fl">机+酒</div>
+                            <div class="mask_2 fl"><span>3099</span>元起</div>
+                        </div>
+                        <div><h3>【圣诞/元旦】上海/北京/成都直飞普吉岛6-7天自由行</h3></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="air">
+            <div class="air_t">
+                <h3>超值机票</h3>
+                <ul>
+                    <li>长滩岛</li>
+                    <li>日本</li>
+                    <li>北海道</li>
+                    <li>冲绳</li>
+                    <li>韩国</li>
+                    <li>泰国海岛</li>
+                    <li>澳新</li>
+                    <li>美国</li>
+                    <li>欧洲</li>
+                    <li>斯里兰卡</li>
+                </ul>
+                <a href="#">查看更多</a>
+            </div>
+            <div class="air_b">
+                <ul>
+                    <li class="air_b_1 shadow">
+                        <a href="#"><img src="images/275x185 (1)-3.jpg" alt=""/></a>
+
+                        <div class="mask">
+                            <div class="mask_1 fl">机+酒</div>
+                            <div class="mask_2 fl"><span>2999</span>元起</div>
+                        </div>
+                        <div><h3>上海/重庆/成都/厦门出发长滩岛5-6天自由行</h3></div>
+                    </li>
+                    <li class="air_b_2 shadow">
+                        <a href="#"><img src="images/275x185 (2)-3.jpg" alt=""/></a>
+
+                        <div class="mask">
+                            <div class="mask_1 fl">机票</div>
+                            <div class="mask_2 fl"><span>1999</span>元起</div>
+                        </div>
+                        <div><h3>【元旦假期】北京/上海/杭州直飞长滩岛6-8天往返含税机票</h3></div>
+                    </li>
+                    <li class="air_b_3 shadow">
+                        <a href="#"><img src="images/275x185 (3)-3.jpg" alt=""/></a>
+
+                        <div class="mask">
+                            <div class="mask_1 fl">机票</div>
+                            <div class="mask_2 fl"><span>1999</span>元起</div>
+                        </div>
+                        <div><h3>【中秋/国庆】上海直飞长滩岛6天往返含税机票</h3></div>
+                    </li>
+                    <li class="air_b_4 shadow">
+                        <a href="#"><img src="images/275x185 (4)-3.jpg" alt=""/></a>
+
+                        <div class="mask">
+                            <div class="mask_1 fl">机票</div>
+                            <div class="mask_2 fl"><span>999</span>元起</div>
+                        </div>
+                        <div><h3>上海直飞长滩岛5-6天往返含税机票</h3></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--超值爆款end-->
+</div>
+<!--主体end-->
+<!--底部begin-->
+<div class="foot">
+    <div class="banxin">
+        <div class="foot_t clearfix">
+            <ul>
+                <li><a href="#">机酒自由行</a>丨</li>
+                <li><a href="#">城市玩乐</a>丨</li>
+                <li><a href="#">签证</a>丨</li>
+                <li><a href="#">租车</a>丨</li>
+                <li><a href="#">邮轮</a>丨</li>
+                <li><a href="#">海岛游</a>丨</li>
+                <li><a href="#">限时特卖</a>丨</li>
+                <li><a href="#">特色线路</a>丨</li>
+                <li><a href="#">CityWalk</a></li>
+            </ul>
+        </div>
+        <div class="foot_b clearfix">
+            <ul>
+                <li>
+                    <div class="pic01"></div>
+                    <h3>专业保证</h3>
+
+                    <p>我们收集穷游er的真实诉求，也找寻全世界最独特的旅行目的地，让更多的穷游er轻松出行</p>
+                </li>
+                <li class="li02">
+                    <div class="pic02"></div>
+                    <h3>多重审核</h3>
+
+                    <p>对旅游产品供应商严格筛选，资质认证层层把关，为穷游er精挑细选最值得信赖的旅行产品</p>
+                </li>
+                <li class="li03">
+                    <div class="pic03"></div>
+                    <h3>安心陪护</h3>
+
+                    <p>对所有穷游er的购买进行跟踪服务以及质量监控，有效投诉先行赔付，出现任何问题负责到底</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--底部end-->
+<!--底部通栏begin-->
+<div class="bottom">
+    <div class="banxin">
+        <div class="bottom_t_l fl clearfix">
+            <div class="bottom_logo"></div>
+            <p>最世界·自由行——从一张机票、一家酒店的订购，到一次暖心的接机服务、一张轻松融入当地的交通卡，让我们带你探索这个世界</p>
+        </div>
+        <div class="bottom_t_r fr">
+            <ul class="fr">
+                <li><i class="iconfont">&#xe609;</i>
+                </li>
+                <li><i class="iconfont">&#xe601;</i></li>
+                <li><i class="iconfont">&#xe600;</i></li>
+                <li><i class="iconfont">&#xe608;</i></li>
+            </ul>
+            <span>关注我们</span>
+        </div>
+        <div class="bottom_b">
+            <ul class="clearfix">
+                <li><a class="one" href="#">关于最世界·自由行</a>|</li>
+                <li><a href="#">服务与隐私</a>|</li>
+                <li><a href="#">联系我们</a>|</li>
+                <li><a href="#">旅游度假资质</a>|</li>
+                <li><a href="#">营业执照</a>|</li>
+                <li><a href="#">投诉建议</a></li>
+            </ul>
+            <p>2004-2016 © 穷游网™ qyer.com All rights reserved. Version v5.57 京ICP备12003524号 京公网安备11010502023470
+                京ICP证140673号</p>
+        </div>
+    </div>
+</div>
+<!--底部通栏end-->
+<!--侧边栏begin-->
+<div class="sidebar">
+    <ul>
+        <li><a href="#"><i class="iconfont">&#xe603;</i></a></li>
+        <li><a href="#"><i class="iconfont">&#xe604;</i></a></li>
+        <li><a id="UP" href="javascript:;">UP</a></li>
+    </ul>
+</div>
+<!--侧边栏end-->
+</body>
+</html>

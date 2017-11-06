@@ -1,0 +1,555 @@
+body {
+    font: 12px/1.5 Helvetica Neue, Helvetica, Arial, Hiragino Sans GB, Microsoft YaHei, \5b8b\4f53, sans-serif;
+}
+
+/*顶部导航start*/
+.top-nav {
+    height: 30px;
+    background-color: #323232;
+}
+
+.top-nav .top-logo {
+    margin-left: 30px;
+    line-height: 28px;
+}
+
+.top-nav .t-nav li {
+    float: left;
+    padding-left: 30px;
+    font: 700 14px/30px "Hiragino Sans GB", "Microsoft YaHei", SimHei, SimSun, sans-serif;
+    position: relative;
+}
+.top-nav .t-nav li.spacer{
+    padding-right: 13px;
+    position: relative;
+}
+.top-nav .t-nav li a {
+    color: #C0C0C0;
+}
+
+.top-nav .t-nav li a:hover {
+    color: #10b041;
+}
+
+.top-nav .t-nav i {
+    width: 13px;
+    height: 9px;
+    position: absolute;
+    top: 13px;
+    right: -16px;
+    overflow: hidden;
+}
+.top-nav .t-nav s{
+    font: 400 15px/15px consolas;
+    position: absolute;
+    top: -7px;
+    left: 0;
+}
+/*顶部导航end*/
+/*顶部搜索栏start*/
+.topsearch {
+    height: 120px;
+    background-image: linear-gradient(180deg, #50c971, #0fbfa6);
+}
+
+.search-logo {
+    width: 226px;
+    height: 49px;
+    padding-top: 32px;
+    padding-left: 12px;
+}
+
+.search-input {
+    margin-top: 40px;
+    margin-left: 90px;
+    width: 480px;
+    height: 40px;
+    /*background-color: pink;*/
+}
+
+.si-search {
+    width: 310px;
+    height: 20px;
+    padding: 10px 25px;
+    line-height: 20px;
+    /*color: #C0C0C0;*/
+    font-size: 16px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 14px;
+}
+
+.si-gap {
+    float: left;
+    width: 1px;
+    height: 28px;
+    border-top: 6px solid #fff;
+    border-bottom: 6px solid #fff;
+    background-color: #8ae1cb;
+}
+
+.si-button {
+    width: 118px;
+    height: 40px;
+    /*overflow: hidden;*/
+    border: none;
+    background-color: #fff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #00B081;
+    font-family: Helvetica Neue, Helvetica, Arial, Hiragino Sans GB, Microsoft YaHei, \5b8b\4f53, sans-serif;
+    line-height: 40px;
+    /*opacity: 0;*/
+}
+
+.search-app {
+    width: 64px;
+    height: 104px;
+    margin-right: 58px;
+    background: url("../images/top-app-bg.png");
+    position: relative;
+    overflow: hidden;
+}
+
+.search-app img {
+    position: absolute;
+    top: 0;
+    right: 8px;
+}
+
+.search-app .appword {
+    font-size: 16px;
+    line-height: 135px;
+    text-align: center;
+    color: #fff;
+}
+
+/*顶部搜索栏end*/
+/*主导航栏start*/
+.main-nav {
+    height: 50px;
+}
+
+.main-nav li {
+    float: left;
+
+}
+
+.main-nav li a {
+    line-height: 50px;
+    padding: 0px 30px;
+    font-size: 16px;
+    display: block;
+    color: #323232;
+}
+
+.main-nav a:hover {
+    color: #00B081;
+    background-color: #F5F5F5;
+}
+
+/*主导航栏end*/
+/*轮播图start*/
+.slider {
+    position: relative;
+}
+
+.slider .screen {
+    width: 100%;
+    height: 420px;
+    /*overflow: hidden;*/
+    position: relative;
+}
+
+.slider .screen ul {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 8000px;
+}
+
+.slider .screen ul li {
+    float: left;
+    /*这里的图片宽度需要js动态添加一下*/
+    width: 1349px;
+    height: 420px;
+    /*这个代表什么意思*/
+    background-position: 50%;
+}
+
+.slider .screen ol {
+    position: absolute;
+    right: 80px;
+    bottom: 15px;
+
+}
+
+.slider .screen ol li {
+    width: 40px;
+    height: 5px;
+    background-color: #000;
+    opacity: 0.5;
+    margin-left: 2px;
+    cursor: pointer;
+    float: left;
+}
+
+.slider .screen ol li.active {
+    background-color: #FF7467;
+}
+
+.slider #arr {
+    display: none;
+}
+
+.slider #arr span {
+    width: 138px;
+    height: 420px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    cursor: pointer;
+    line-height: 420px;
+    text-align: center;
+    font-weight: bold;
+    font-family: '黑体';
+    font-size: 80px;
+    color: #fff;
+    opacity: 0.3;
+    /*border: 1px solid #fff;*/
+}
+
+.slider #arr #right {
+    right: 0;
+    left: auto;
+}
+
+/*轮播图end*/
+/*热门分类start*/
+.category {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -580px;
+    z-index: 2;
+}
+
+.category-ul {
+    width: 280px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+}
+
+.category-ul li {
+    height: 56px;
+    padding-left: 53px;
+    position: relative;
+    border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+}
+
+.category-ul li.active {
+    background-color: #fff;
+}
+
+.category-ul li.active h3 {
+    color: #323232;
+}
+
+.category-ul span {
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 17px;
+}
+
+.category-ul li h3 {
+    padding-top: 10px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #fff;
+}
+
+.category-ul li .place {
+    font-size: 14px;
+    color: silver;
+}
+
+.category-ul li .c-arrow {
+    position: absolute;
+    top: 21px;
+    right: 12px;
+}
+
+.category-ul .icon1 {
+    background: url(../images/smallpic.png) -2px -1px;
+
+}
+
+.category-ul .icon2 {
+    background: url(../images/smallpic.png) -2px -58px;
+
+}
+
+.category-ul .icon3 {
+    background: url(../images/smallpic.png) -2px -116px;
+
+}
+
+.category-ul .icon4 {
+    background: url(../images/smallpic.png) -2px -172px;
+
+}
+
+.category-ul .icon5 {
+    background: url(../images/smallpic.png) -2px -229px;
+
+}
+
+.category-ul .icon6 {
+    background: url(../images/smallpic.png) -2px -286px;
+
+}
+
+.category-ul .icon7 {
+    background: url(../images/smallpic.png) -2px -343px;
+
+}
+
+.category-div {
+    /*display: none;*/
+    position: absolute;
+    top: 10px;
+    left: 280px;
+    float: left;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, .3);
+    background-color: #fff;
+}
+
+.category-div img {
+    display: none;
+    float: left;
+    padding: 0 40px;
+}
+
+.category-div img.show {
+    display: block;
+}
+
+/*热门分类end*/
+/*推荐start*/
+.hotlist {
+    height: 150px;
+}
+
+.hotlist ul {
+    padding: 20px 0;
+
+}
+
+.hotlist ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+.hotlist ul li.marginnone {
+    margin-right: 0;
+}
+
+/*推荐end*/
+/*限时特卖start*/
+.hotsale {
+    height: 280px;
+    background-color: #F5F5F5;
+    /*background-color: pink;*/
+}
+
+.hotsale .hot-top {
+    height: 105px;
+    /*background-color: yellow;*/
+}
+
+.hotsale .hot-top h2 {
+    float: left;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 105px;
+}
+
+.hotsale .hot-top .leftp {
+    float: left;
+    margin-left: 12px;
+    font-size: 14px;
+    line-height: 100px;
+    color: #636363;
+}
+
+.hotsale .hot-top .rightp {
+    float: right;
+    margin-right: 5px;
+    font-size: 16px;
+    line-height: 105px;
+    cursor: pointer;
+}
+
+.hotsale .hot-bottom {
+    position: relative;
+}
+
+.hotsale .hot-bottom ul .first-child {
+    margin-left: 0;
+}
+
+.hotsale .hot-bottom li {
+    float: left;
+    width: 370px;
+    height: 125px;
+    margin-left: 25px;
+    background-color: #fff;
+}
+
+.hotsale .hot-bottom li.hot-mask {
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    /*display: none;*/
+    position: absolute;
+    top: 0;
+}
+
+.hotsale .hot-bottom li.hm1 {
+    left: 0;
+}
+
+.hotsale .hot-bottom li.hm2 {
+    left: 370px;
+}
+
+.hotsale .hot-bottom li.hm3 {
+    left: 765px;
+}
+
+.hotsale .hot-bottom li.shadow {
+    box-shadow: 5px 0 5px rgba(0, 0, 0, .3)
+}
+
+/*限时特卖end*/
+/*机酒自由行start*/
+.ziyouxing,
+.theme {
+    height: 710px;
+}
+
+.ziyouxing .w,
+.theme .w {
+    position: relative;
+}
+
+.ziyouxingtitle,
+.wondertitle,
+.themetitle {
+    height: 105px;
+}
+
+.ziyouxingtitle h2,
+.wondertitle h2,
+.themetitle h2 {
+    float: left;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 105px;
+}
+
+.ziyouxingtitle p,
+.wondertitle p,
+.themetitle p {
+    float: left;
+    margin-left: 12px;
+    font-size: 14px;
+    line-height: 105px;
+    color: #636363;
+}
+
+.ziyouxingtags,
+.wondertags,
+.themetags {
+    float: right;
+}
+
+.ziyouxingtitle .ziyouxingtags li,
+.wondertitle .wondertags li,
+.themetitle .themetags li {
+    /*display: none;*/
+    float: left;
+    padding-top: 30px;
+    margin-left: 30px;
+    font-size: 16px;
+    line-height: 28px;
+    /*position: absolute;*/
+}
+
+.ziyouxingtitle .ziyouxingtags li:hover,
+.wondertitle .wondertags li:hover,
+.themetitle .themetags li:hover {
+    border-bottom: 3px solid #16C1A0;
+}
+
+.ziyouxingcontent ul,
+.wondercontent ul,
+.themecontent ul {
+    margin-left: -20px;
+}
+
+.ziyouxingcontent li,
+.wondercontent li,
+.themecontent li {
+    float: left;
+    margin: 20px 0 0 20px;
+}
+
+/*机酒自由行end*/
+/*城市玩乐start*/
+.wonder {
+    height: 565px;
+    background-color: #F5F5F5;
+}
+
+.wondercontent li.special {
+    float: right;
+}
+
+/*城市玩乐end*/
+/*尾部部分start*/
+.footer {
+    height: 220px;
+    background-color: #F5F5F5;
+}
+
+.footer .footer-nav {
+    height: 20px;
+    line-height: 20px;
+}
+
+.footer .footer-nav li {
+    margin: 30px 0;
+    padding: 0 32px;
+    border-right: 2px solid #DFE3E8;
+    font-size: 18px;
+    float: left;
+}
+
+.footer .footer-nav li.noborder {
+    border: none;
+}
+
+/*尾部部分end*/
+/*结束部分start*/
+.theend {
+    background-color: #333333;
+}
+
+/*结束部分end*/

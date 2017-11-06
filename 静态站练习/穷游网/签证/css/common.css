@@ -1,0 +1,100 @@
+@charset "UTF-8";
+html, body, h1, h2, h3, h4, h5, h6, ul, li, dl, dt, dd, img, p, form, legend, fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+ul, li {
+    list-style: none;
+}
+
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "simsun", "宋体";
+}
+select, input {
+    vertical-align: middle;
+}
+select, input, textarea {
+    font-size: 0;
+    padding: 0;
+}
+
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+table {
+   border-collapse: collapse;
+}
+body {
+    font: 14px/150% Arial, Verdana, "\5b8b\4f53";
+    color: #666;
+    background-color: #fff;
+}
+
+
+textarea {
+    resize: none;
+}
+
+
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+a:hover {
+    color: #C81623;
+}
+h1, h2, h3,h4 ,h5 ,h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+em, i, s {
+    text-decoration: none;
+    font-style: normal;
+}
+
+.w {
+    width: 1160px;
+    margin: 0 auto;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.al {
+    text-align: left;
+}
+.ac {
+    text-align: center;
+}
+.ar {
+    text-align: right;
+}
+.hide {
+    display: none;
+}
