@@ -1,0 +1,592 @@
+@charset "UTF-8";
+.top{
+	
+	height: 26px;
+	background-color:#F7F7F7;
+	border-bottom:1px solid #D8D8D8;
+}
+.top-page{
+	width:970px;
+	font-size:12px;
+	color:#000;
+	margin:0 auto;
+	background-color:#F7F7F7;
+}
+.tl{
+	float:left;
+	line-height:26px;
+}
+.tr{
+	float:right;
+	line-height: 26px;
+}
+.tr ul li{
+	float:left;
+	padding-right:10px;
+}
+.tr ul li s{
+	display: inline-block;
+	width:12px;
+	height:12px;
+	background:url(../img/01.png);
+	vertical-align:middle;
+}
+.logo{
+	width: 970px;
+	height: 98px;
+	margin: 0 auto;
+}
+.logo_l{
+	width: 200px;
+	height: 55px;
+	float: left;
+	background:url(../img/01.png) -20px 0;
+	margin: 24px 0 19px 10px;
+	text-indent: -1000em;
+}
+.logo_r{
+	border: 1px solid #C9C9C9;
+	float: right;
+	width:530px;
+	height:40px;
+	margin-top: 29px;
+}
+.logo_r_serch{
+	border: 1px solid #A6A6A6;
+	width:418px;
+	height: 28px;
+	float: left;
+	margin: 5px 0px 5px 4px;
+}
+.btn{
+	 color:white;
+     border: none;
+     width: 99px;
+     height: 30px;
+     float:left;
+     background-color: #2F70D0;
+     margin:5px 5px 5px 0;
+}
+.menu{
+	width:970px;
+	height:25px;
+	margin:0 auto;
+	border-bottom: 2px solid #0266A3;
+}
+.menu ul li{
+
+	line-height: 25px;
+	float:left;
+	padding: 0 15px;
+}
+.menu ul li a{
+	color: #306BAE;
+	font-size: 14px;
+	font-weight: bold;
+}
+.menu ul li:hover{
+	background:#0266A3;
+	color: white;
+	line-height: 25px;
+}
+.menu ul li:hover a{
+	color:white;
+}
+.menu li span{
+	color:white;
+}
+.menu .li_1{
+	background-color: #0266A3;
+}
+.nav{
+	width: 970px;
+	height: 224px;
+	margin: 10px auto 0 auto;
+}
+.left{
+	float: left;
+	width: 200px;
+	height: 210px;
+	margin-right: 11px;
+}
+.left h2 {
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #0266A3;
+	color:white;
+	padding-left: 21px;
+}
+.left ul{
+	width:200px;
+	height:180px;
+	background-color:#EBF0F6;
+}
+.left ul li{
+	font-size:14px;
+	padding-top: 10px;
+	margin-left: 22px;
+	
+
+}
+.left s {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background:url(../img/01.png) -230px -1px;
+	margin-right: 14px;
+
+}
+.ad{
+	display: inline-block;
+	width:520px;
+	height:210px;
+	background:url(../img/01.png) 0 -230px;
+}
+.message{
+	float: right;
+	width:228px;
+	height: 210px;
+
+}
+.message_top{
+	width:226px;
+	height: 91px;
+	background-color: #F7FAFF;
+	border: 1px solid #DDDDDD;
+	margin-bottom: 21px;
+}
+.message h3{
+	font-size: 14px;
+	font-weight: bold;
+	padding:7px 0 0 18px;
+}
+.message_top p{
+	margin-top: 10px;
+
+}
+.message_top .message_content{
+	margin:25px 10px 0 0;
+}
+.message_top s{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background:url(../img/01.png) -260px 0;
+	margin:20px 10px 0 10px;
+}
+.message_bottom{
+	width: 228px;
+	height: 94px;
+	background-color: #F7F7F7;
+}
+.message_bottom h2{
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: gray;
+	padding-top: 12px;
+}
+.message_bottom span{
+	font-size: 18px;
+	font-weight: bold;
+	
+}
+.p1{
+	display: inline-block;
+	width: 13px;
+	height: 18px;
+	background:url(../img/01.png) -310px 0;
+	margin: 12px 8px 0 56px;
+}
+.p2{
+	display: inline-block;
+	width: 81px;
+	height: 23px;
+	background:url(../img/01.png) -330px 0;
+	margin: 12px 8px 0 56px;
+}
+.message_bottom .btn{
+
+	width: 81px;
+	height: 23px;
+	background:url(../img/01.png) -330px -30px;
+	margin-top: 4px;
+	margin-left: 75px;
+}
+.tit{
+	width: 948px;
+	height: 34px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 34px;
+	background:#ECF1F7;
+	border-top:2px solid #C3D7E4;
+	margin-top: 14px;
+	padding-left: 22px;
+	margin: 0 auto;
+}
+/*建筑材料内容部分*/
+.material{
+	width: 966px;/*减去4条边框的宽度*/
+	height: 344px;/*减去2条边框的宽度*/
+	margin-top: 10px;
+	margin:0 auto;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.material_l{
+	border: 1px solid #D8D8D8;
+	width: 722px;/* 727*/
+	height: 344px;
+	margin-top: 10px;
+}
+.material_l_top{
+	width: 727px;
+}
+.material_l_product1{
+	width: 351px;
+	height: 143px;
+	margin: 15px 0 0 10px;
+}
+.material_l_product1_l{
+	width: 99px;
+	height: 143px;
+
+}
+.material_l_product1 .pic{
+	width: 98px;
+	height: 100px;
+	border: 1px solid #CACACA;
+}
+.material_l_product1 .pic s{
+	display: inline-block;
+	width: 90px;
+	height: 63px;
+	background:url(../img/02.png) 0 0;
+	margin: 18px 0 0 4px;
+}
+.material_l_product1_l .buy{
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	width: 100px;
+	height: 26px;
+	background-color: #0A84E3;
+	margin-top: 15px;
+}
+.material_l_product1_r{
+	width: 252px;
+	height: 143px;
+}
+
+.material_l_product1_r .p6{
+	font-size: 12px;
+	color: #863E01;
+	margin: 14px 0 0 15px;
+}
+.material_l_product1_r .p7{
+	margin:20px 0 0 10px;
+}
+.material_l_product1_r .p7 span{
+	font-size: 14px;
+	color:#C50934;
+	font-weight: bold;
+}
+.material_l_product1_r .p8{
+	font-size: 12px;
+	margin:24px 0 0 10px;
+}
+.material_l_product1_r .p8 span{
+	color:#C50A7F;
+}
+
+
+.material_l_product1_r del{
+	font-size: 14px;
+}
+.material_l_product1_r .p5{
+	font-size: 14px;
+	font-weight: bold;
+	margin:10px 0 0 10px;
+}
+.material_r{
+	border:1px solid #E0E6F0;
+	width: 230px;
+	height: 344px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.material_r h2{
+	width: 213px;
+	height:28px;
+	line-height: 28px;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px solid #E0E6F0;
+	padding-left:15px;
+	background-color: #FBFBFB;
+}
+.material_r .tips li{
+	font-size: 13px;
+	margin-top: 8px;
+	margin-left: 12px;
+}
+.material_r .tips li s{
+	display: inline-block;
+	width: 21px;
+	height: 14px;
+	background:url(../img/02.png) -100px 0;
+	margin-left: 0px;
+}
+.material_r .tips li:hover a{
+	color:red;
+}
+/*建筑材料内容部分end*/
+/*儿童安全座椅 begin*/
+.tit_1{
+	width: 944px;
+	height: 34px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 34px;
+	background:#ECF1F7;
+	border-top:2px solid #C3D7E4;
+	margin: 22px auto 0 auto;
+	padding-left: 22px;
+}
+
+/*儿童安全座椅 end*/
+/*儿童安全座椅内容 begin*/
+.chair{
+	width: 966px;
+	height: 326px;
+	margin:12px auto 0 auto;
+}
+.chair_l{
+	width: 722px;
+	height:326px;
+}
+.chair_l_top{
+	width: 722px;
+	height:23px;
+}
+.chair_l_top p{
+	float:right;
+	line-height: 23px;
+	color: #5F94CA;
+}
+.chair_l_bottom{
+	border-top: 2px solid #00B0E7;
+}
+.chair_l_bottom a:hover{
+	color:red;
+}
+.chair_l_bottom .chair1{
+	width:163px;
+	height: 296px;
+	margin:5px 14px 0 3px;
+}
+.chair_l_bottom .chair1 .cp1{
+	margin:5px 0;
+}
+.chair_l_bottom .chair1 .cp2{
+	color:#999999;
+}
+.chair_l_bottom .chair1 .cp2 strong{
+	color:brown;
+}
+.chair_l_bottom .chair1 p{
+	text-align: center;
+	font-size: 14px;
+}
+.chair_l_bottom .chair1 p span{
+	display: inline-block;
+	margin:5px 0;
+}
+.chair_r{
+	width: 228px;
+	height: 325px;
+}
+.chair_r_top{
+	width:218px;
+	height: 128px;
+	border:1px solid #CBCBCB;
+	background:url(../img/02.png) -130px 0;
+	margin-left: 13px;
+}
+.chair_r_bottom{
+	width: 220px;
+	height: 177px;
+	background:url(../img/02.png) -360px 0;
+	margin-left: 13px;
+	margin-top: 10px;
+	text-transform: 
+}
+/*儿童安全座椅内容 end*/
+/*工艺美术品 begin*/
+.art{
+	width: 966px;
+	height: 342px;
+	margin:0 auto;
+}
+.art_l{
+	width: 720px;
+	height: 342px;
+}
+
+.art_product1{
+	width: 352px;
+	height: 144px;
+	margin:13px 0 0 8px;
+}
+.art_product1_l{
+	width: 98px;
+	height: 142px;
+}
+.art_product1_l .pic{
+	width: 88px;
+	height: 100px;
+	border:1px solid #CACACA;
+	padding: 5px 4px 0 4px;
+}
+.art_product1_l input{
+	width: 98px;
+	height: 26px;
+	background-color: #0A84E3;
+	font-size: 16px;
+	margin-top: 17px;
+	font-weight: bold;
+}
+.art_product1_r{
+	width: 242px;
+	height: 142px;
+	margin-left: 10px;
+}
+.art_product1_r h3{
+	margin-top: 10px;
+	margin-bottom:14px;
+}
+.art_product1_r:hover a{
+	color: red;
+}
+.art_product1_r .pp1{
+	color: #863E01;
+	margin-left: 6px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.art_product1_r  .pp2{
+	margin-top: 16px;
+}
+.art_product1_r  .pp2 span{
+	font-size: 18px;
+	font-weight: bold;
+	color: red;
+}
+.art_product1_r  .pp2 s{
+	width:14px;
+	height: 14px;
+	display: inline-block;
+	background:url(../img/01.png) -420px 0;
+	margin-left: 3px;
+}
+.art_product1_r  .pp2 del{
+	color: #555;
+	font-size: 14px;
+}
+.art_product1_r  .pp3{
+	margin-top: 25px;
+}
+.art_r{
+	width: 245px;
+	height: 342px;
+	border-right :1px solid #E1E2E2;
+	margin-top: 13px;
+}
+.art_r_top {
+	width: 226px;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #E1E2E2;
+	background-color: #F8F8F8;
+	text-indent: 1em;
+	margin: 19px 0 0 2px;
+}
+.art_r_mid{
+	width: 216px;
+	height: 88px;
+	margin-top: 10px;
+}
+.art_r_mid img{
+	margin:5px 0 0 2px;
+}
+.art_r_mid p{
+	font-size: 12px;
+	margin: 8px 0 0 8px;
+}
+.art_r_bottom{
+	clear: both;
+	width: 240px;
+	height: 225px;
+}
+.art_r_bottom li{
+	font-size: 13px;
+	padding:5px 0 ;
+}
+.art_r_bottom span{
+	color: #999;
+}
+.art_r_bottom li:hover a{
+	color: red;
+}
+.bottom_line{
+	width: 966px;
+	height: 20px;
+	border-bottom: 1px solid #DDD;
+	margin:0 auto;
+}
+/*工艺美术品 end*/
+/* 底部 begin */
+.bottom{
+	width: 966px;
+	height: 102px;
+	margin:0 auto;
+	border-bottom: 3px solid #0A7EC3;
+}
+.bottom .bp1,.bp2{
+	font-size: 13px;
+	text-align: center;
+	margin-top: 35px;
+	color: #666;
+}
+.bottom span{
+	color:#999;
+}
+.bottom a{
+	text-decoration: none;
+}
+.bottom a:hover{
+	text-decoration: underline;
+	color: red;
+}
+.bottom_1{
+	width: 966px;
+	height: 90px;
+	margin: 0 auto;
+}
+.bottom_1 p{
+	text-align: center;
+	margin-top: 10px;
+}
+.bottom_1 a:hover{
+	color: red;
+	text-decoration: underline;
+}
+/* 底部 end */

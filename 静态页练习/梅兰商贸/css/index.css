@@ -1,0 +1,528 @@
+@charset "utf-8";
+.top {
+	height: 26px;
+	background:#F7F7F7;
+	border-bottom: 1px solid #D8D8D8;
+}
+.top_mid {
+	height: 26px;
+}
+.top_mid .banxin_l {
+	padding-left: 6px;
+	line-height: 26px;
+	color: #666;
+}
+.top_mid .banxin_l p {
+	font-size: 12px;
+}
+.top_mid .banxin_r li {
+	float: right;
+	height: 26px;
+	line-height: 26px;
+	padding-right: 11px;
+}
+.top_mid .banxin_r a {
+	font-size: 10px;
+}
+.top_mid .banxin_r a:hover {
+	color: red;
+}
+.top_mid a {
+	color: #666;
+}
+.top_mid .banxin_r s {
+	width: 14px;
+	height: 5px;
+	display: inline-block;
+	background:url(../img/sprite.png) no-repeat 0 0;
+	vertical-align: middle;
+}
+/*logo部分 S*/
+.logo {
+	height: 98px;
+}
+.logo_l {
+	width: 199px;
+	height: 56px;
+	background:url(../img/sprite.png) no-repeat 0 -380px;
+	margin:24px 0 0 10px;
+}
+.logo_r {
+	width: 528px;
+	height: 40px;
+	border:1px solid #C9C9C9;
+	margin-top: 29px;
+	background:#F6F6F6;
+}
+.logo_r .inp {
+	width: 419px;
+	height: 28px;
+	margin:5px 0 0 4px;
+	border:1px solid #C9C9C9;
+}
+.logo_r .btn {
+	width: 98px;
+	height: 30px;
+	background:#2F70D0;
+	color: white;
+	font-size: 18px;
+	font:normal white 18px "MicrosoftYahei";
+	margin-top:5px;
+	border:none;
+}
+/*logo部分 E*/
+/*导航栏部分 S*/
+.nav {
+	height: 26px;
+	border-bottom: 2px solid #0266A3;
+}
+.nav li {
+	float: left;
+	line-height: 26px;
+	padding:0 17px;
+}
+.nav .li_1 {
+	background:#0266A3;
+}
+.nav .li_1 a {
+	color: white;
+}
+.nav a {
+	font-size: 14px;
+	color: #0266A3;
+	font-weight: bold;
+}
+.nav li:hover{
+	background:#0266A3;
+}
+.nav li a:hover {
+	color: white;
+	font-size: 17px;
+}
+/*导航栏部分 E*/
+/*导航栏下面具体部分 B*/
+.nav_1 {
+	height: 210px;
+	margin-top: 10px;
+}
+.nav_1_l {
+	width: 200px;
+	height: 210px;
+	background:#EBF0F6;
+}
+.nav_1_l h3 {
+	height: 30px;
+	background: #0266A3;
+	padding-left: 22px;
+	line-height: 30px;
+	color: white;
+	font-size: 14px;
+}
+.nav_1_l li {
+	line-height: 28px;
+	padding-left: 9px;
+}
+.nav_1_l s {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background:url(../img/sprite.png) no-repeat -20px 0; 
+	padding-right:14px;
+	vertical-align: middle;
+}
+.nav_1_l li:hover {
+	background:#0266A3;
+}
+.nav_1_l li:hover a {
+	color: white;
+}
+.nav_1_m {
+	width: 520px;
+	height: 210px;
+	background:teal;
+	margin-left: 10px;
+	background:url(../img/mi.png) no-repeat center center;
+}
+.nav_1_r {
+	width: 230px;
+	height: 210px;
+	margin-left: 9px;
+}
+.nav_1_r_top {
+	width: 228px;
+	height: 93px;
+	border:1px solid #ccc;
+	background-color:#F7FAFF;
+}
+.nav_1_r_top h3 {
+	font-size: 14px;
+	margin-top: 7px;
+	margin-left: 18px;
+	color: #666;
+}
+.nav_1_r_top .price {
+	height: 40px;
+	width: 220px;
+	font-size: 14px;
+	padding-left: 10px;
+	margin-top: 8px;
+}
+.nav_1_r_top  s {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background:url(../img/sprite.png) no-repeat -50px 0;
+}
+.nav_1_r_top p {
+	display: inline-block;
+	margin-top: 5px;
+	line-height:24px;
+	font-size: 12px;
+	color: #666;
+}  
+.nav_1_r_top a{
+	color: #444444;
+	font-size: 12px;
+}
+.nav_1_r_top a:hover {
+	color: red;
+}
+.nav_1_r_bottom {
+	height: 82px;
+	margin-top: 21px;
+	background:#F7F7F7;
+	padding-top: 12px;
+}
+.nav_1_r_bottom h3 {
+	color: #999;
+	font-size: 16px;
+	text-align: center;
+}
+.nav_1_r_bottom p {
+	color: #6AB2E6;
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 35px;
+	margin-top: 6px;
+}
+.nav_1_r_bottom s {
+	width: 12px;
+	height: 18px;
+	display: inline-block;
+	background:url(../img/sprite.png) no-repeat -100px 0;
+	vertical-align: middle;
+	padding-right: 8px;
+}
+.nav_1_r_bottom input {
+	width: 81px;
+	height: 23px;
+	border:0;
+	background:url(../img/sprite.png) no-repeat -125px 0;
+	margin-top: 6px;
+	margin-left: 75px;
+}
+/*导航栏下面具体部分 E*/
+/*建筑材料标题栏 B*/
+.title {
+	height: 34px;
+	line-height: 34px;
+	background:#ECF1F7;
+	border-top: 1px solid #C3D7E4;
+	margin-top: 14px;
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 22px;
+	width: 947px;
+}
+/*建筑材料标题栏 E*/
+/*建筑材料部分 B*/
+.material {
+	height: 346px;
+	margin-top: 11px;
+	width: 969px;
+}
+.material_l {
+	width: 727px;
+	height: 329px;
+	border:1px solid #C3D7E4;
+	padding-top: 12px;
+}
+.material_l_top {
+	width: 727px;
+	height: 144px;
+	margin-left: 25px;
+}
+.material_l_bottom {
+	width: 727px;
+	height: 144px;
+	margin-left: 25px;
+}
+.material_l_top_left {
+	width: 351px;
+	height: 144px;
+}
+.material_l_top_left_left {
+	width: 97px;
+	height: 143px;
+}
+.material_l_top_left_left_pic {
+	width: 89px;
+	height: 97px;
+	border:1px solid #C3D7E4;
+	padding:4px 4px 0 4px;
+}
+.material_l_top_left_left input {
+	width: 99px;
+	height: 26px;
+	background:#0A84E3;
+	font-size: 16px;
+	margin-top: 15px;
+}
+.material_l_top_left_left_describe {
+	width: 242px;
+	height: 144px;
+	padding-left: 10px;
+}
+.material_l_top_left_left_describe .p1 {
+	margin-top:12px;
+	font-size: 14px;
+}
+.material_l_top_left_left_describe .p2 {
+	font-size: 10px;
+	color: #863E01;
+	margin:15px 0 16px 4px;
+}
+.material_l_top_left_left_describe .p3 span {
+	font-weight: bold;
+	color: red;
+}
+.material_l_top_left_left_describe .p3 del {
+	font-size: 14px;
+}
+.material_l_top_left_left_describe .p4 {
+	font-size: 12px;
+	margin-top: 25px;
+}
+.material_l_top_left_left_describe .p4 span {
+	color: red;
+}
+.material_l_mid {
+	border-top: 1px solid #eee;
+	width: 711px;
+	margin: 15px 8px;
+}
+.material_r {
+	width: 228px;
+	height: 341px;
+	border:1px solid #E0E6F0;
+}
+.material_r h3 {
+	height: 29px;
+	line-height: 29px;
+	font-size: 16px;
+	color: #4E4E4E;
+	padding-left: 16px;
+	border-bottom: 1px solid #E0E6F0;
+}
+.material_r ul {
+	padding-left: 10px;
+	padding-top: 10px;
+}
+.material_r li {
+	height: 24px;
+	line-height: 24px;
+}
+.material_r li a {
+	color: #4E4E4E;
+	font-size: 14px;
+}
+.material_r li:hover a {
+	color: red;
+}
+.material_r s {
+	width: 4px;
+	height: 4px;
+	display: inline-block;
+	background:url(../img/sprite.png) no-repeat  0 -15px;
+	margin-right: 11px;
+	vertical-align: middle;
+}
+/*建筑材料部分 E*/
+/*儿童安全座椅标题 B*/
+/*儿童安全座椅标题 E*/
+/*儿童座椅内容展示部分 B*/
+.chair {
+	height: 327px;
+	margin-top: 11px;
+}
+.chiar_left {
+	width: 723px;
+	height: 322px;
+}
+.chiar_left_top {
+	height: 23px;
+	line-height: 23px;
+	border-bottom: 2px solid #00B0E7;
+	background:url(../img/11.gif) no-repeat left ;
+}
+.chiar_left_top p {
+	margin-left:630px;
+	color: #1A66B3;
+}
+.chiar_left_bottom {
+	width: 721px;
+	height: 295px;
+	border:1px solid #CACACA;
+	border-top: none;
+	padding-top: 6px;
+}
+.chiar_left_bottom_content1 {
+	width: 163px;
+	height: 296px;
+	margin:0 8px;
+}
+.chiar_left_bottom_content1 .chiar_left_bottom_content1_pic {
+	width: 163px;
+	height: 170px;
+	background:url(../img/22.gif) no-repeat;
+}
+.chiar_left_bottom_content1 .p1 {
+	line-height: 20px;
+	text-align: center;
+	font-size: 10px;
+	margin: 8px 0 10px 0;
+}
+.chiar_left_bottom_content1 .p2{
+	text-align: center;
+	color: #999;
+	font-size: 10px;
+}
+.chiar_left_bottom_content1 .p3 {
+	color: #999;
+	text-align: center;
+	font-size: 10px;
+	margin-top: 5px;
+}
+.chiar_left_bottom_content1 .p4 {
+	color: #999;
+	text-align: center;
+	font-size: 10px;
+	margin-top: 5px;
+}
+.chiar_left_bottom_content1 .p4 span{
+	color: red;
+	font-weight: bold;
+}
+.chiar_right {
+	width: 220px;
+	height: 327px;
+}
+.chiar_right_top {
+	width: 218px;
+	height: 128px;
+	background:url(../img/33.gif);
+	margin-top: 2px;
+}
+.chiar_right_bottom {
+	width: 220px;
+	height: 177px;
+	background:url(../img/44.gif);
+	margin-top: 10px;
+}
+/*儿童座椅内容展示部分 E*/
+/*工艺美术品部分 B*/
+.art {
+	height: 344px;
+	margin-top: 14px;
+	width: 969px;
+}
+.art_r {
+	width: 227px;
+	height: 343px;
+	margin-left: 10px;
+	background:#DBFFFD;
+}
+.art_r h3 {
+	height: 30px;
+	line-height: 30px;
+	padding-left: 11px;
+	background:#F8F8F8;
+	font-size: 16px;
+	border-bottom: 1px solid #E1E2E2;
+}
+.art_r_mid {
+	height: 75px;
+	margin-top: 15px;
+}
+.art_r_mid .art_r_mid_pic {
+	width: 100px;
+	height: 75px;
+	background:url(../img/55.gif) no-repeat;
+}
+.art_r_mid .art_r_mid_describe {
+	width: 120px;
+	height: 75px;
+	font-size: 14px;
+	line-height: 18px;
+	margin-left: 6px;
+}
+.art_r ul {
+	margin-top: 15px;
+}
+.art_r li {
+	height: 22px;
+	line-height: 22px;
+	font-size: 13px;
+}
+.art_r li a {
+	font-size: 13px;
+	color: #444;
+}
+.art_r li:hover a {
+	color: red;
+}
+.art_r li span {
+	color: #999;
+}
+/*工艺美术品部分 E*/
+/*底部分割线 B*/
+.bottom_line {
+	border-top: 1px solid #ddd;
+	margin-top: 18px;
+}
+/*底部分割线 E*/
+/*友情链接部分 B*/
+.link {
+	height: 72px;
+	font-size: 8px;
+	border-bottom: 3px solid #0A7EC3;
+	line-height: 20px;
+	padding-top: 30px;
+}
+.link span {
+	color: #999;
+}
+.link .p2 {
+	text-indent: 4.5em;
+}
+/*友情链接部分 E*/
+/*关于我们部分 B*/
+.aboutus {
+	height: 62px;
+	text-align: center;
+	font-size: 8px;
+	line-height: 25px;
+	padding-top: 13px;
+}
+.aboutus li {
+	float: left;
+	margin-right: 18px;
+}
+.aboutus  a,p {
+	font-size: 8px;
+	color: #444;
+}
+.aboutus ul {
+	margin-left: 120px;
+}
+/*关于我们部分 E*/

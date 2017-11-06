@@ -1,0 +1,358 @@
+@charset "utf-8";
+/*网页顶部 B*/
+.top {
+	height: 40px;
+	background:#333;
+}
+.top_mid {
+	width: 1226px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0 auto;
+}
+.top_mid li {
+	float: left;
+	text-align: center;
+	color: #393D42;
+}
+.top_mid a {
+	font-size: 12px;
+	color: #B0B0B0;
+}
+.top_mid li:hover a {
+	color: red;
+}
+.top_mid .li_1 {
+	margin-left: 250px;
+}
+/*网页顶部 E*/
+/*导航标题部分 B*/
+.nav {
+	height: 100px;
+}
+.nav_mid {
+	height: 100px;
+	background:url(../img/logo.png) no-repeat left ;
+}
+.nav_mid ul {
+	margin-left: 120px;
+	float: left;
+}
+.nav_mid li {
+	height: 100px;
+	line-height: 100px;
+	float: left;
+	margin-right: 15px;
+}
+.nav_mid li a {
+	font-size: 16px;
+	color: #333;
+}
+.nav_mid a:hover {
+	color:red;
+}
+.nav_mid .inp {
+	float: left;
+	width: 243px;
+	height: 46px;
+	margin-left: 151px;
+	margin-top: 25px;
+	border:1px solid #444;
+	position: relative;
+	text-align: right;
+	color: #FF6700;
+}
+.nav_mid .btn {
+	float: right;
+	width: 48px;
+	height: 48px;
+	margin-top: 25px;
+	border:1px solid #444;
+	border-left: 0;
+	background:url(../img/serch.png) ;
+}
+/*导航标题部分 E*/
+/*小标题栏部分 B*/
+.banner {
+	height: 40px;
+	line-height: 40px;
+	background: #F5F5F5;
+	color: #757575;
+	font-size: 10px;
+}
+/*小标题栏部分 E*/
+/*小米电视展示区 B*/
+.show {
+	height: 540px;
+}
+.show .show_top {
+	height: 82px;
+	line-height: 82px;
+	padding-left:40px;
+	width: 1186px;
+}
+.show .show_top li {
+	float: left;
+	margin-right: 54px;
+}
+.show .show_top a{
+	font-size: 14px;
+	color: #333;
+}
+.show .show_top .a1 {
+	font-weight: bold;
+}
+.show .show_top .a2 {
+	color: red;
+}
+.show .show_bottom {
+	height: 460px;
+	background:url(../img/banner.jpg);
+}
+/*小米电视展示区 e*/
+/*小米电视型号具体内容 B*/
+.content {
+	height: 994px;
+	background:#F5F5F5;
+}
+.content .content_top {
+	height: 492px;
+}
+.content_top_left {
+	width: 606px;
+	height: 492px;
+}
+.content_top_l_pic {
+	width: 606px;
+	height: 360px;
+	background:url(../img/pr1.jpg);
+}
+.content_top_l_line {
+	width: 528px;
+	border-top: 1px solid #E0E0E0;
+	margin:0 auto;
+}
+.content_top_l_describe {
+	width: 566px;
+	height: 132px;
+	padding-left: 40px;
+}
+.content_top_l_d_l {
+	width: 358px;
+	height: 96px;
+	padding-top: 36px;
+	}
+.content_top_l_d_l h2 {
+	font-size: 20px;
+}
+.content_top_l_d_l span {
+	color: #FF6700;
+	font-size: 16px;
+}
+.content_top_l_d_l p {
+	font-size: 14px;
+}
+.content_top_l_describe .inp {
+	width: 156px;
+	height: 36px;
+	color: #FF6700;
+	margin-top: 30px;
+	margin-right: 40px;
+	border:1px solid #FF6700;
+}
+.content_bottom {
+	height: 477px;
+	padding-top:15px;
+}
+/*小米电视型号具体内容 E*/
+/*售后维修介绍部分 B */
+.fix {
+	margin-top: 15px;
+	height: 600px;
+	background:url(../img/001.jpg);
+	position: relative;
+}
+.fix_bottom {
+	width: 1146px;
+	height: 158px;
+	opacity: 0.8;
+	background:#4B4A46;
+	position: absolute;
+	bottom: 0;
+	padding-left: 80px;
+}
+.fix_bottom_l {
+	width: 900px;
+	height: 113px;
+	padding-top: 45px;
+}
+.fix_bottom_l h3 {
+	font-size: 20px;
+	color: white;
+	margin-bottom: 22px;
+}
+.fix_bottom_l p {
+	font-size: 14px;
+	color: white;
+}
+.fix_bottom_r {
+	width: 180px;
+	height: 89px;
+	padding-top: 24px;
+	padding-right: 34px;
+}
+.fix_bottom_r .inp1,.inp2 {
+	width: 179px;
+	height: 47px;
+	line-height: 47px;
+	border:1px solid #FF6700;
+	color: #FF6700;
+	font-size: 12px;
+	background:#4B4A46;
+}
+.fix_bottom_r .inp1 {
+	margin-bottom: 10px;
+}
+/*售后维修介绍部分 E */
+/*维修具体条件部分 B */
+.fix2 {
+	height: 80px;
+	border-bottom: 1px solid #E0E0E0;
+	padding-left: 54px;
+	width: 1172px;
+}
+.fix2 li {
+	width: 230px;
+	height: 80px;
+	line-height: 80px;
+	font-size: 15px;
+	color: #444;
+	float: left;
+}
+.fix2 s {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 8px;
+}
+.fix2 .li_1 s {
+	width: 24px;
+	height: 24px;
+	background:url(../img/sprite.png) no-repeat 0 0;
+}
+.fix2 .li_2 s {
+	width: 23px;
+	height: 24px;
+	background:url(../img/sprite.png) no-repeat -35px 0;
+}
+.fix2 .li_3 s {
+	width: 23px;
+	height: 22px;
+	background:url(../img/sprite.png) no-repeat -70px 0;
+}
+.fix2 .li_4 s {
+	width: 21px;
+	height: 21px;
+	background:url(../img/sprite.png) no-repeat -100px 0;
+}
+.fix2 .li_5 s {
+	width: 15px;
+	height: 20px;
+	background:url(../img/sprite.png) no-repeat -130px 0;
+}
+/*维修具体条件部分 e */
+/*帮助中心 B*/
+
+.help {
+	height: 222px;
+}
+.help_l {
+	width: 973px;
+	height: 222px;
+}
+.help dl {
+	float: left;
+	margin-top: 40px;
+	margin-right: 50px;
+}
+.help dt {
+	text-indent: 2.5em;
+	margin-bottom: 33px;
+	color: #424242;
+}
+.help dd {
+	font-size: 14px;
+	color: #757575;
+}
+.heip_r {
+	text-align: center;
+	width: 252px;
+	height: 112px;
+	border-left: 1px solid #E0E0E0;
+	margin-top: 35px;
+}
+.heip_r h3 {
+	font-size: 24px;
+	color: #FF6700;
+	margin-bottom: 12px;
+
+}
+.heip_r p {
+	font-size: 12px;
+	color: #333;
+}
+.heip_r input {
+	width: 120px;
+	height: 30px;
+	border:1px solid #FF6700;
+	font-size: 10px;
+	color:#FF6700; 
+	margin-top: 20px;
+	background:white;
+}
+/*帮助中心 E*/
+/*网页底部部分 B*/
+.page_bottom {
+	padding-left: 65px;
+	width: 1171px;
+	height: 136px;
+	background-color:red;
+	background:url(../img/logo.png) no-repeat left top;
+	position: relative;
+}
+.page_bottom .zuo {
+	height: 136px;
+	width: 720px;
+}
+.page_bottom li {
+	float: left;
+}
+.page_bottom li a {
+	font-size: 14px;
+	color: #333;
+}
+.page_bottom p {
+	font-size: 14px;
+	color: #C8B0BC;
+	margin:5px 0;
+}
+.page_bottom .d1 {
+	position: absolute;
+	right: 490px ;
+	top:5px;
+}
+.page_bottom .you {
+	width: 380px;
+	height: 136px;
+	padding-left:60px;
+}
+.page_bottom  .img1 {
+	width: 84px;
+	height: 27px;
+}
+.page_bottom  .img2 {
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	margin-left:-133px;
+}
+/*网页底部部分 e*/

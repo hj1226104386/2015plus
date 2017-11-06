@@ -1,0 +1,33 @@
+
+html,body,h1,h2,h3,ul,li,input,img,p{
+	margin:0;
+	padding:0;
+}
+input,img {
+	border:0;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;	
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	font-size: 14px;
+}
+a:hover {
+	color: red;
+}
+.fl {
+	float: left;
+	display: inline;
+}
+.fr {
+	float: right;
+	display: inline;
+}
+.banxin {
+	width: 969px;
+	margin: 0 auto;
+}

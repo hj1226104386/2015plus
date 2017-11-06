@@ -1,0 +1,38 @@
+
+body,html,h1,h2,h3,h4,h5,input,img,p,ul,li {
+	margin: 0;
+	padding: 0;
+}
+img,input {
+	border:0;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	color: red;
+}
+li {
+	list-style: none;
+}
+.clearfix:after {
+	content: "0";
+	width: 0;
+	height: 0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	zoom:1;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.banxin {
+	width: 1238px;
+	margin:0 auto;
+}

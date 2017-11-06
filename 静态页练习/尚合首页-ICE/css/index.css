@@ -1,0 +1,263 @@
+@charset "utf-8";
+*{
+	margin: 0;padding:0;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+.mainbody{
+	width: 1349px;
+	height: 1414px;
+	border:1px solid white;
+	margin: 0 auto;
+}
+/*顶部 S*/	
+
+.top{
+	width: 1349px;
+	height: 62px;
+	border:1px solid white;
+	margin: 0 auto;
+}
+.top img{
+	margin-left: 184px;
+}
+.inp1{
+	width: 166px;
+	height: 24px;
+	margin-left: 560px;
+	font-size: 16px;
+	margin-top: 20px;
+}
+.inp2{
+	width: 60px;
+	height: 28px;
+	margin-left: -8px;
+	border:none;
+	font-size: 16px;
+	line-height: 28px;
+	background-color:#395E93;
+	color: white;
+}
+.top1{
+	width: 1349px;
+	height: 52px;
+	background:url(../img/nav_bg.png);
+	border:1px solid #C9C9C9;
+	line-height: 52px;
+}
+.top1 a{
+	text-decoration: none;
+	display: inline;
+	width: 130px;
+	border-right: 2px solid #E5E5E5;
+	float: left;
+	font-size: 16px;
+	font-weight: bold;
+	color: #000;
+	text-align: center;
+}
+.top1 a:hover{
+	color: red;
+	font-size: 20px;
+}
+.top1 .a1{
+	margin-left: 184px;
+}
+/*顶部 E*/	
+/*大背景部分 S*/
+.bbg{
+	width: 980px;
+	height: 666px;
+	border:1px solid #EDEDED;
+	background:url(../img/banner.png);
+	margin: 0 auto;
+}
+.note{
+	width: 1347px;
+	height: 29px;
+	line-height: 29px;
+	border:1px solid #EFEFEF;
+	text-align: center;
+	background:  #F8F8F8;
+}
+.note_{
+	width: 980px;
+	height: 29px;
+	margin: 0 auto;
+}
+.note p{
+	display: inline-block;
+	font-size: 14px ;
+	color: #000;
+	float: left;
+}
+.note input{
+	margin-top: 6px;
+	float: right;
+}
+/*大背景部分 E*/
+.content{
+	width: 980px;
+	height: 227px;
+	border:1px solid white;
+	margin:16px auto 0 auto;
+}
+.content_1 {
+	width: 310px;
+	height: 224px;
+	border:1px solid #E4E4E4;
+	background:url(../img/002.png);
+	float: left;
+}
+.content_2 {
+	width:372px;
+	height: 224px;
+	border:1px solid #E4E4E4;
+	
+	float: left;
+	margin-left: 11px;
+}
+.content .h {
+	padding: 17px 0 7px 0;
+}
+.content_2 ul {
+	padding-left:23px;
+	padding-right: 18px;
+}
+.content_2 li {
+	height: 27px;
+	line-height: 27px;
+	border-bottom: 1px dashed #DCDCDC;
+	font-size: 12px;
+}
+.content_2 a {
+	text-decoration: none;
+	color: #666;
+	font-size: 10px;
+}
+.content_2 .hh3{
+	padding-left: 23px;
+	float: left;
+}
+.content_2 .hh3_{
+	float: right;
+	color: #666;
+}
+.content_2 a:hover{
+	color: red;
+}
+.content_2 s{
+	display: inline-block;
+	width: 14px;
+	height: 13px;
+	background:url(../img/007.png) no-repeat -20px 0;
+}
+.content_2 span{
+	color:red;
+}
+.content_3 .hhh3{
+	display: inline-block;
+	color: #7AB82A;
+	margin-top: 11px;
+	padding: 5px 0 5px 5px;
+}
+.content_3 p {
+	font-size: 12px;
+	padding:7px 0 0 28px;
+}
+.content_3{
+	width: 268px;
+	height: 224px;
+	border:1px solid #E4E4E4;
+	float: left;
+	margin-left: 11px;
+}
+.content_3 a{
+	text-decoration: none;
+	color: #666;
+	font-size: 10px;
+}
+.content_3 ul{
+	margin-top: 5px;
+	padding-left:28px;
+}
+.content_3 li{
+	border-left: 3px solid #98CB00;
+	margin:5px 0 5px 5px;
+	padding-left: 5px;
+}
+.content_3 s{
+	display: inline-block;
+	width: 14px;
+	height: 13px;
+	margin-left: 8px;
+	background:url(../img/007.png) no-repeat -20px 0;
+}
+.content_3 a:hover{
+	color: yellow;
+}
+/*页面底部部分 S*/
+.buttom_1{
+	width: 1347px;
+	height: 204px;
+	border:1px dashed #414141;
+	background-color: #2D2D2D;
+	margin: 52px auto 0 auto;
+	overflow: hidden;
+	text-align: center;
+	padding-top: 16px;
+	position: relative;
+}
+.table_1{
+	display: inline-block;
+	margin: 0 auto;
+}
+.buttom_1 td a {
+	color: #707070;
+}
+.buttom_1 th a {
+	color: #C7C7C7;
+}
+table td,th {
+	padding-left: 20px;
+}
+table tr td,th{
+	text-align: left;
+	font-size: 12px;
+}
+.buttom_1 a:hover{
+	color: red;
+}
+.retotop {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 187px;
+}
+/*页面底部部分 E*/
+/*版权说明部分 S*/
+.right {
+	width: 1347px;
+	height: 84px;
+	border:1px dashed #414141;
+	background-color:#2D2D2D; 
+	margin:0 auto;
+	text-align: center;
+}
+.right p {
+	color: #000;
+	padding:10px 0;
+	font-size: 12px;
+}
+.right s {
+	display: inline-block;
+	width: 43px;
+	height: 19px;
+	background:url(../img/007.png) no-repeat -50px -2px;
+
+}
+/*版权说明部分 E*/
