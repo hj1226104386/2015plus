@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.top{
+			width: 500px;
+			border: 1px solid #000;
+		}
+		img{
+			float: right;
+		}
+		.bottom{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+			background:red;
+		}
+		.clearFix:after {
+			content: "";
+			height: 0;
+			line-height: 0;
+			display: block;
+			clear: both;
+			visibility: hidden;
+		}
+		.clearFix {
+			zoom:1;
+		}
+	</style>
+</head>
+<body>
+	<div class="top clearFix">	
+		<img src="img/girl.gif" />
+	</div>
+
+	<div class="bottom">
+		这里是在下面的div,div不要被盖住啊啊啊
+	</div>
+</body>
+</html>

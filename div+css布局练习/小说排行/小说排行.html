@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小说排行榜</title>
+	<style type="text/css">
+.register{width:600px;float:right;}
+ul li{list-style: none;}
+h3{margin:0 auto;}
+
+span{
+	width: 300px;
+	display: inline-block;
+	text-align:right;
+}
+.spe{text-align:center;}
+.sub{
+	margin:0 auto;
+	}
+	</style>
+
+</head>
+<body>
+	<table border="1px" cellspacing="1px" cellpadding="10px">
+		<caption value="title"><h3>今日小说排行榜</h3></caption>
+		<thead>
+			<tr>
+				<th>排名</th>
+				<th>关键词</th>
+				<th>趋势</th>
+				<th>今日搜索</th>
+				<th>最近七日</th>
+				<th>相关链接</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>鬼吹灯</td>
+				<td><img src="images/up.jpg" alt="图片加载失败" title="上涨"></td>
+				<td>65589</td>
+				<td>45</td>
+				<td>
+					<a href="#">贴吧</a>
+					<a href="#">图片</a>
+					<a href="#">百科</a>
+				</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>盗墓笔记</td>
+				<td><img src="images/down.jpg" alt="图片加载失败" title="下跌"></td>
+				<td>1</td>
+				<td>456</td>
+				<td>
+					<a href="#">贴吧</a>
+					<a href="#">图片</a>
+					<a href="#">百科</a>
+				</td>
+			</tr>
+
+            <tr>
+				<td>3</td>
+				<td>西游记</td>
+				<td><img src="images/up.jpg" alt="图片加载失败" title="上涨"></td>
+				<td>2</td>
+				<td>456</td>
+				<td>
+					<a href="#">贴吧</a>
+					<a href="#">图片</a>
+					<a href="#">百科</a>
+				</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>东游记</td>
+				<td><img src="images/up.jpg" alt="图片加载失败" title="上涨"></td>
+				<td>4567</td>
+				<td>456</td>
+				<td>
+					<a href="#">贴吧</a>
+					<a href="#">图片</a>
+					<a href="#">百科</a>
+				</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>西游记</td>
+				<td><img src="images/down.jpg" alt="图片加载失败" title="下跌"></td>
+				<td>7895</td>
+				<td>456</td>
+				<td>
+					<a href="#">贴吧</a>
+					<a href="#">图片</a>
+					<a href="#">百科</a>
+				</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>水浒传</td>
+				<td><img src="images/up.jpg" alt="图片加载失败" title="上涨"></td>
+				<td>4254</td>
+				<td>456</td>
+				<td>
+					<a href="#">贴吧</a>
+					<a href="#">图片</a>
+					<a href="#">百科</a>
+				</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>三国演义</td>
+				<td><img src="images/up.jpg" alt="图片加载失败" title="上涨"></td>
+				<td>456</td>
+				<td>456</td>
+				<td>
+					<a href="#">贴吧</a>
+					<a href="#">图片</a>
+					<a href="#">百科</a>
+				</td>
+			</tr>
+		</tbody>
+	</table><hr>
+	<form action="post" action="save.php">
+	<!-- 域名注册页面 -->
+	<h3>请填写域名信息(请您务必填写真实,有效和完整的域名注册信息)</h3>
+	    <ul>
+	    <li><span>登录账号:</span><input type="text" placeholder="你的账号" name="username"></li>
+		<li><span>密码:</span><input type="password" name="pass"></li>
+	    <li>
+		    <span>性别:</span>
+			<label for="man">男</label>
+		    <input type="radio" id="man" name="gender">
+		    <label for="woman">女</label>
+		    <input type="radio" id="woman" name="gender" checked>
+	    </li>
+	  	<li><span>注册网址:</span><input type="text" placeholder="www." name="register"></li>
+	  	<li>
+		  	<span>注册网址后缀:</span>
+			<label for="url1">.com</label>
+			<input type="checkbox" id="url1" name="checkbox1" checked>
+			<label for="url2">.cn</label>
+			<input type="checkbox" id="url2" name="checkbox2"
+			checked>
+			<label for="url3">.net</label>
+			<input type="checkbox" id="url3" name="checkbox3"
+			checked>
+			<label for="url4">.org</label>
+			<input type="checkbox" id="url4" name="checkbox4"
+			checked>
+	  	</li>
+       	<li><span>域名所有者(中文):</span><input type="text" name="chinese"></li>
+       	<li><span>域名所有者(拼音):</span><input type="text" name="pinyin"></li>
+       	<li>
+	       	<span>所属区域:</span>
+			<select>
+				<option>国家</option>
+				<option>中国</option>
+				<option>意英国大利</option>
+				<option>中国</option>
+			</select>
+	    	<select>
+				 <option>-省份-</option>
+				 <option>湖北省</option>
+				 <option>江西省</option>
+				 <option>浙江省</option>
+		    </select>
+       	</li>
+       	<li><span>单位所在地:</span><input type="text" name="com"></li>
+       	<li><span>单位负责人:</span><input type="text" name="person"></li>
+       	<li><span>通信地址:</span><input type="text" name="address"></li>
+       	<li><span>联系电话:</span><input type="text" name="phone">
+			<input type="submit" value="提交" name="sub">
+			<input type="reset" value="重置" name="reset">
+       	</li>
+       	</ul>
+</form>
+</body>
+</html>

@@ -1,0 +1,150 @@
+0.我老婆今天让我下班买两斤苹果，如果看到卖菠萝的就买一个，为什么晚上她拿着我买的那一个苹果骂了我,还打了我。如果将这个事情用程序写出来，老婆怎么想的，我是怎么想的。
+	笑话：说明程序员与普通人之间思维的一个差异。
+	
+写一个程序，随机生成三个数，分别输出，并且比较这三个数的大小。（自己的想法来写，不使用math.max比较）
+		var num=Math.random()*100;
+	 	a=Math.floor(num);
+	 	var num1=Math.random()*100;
+	 	b=Math.floor(num1);
+	 	var num2=Math.random()*100;
+	 	c=Math.floor(num2);
+	 	document.write("随机生成的三个数分别为:"+a+","+b+","+c+","+"<br/>")
+	 	if(a>b&&a>c){
+	 		document.write("三个数最大的为:"+a)
+	 	}
+	 	else if(b>a&&b>c){
+	 		document.write("三个数最大的为:"+b)
+	 	}
+	 	else if(c>a&&c>b) {
+	 		document.write("三个数最大的为:"+c)
+	 	}
+1、  盖茨买了一筐鸡蛋(20个)，如果坏蛋少于5个，他就吃掉，否则他就去退货(坏蛋的数量随机产生)
+
+[可选进阶]1.1. 由用户输入鸡蛋的总数量,如果坏蛋率小于10%,则吃掉,否则找超市去退货. 坏蛋的数量随机产生.****
+		var sum=Math.random()*20;
+	 	a=Math.floor(sum);
+	 	if (a<5) {
+	 		document.write("坏蛋个数是"+a+"个,少于5个,自己吃掉算啦!");
+	 	}
+	 	else {
+	 		document.write("坏蛋个数是"+a+"个,太多啦,我要退货!")
+	 	}
+2、 要求用户输入两个数a、b，如果a能被b整除则输出a的值，否则输出b的值
+		var a =prompt("请输入一个整数:")
+	 	var b =prompt("请再输入一个整数:")
+	 	a = +a;b= +b;
+	 	b%a==0?document.write(a):document.write(b);
+2.1、 要求用户输入两个数a、b，a加b大于100，则输出a的值，否则输出b的值 
+		var a =prompt("请输入一个整数:");
+	 	var b =prompt("请再输入一个整数:");
+	 	a = +a;b = +b;
+	 	a+b>100?document.write("a的值为:"+a):document.write("b的值为:"+b);
+2.2、 要求用户输入两个数a、b，如果a能被b整除或者a加b大于100，则输出a的值，否则输出b的值
+		var a =prompt("请输入一个整数:");
+	 	var b =prompt("请再输入一个整数:");
+	 	a = +a;b =+b;
+	 	b&a==0||a+b>100?document.write("a的值为:"+a):document.write("b的值			为:"+b);
+
+3、 提示用户输入密码，如果密码是“888888”则提示正确，
+    否则要求再输入一次，如果密码是“888888”则提示正确，否则提示错误,程序结束。 
+		var pass =prompt("请输入密码:");
+	 	pass = +pass;
+	 	if(pass==888888){
+	 		alert("恭喜你,密码正确!")
+	 	}
+	 	else{
+	 		var pass =prompt("密码错误,请再次输入密码:");
+	 		pass = +pass;
+	 		if(pass==888888){
+	 			alert("你终于答对了,哈哈")
+	 		}
+	 		else{
+	 			document.write("程序结束!")
+	 		}
+	 	} 
+3.1、 提示用户输入用户名和密码，如果用户名是admin,密码是“888888”则提示正确，否则要求再输入一次，如果用户名是admin,密码是“888888”则提示正确,否则提示错误,程序结束。
+		var user =prompt("请输入你的用户名:");
+	 	var pass =prompt("请输入密码:");
+	 	pass = +pass;
+	 	if(user=="admin"&&pass==888888){
+	 		alert("恭喜你,输入正确!")
+	 	}
+	 	else{
+	 		var user =prompt("请再次输入你的用户名:")
+	 		var pass =prompt("请再次输入密码:");
+	 		pass = +pass;
+	 		if(user=="admin"&&pass==888888){
+	 			alert("你终于答对了,哈哈")
+	 		}
+	 		else{
+	 			document.write("输入错误,程序结束!")
+	 		}
+	 	}
+4.提示输入张三的年龄，再提示输入李四的年龄，比较两个年龄，打印“？的年龄比较大”
+		var age =prompt("请输入张三的年龄:");
+	 	var age1 =prompt("请输入李四的年龄:");
+	 	age =+age;age1 =+age1;
+	 	document.write("更大的年龄是:"+Math.max(age,age1));
+5.提示输入买电脑的预算，如果预算是2000以下，输出“您适合买二手电脑”,如果预算是2000~4000,输出“您适合买台式机”,如果预算是4001~6000，输出“您适合买品牌笔记本电脑”，如果预算是6001~10000，输出“您适合购买高配ThindPad”,如果预算是10001~15000,输出“您适合购买苹果笔记本电脑，高格调人士必备”，如果预算是15000以上，输出“您适合购买外星人笔记本电脑，低调的奢华”。
+注意：使用if判断编写该程序。
+进阶有难度[可选]：可否使用switch...case 编写这个程序？试试看？
+		var sum =prompt("请输入你买电脑的预算:");
+	 	sum =+sum;
+	 	switch(sum){
+	 		case 1000:
+	 		case 2000:
+	 		alert("您适合买二手电脑,讲真!");
+	 		break;
+	 		case 3000:
+	 		case 4000:
+	 		alert("您适合买台式机,讲真!");
+	 		break;
+	 		case 5000:
+	 		case 6000:
+	 		alert("您适合买品牌笔记本电脑,讲真!");
+	 		break;
+	 		case 7000:
+	 		case 8000:
+	 		case 9000:
+	 		case 10000:
+	 		alert("您适合买高配ThindPad,讲真!");
+	 		break;
+	 		case 11000:
+	 		case 12000:
+	 		case 13000:
+	 		case 14000:
+	 		case 15000:
+	 		alert("您适合买苹果笔记本电脑，高格调人士必备,讲真!");
+	 		break;
+	 		case 16000:
+	 		case 17000:
+	 		case 18000:
+	 		case 19000:
+	 		case 20000:
+	 		alert("您适合买外星人笔记本电脑，低调的奢华,讲真!");
+	 		break;
+	 	}
+6.提示用户输入今天是本周的第几天，如果输入的是1，则输出“今天是本周的第一天”，以此类推。
+注意：请使用switch...case语句编写该程序。
+		var date=prompt("请输入今天是本周的第几天:")
+	 	date = +date;
+	 	switch(date){
+	 		case 1:
+	 		document.write("今天是本周的第一天");
+	 		break;
+	 		case 2:
+	 		document.write("今天是本周的第二天");
+	 		break;
+	 		case 3:
+	 		document.write("今天是本周的第三天");
+	 		break;
+	 		case 4:
+	 		document.write("今天是本周的第四天");
+	 		break;
+	 		case 5:
+	 		document.write("今天是本周的第五天");
+	 		break;
+	 	}
+7.[可选有难度]提示用户输入三个数，使用三元运算符求得最大的数字。
+
+

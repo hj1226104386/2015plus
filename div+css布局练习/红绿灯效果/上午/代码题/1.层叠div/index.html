@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			float: left;
+		}
+		.one{
+			background: red;	
+
+			z-index: 1;	
+		}
+		.two{
+			background: green;
+			position: absolute;
+			top:76px;
+			left: 76px;
+			z-index: 2;
+		}
+		.three{
+			background: blue;
+			position: absolute;
+			top:152px;
+			left: 152px;
+			z-index: 3;
+		}	
+	</style>
+</head>
+<body>
+	<div class="one"></div>
+	<div class="two"></div>
+	<div class="three"></div>
+</body>
+</html>

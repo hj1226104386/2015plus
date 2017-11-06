@@ -1,0 +1,208 @@
+@charset "utf-8";
+ul li span{
+	font-size: 30px;
+	color: gold;
+}
+.p4 {
+	width:300px;
+	height:50px; 
+	background-color: gray;
+}
+.p5 span{
+	font-size: 30px;
+	color: gold;
+}
+.p6{
+	color: green;
+}
+.p7{
+	font-size: 30px;
+	color:red;
+}
+.main{
+	color: gray;
+}
+.p12{
+	color: blue;
+	text-indent: 2em;
+}
+.p13{
+	color:purple;
+	width: 300px;
+	height: 50px;
+	background-color: gray;
+	margin-left: 33px;
+}
+/*忆江南 begin*/
+.yjn{
+	width: 1000px;
+	margin:0 auto;
+}
+.yjn h2{
+	color: teal;
+	text-align: center;
+}
+.yjn h3{
+	color: brown;
+}
+.yjn h4{
+	text-align: center;
+}
+.yjn p{
+	color: blue;
+	text-indent: 2em;
+}
+/*忆江南 end*/
+/*新闻案例 begin*/
+.news{
+	width: 1000px;
+	margin: 0 auto;
+}
+.news h1{
+	text-align: center;
+}
+.news .p_1{
+	text-align: center;
+	font-size: 12px;
+}
+.news a{
+	color: blue;
+}
+.news .p_2,.p_3,.p_4,.p_5{
+	text-indent: 2em;
+}
+/*新闻案例 end*/
+/*谷歌logo begin*/
+.logo{
+	width: 1000px;
+	margin:0 auto;
+}
+.logo .g{
+	color: blue;
+	font-size: 150px;
+}
+.logo .o{
+	color: brown;
+	font-size: 150px;
+}
+.logo .o_{
+	color: yellow;
+	font-size: 150px;
+}
+.logo .l{
+	color: green;
+	font-size: 150px;
+}
+.logo .e{
+	color: brown;
+	font-size: 150px;
+}
+.logo p{
+	margin-left: 250px;
+}
+/*谷歌logo end*/
+/*案例综合 begin*/
+.news .span1{
+	color: gray;
+}
+.news .span2{
+	color: brown;
+}
+/*案例综合 end*/
+/*新闻列表 begin*/
+.nlist{
+	width: 1000px;
+	margin:0 auto;
+}
+.nlist .l_1,.l_2,.l_3{
+		color: brown;
+		font-size: 16px;
+	}
+.nlist a{
+	text-decoration: none;
+	color: black;
+}
+.nlist a:hover{
+	color: brown;
+	text-decoration: underline;
+}
+/*新闻列表 end*/
+/*百度首页 begin*/
+.baidu{
+	width: 675px;
+	margin:0 auto;
+}
+.baidu a{
+	color: blue;
+}
+.baidu li:hover a{
+	color: red;
+}
+.bai_1{
+	display: inline-block;
+	width: 270px;
+	height: 129px;
+	background:url(img/01.png) 0 0;
+	margin-left: 105px;
+}
+
+.ul_1 li{
+	list-style: none;
+	float: left;
+	margin-right: 10px;
+}
+
+.btn{
+	width: 550px;
+	height: 40px;
+	margin:20px 0 30px 25px;
+
+	
+}
+.btn .btn1{
+	width:420px;
+	height: 32px;
+	border:1px solid gray;
+}
+.btn .btn2{
+	width: 98px;
+	height: 32px;
+	background-color: #D4D0C8;
+}
+.ul_2{
+	margin-left: 80px;
+	margin-bottom: 150px;
+}
+.ul_2 li{
+	list-style: none;
+	float: left;
+	margin-right: 15px;
+	font-size: 14px;
+	
+
+}
+.ul_3{
+	margin-left:85px;
+	margin-bottom: 15px;
+}
+.ul_3 li{
+	list-style: none;
+	float: left;
+	margin-right: 12px;
+	font-size: 14px;
+}
+.ul_4{
+	margin-left: 25px;
+}
+.ul_4 li{
+	list-style: none;
+	float: left;
+	margin-right: 12px;
+	font-size: 14px;
+}
+.baidu p{
+	margin-top: 6px;
+	margin-left: 100px;
+	font-size: 12px;
+}
+/*百度首页 end*/

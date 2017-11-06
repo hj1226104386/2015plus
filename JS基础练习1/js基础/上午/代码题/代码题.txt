@@ -1,0 +1,21 @@
+一.请在你的sublime中创建javascript模版。
+操作步骤：
+1.点击工具->新代码段，
+2.将CDATA[内容]  中括号里面的内容删除掉，换成需要的模版代码（模版网页的所有代码）
+3.将<tabtrigger>注释打开，将标签中的内容更改为需要的命名，如scriptModel。最后保存文件到默认目录
+4.新建文件，输入scriptModel+tab，就会出现默认的模版网页了。
+
+二.请直接说出下面的结果
+	typeof(1) ,   
+	typeof(-1)
+	typeof(-1.1)
+	typeof(11),
+	typeof("111"),
+	typeof(""）,
+	typeof("  "),
+	typeof("abc"),
+
+三.请在console中打印静夜思，格式如下：
+	静夜思
+床前明月光，疑是地上霜。
+举头望明月，低头思故乡。

@@ -1,0 +1,15 @@
+1.如果有一个父元素里面有一个子元素，现在想要让子元素在父元素中水平居中，应该如何编写css？请在下面添加你需要的css来完成居中效果。
+父元素{width:300px;height:130px;position:relative;}
+子元素{width:40px;height:40px;position:absolute;top:0;left:50%;margin-left:-20px;}
+
+2.绝对定位，相对定位，固定定位他们有没有脱离标准流？会不会在页面上占据位置？
+	绝对定位和固定定位脱标,但是相对定位没有脱标,相对定位会占据位置,绝对定位和固定定位不会;
+3.overflow属性是用来设置超出部分如何显示的一个css属性，它可以设置的值有哪几个？分别有什么作用？
+	属性值有:visible,hidden,scroll,auto,inherit,
+	visible:浏览器默认,内容正常显示,不会被修剪/hidden:超出部分会被隐藏/scroll:内容会被修剪,但是浏览器会显示滚动条以方便查看其超出的内容/auto:跟scroll类似/inherit:规定应该从父元素继承overflow属性的值;
+
+4.想要设置元素的显示和隐藏可以通过display属性和visibility属性来进行设置，请问他们两个的区别是什么？
+	两者都可以设置元素隐藏,但是display隐藏后依然占据原来位置,而visibility则不会占据原来的位置;
+
+5.如果想要使用emmet语法产生一个ul，ul里面包含5个li，每个li里面有一个超链接，每个超链接的href="#"，每个超链接的内容是导航，请问该如何编写这个emmet语法？
+	ul>li*5>a[href="#"]{导航}

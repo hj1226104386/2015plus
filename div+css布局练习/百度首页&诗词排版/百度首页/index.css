@@ -1,0 +1,55 @@
+@charset "utf-8";
+*{
+	margin:0;padding:0;
+	font-family: "宋体";
+}
+.page{
+	width: 1000px;
+	margin: 0 auto;
+}
+.page a:hover{
+	color: red;
+}
+.page img{
+	margin-left: 330px;
+}
+.page .p1{
+	margin-top: 25px;
+	margin-left: 225px;
+}
+.page .btn{
+	width: 1000px;
+	margin-left: 240px;
+	margin-top: 12px;
+}
+.btn .inp1{
+	width: 420px;
+	height: 30px;
+	border:1px solid gray;
+}
+.btn .inp2{
+	margin-left:-10px;
+	width: 90px;
+	height: 33px;
+	background-color: #3385FF;
+}
+.page .p2{
+	margin-left: 360px;
+	margin-top: 25px;
+	font-size: 15px;
+}
+.page .p3{
+	margin-left: 365px;
+	margin-top: 130px;
+	font-size: 14px;
+}
+.page .p4{
+	margin-left: 285px;
+	margin-top: 15px;
+	font-size: 14px;
+}
+.page .p5{
+	margin-left: 345px;
+	margin-top: 15px;
+	font-size: 12px;
+}
