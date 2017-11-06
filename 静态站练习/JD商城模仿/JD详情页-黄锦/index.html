@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小公主上京东</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script type="text/javascript">
+		window.onload = function(){
+			var banner = document.getElementById("banner") {
+                banner.onclick = function(){
+                    topbanner.style.display = "none";
+                }
+            }
+		}
+	</script>
+</head>
+<body>
+	<!--头部标题栏部分 S-->
+    <div class="shortcut">
+        <div class="banxin">
+            <div class="fl">
+                <ul>
+                    <li class="li_1">
+                        送至:北京
+                        <i><s>◇</s></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="fr">
+                <ul>
+                    <li><a href="#">你好,请登录</a>&nbsp;&nbsp;<a href="#"><span class="jd_red">免费注册</span></a></li>
+                    <li class="spacer"></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li class="spacer"></li>
+                    <li class="li_1"><a href="#">我的京东 </a><i><s>◇</s></i></li>
+                    <li class="spacer"></li>
+                    <li><a href="#">京东会员</a></li>
+                    <li class="spacer"></li>
+                    <li><a href="#">企业采购</a></li>
+                    <li class="spacer"></li>
+                    <li class="li_1 tel"><em></em><a href="#">手机京东 </a><i><s>◇</s></i></li>
+                    <li class="spacer"></li>
+                    <li class="li_1"><a href="#">关注京东 </a><i><s>◇</s></i></li>
+                    <li class="spacer"></li>
+                    <li class="li_1"><a href="#">客户服务 </a><i><s>◇</s></i></li>
+                    <li class="spacer"></li>
+                    <li class="li_1"><a href="#">网站导航 </a><i><s>◇</s></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!--头部标题栏部分 E-->
+<!--头部广告部分 S-->
+<div id="topbanner">
+    <div class="banxin">
+        <img src="img/topbanner.jpg"/>
+        <a id="banner" href="#;"></a>
+    </div>
+</div>
+<!--头部广告部分 e-->
+<!--搜索栏部分 B-->
+<div class="l_s banxin">
+    <div class="logo fl">
+        <a href="#">京东</a>
+    </div>
+    <div class="serch fl">
+        <input class="inp1 fl" type="text" placeholder="游戏超级本"/>
+        <input class="inp2 fl" type="button" value="搜索"/>
+    </div>
+    <div class="car fr">
+        <em></em>
+        <a href="#">我的购物车</a>
+        <i><s class="s11">◇</s></i>
+        <s class="s22">5201314</s>
+    </div>
+    <div class="hotwords fl">
+        <a class="jd_red" href="#">电脑低至888元</a>
+        <a href="#">顽石四代</a>
+        <a href="#">游戏显卡</a>
+        <a href="#">鼠标装备购不停</a>
+        <a href="#">京东影印馆</a>
+        <a href="#">商用电脑</a>
+    </div>
+</div>
+<!--搜索栏部分 E-->
+<!-- 导航栏部分 B -->
+<div class="nav">
+    <div class="navbanner banxin">
+        <ul>
+            <li class="l_1">
+                <a href="#">全部商品分类</a>
+                <i><s>◇</s></i>
+            </li>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">服装城</a></li>
+            <li><a href="#">美妆馆</a></li>
+            <li><a href="#">京东超市</a></li>
+            <li><a href="#">生鲜</a></li>
+            <li><a href="#">全球购</a></li>
+            <li><a href="#">闪购</a></li>
+            <li><a href="#">团购</a></li>
+            <li><a href="#">拍卖</a></li>
+            <li><a href="#">金融</a></li>
+        </ul>
+    </div>
+</div>
+<!-- 导航栏部分 E -->
+<!-- 具体商品详情部分 B -->
+    <div class="detail">
+        <div class="dfz_nav banxin">
+            <a class="a_1" href="#">电脑、办公</a>&nbsp;<s>&gt;</s>
+            <a href="#">外设产品</a>&nbsp;<s>&gt;</s>
+            <a href="#">鼠标</a>&nbsp;<s>&gt;</s>
+            <a href="#">罗技(Logitech)</a>&nbsp;<s>&gt;</s>
+            <a href="#">罗技G502 炫光自适应游戏鼠标</a>
+        </div>
+        <div class="content banxin">
+            <div class="content_l fl">
+                <div class="pic-big">
+                    <a href="#"><img id="a1" src="img/product1-big.jpg" alt=""></a>
+                </div>
+                <div class="pic-small">
+                    <img src="img/product1.jpg"  onclick="img1()" >
+                    <img src="img/product2.jpg" onclick="img(2)">
+                    <img src="img/product3.jpg" onclick="img(3)">
+                    <img src="img/product4.jpg" onclick="img(4)">
+                    <img src="img/product5.jpg" onclick="img(5)">
+                </div>
+                <script>
+                var a1 = document.getElementById("a1");
+                function img1(){
+                    a1.src = "img/product1-big.jpg";
+                };
+                function img(imgName){
+                    a1.src = "img/0"+imgName+"big.jpg";
+                };
+                </script>
+                <div class="pic_num">
+                    <div class="pic_num_l fl">
+                        商品编号:666666
+                    </div>
+                    <div class="pic_num_r fr">
+                        <s></s><a href="#">分享</a>
+                        <i></i><a href="#">关注商品</a>
+                    </div>
+                </div>
+            </div>
+            <div class="content_mid fl">
+                <div class="content_m_title">
+                    <p class="p_1">罗技(Logitech) G502炫光自适应游戏鼠标 RGB鼠标</p>
+                    <p class="p_2 jd_red">信仰之作,科技制胜,做工精细,1680万色自定义RGB指示灯!</p>
+                    <a href="#">对比</a>
+                </div>
+                <div class="content_m_price">
+                    <div class="content_m_p_1 fl">
+                        京 东 价: <span>&yen;399.00</span>&nbsp;(降价通知)
+                    </div>
+                    <div class="content_m_p_2 fr">
+                        <p>累计评价</p><a href="#">17620</a>
+                    </div>
+                    <div class="content_m_p_3 fl">
+                        <p>促销信息 : <span class="sp11">加价购</span><span class="jd_red">满60.00另加49.00元,或满30.00另加19.00元,即可在购物车换购热销<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品&nbsp;&nbsp;<span><a href="#">详情&gt;&gt;</a></p>
+                    </div>
+                </div>
+                <div class="content_m_express">
+                    <p class="p1">支&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;持:
+                        <s></s><span class="jd_red">礼品购</span>
+                    </p>
+                    <p class="p2">配 送 至:
+                        <i>北京朝阳去管庄<em></em></i><span>有货</span>,支持99元免运费 | 货到付款
+                    </p>
+                    <p class="p3">服&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;务: 
+                        由京东发货,并提供售后服务.11:10前完成下单,预计<span>今天(08月03日)</span>送达
+                    </p>
+                </div>
+                <div class="content_m_pay">
+                    <div class="pay_1">
+                        增值保障:<a class="a_1" href="javascript:;">
+                            <s></s>第二年换新 &yen;29<em></em>
+                        </a>
+                        <a class="a_1" href="javascript:;">
+                            <s></s>京东换新 &yen;4.9<em></em>
+                        </a>
+                        <a class="a_1" href="javascript:;">
+                            <s></s>第二年换新 &yen;39<em></em>
+                        </a>
+                        <span class="sp1"></span>
+                    </div>
+                    <div class="pay_2">
+                        <span>选择套装:</span>
+                        <a class="a_11" href="javascript:;">1件</a>
+                        <a href="javascript:;">套装2件</a>
+                    </div>
+                    <div class="pay_3">
+                        <span>白条分期:</span>
+                        <a class="aa1" href="javascript:;">30天免息</a>
+                        <a href="javascript:;">&yen;135×3期</a>
+                        <a href="javascript:;">&yen;68.5×6期</a>
+                        <a href="javascript:;">&yen;35.25×12期</a>
+                        <a href="javascript:;">&yen;18.62×24期</a>
+                        <span class="sp1"></span>
+                    </div>
+                    <div class="pay_4">
+                        <a href="javascript:;"><img  class="b_2" src="img/11.png" ></a>
+                        <a  href="javascript:;"><img class="b_3" src="img/22.png"></a>
+                    </div>
+                    <p>温馨提示: 1. 支持7天无理由退货</p>
+                </div>
+            </div>
+            <div class="content_r fr">
+                <div class="content_r_1">
+                    <a href="#"><img src="img/lj.jpg"></a>
+                </div>
+                <div class="content_r_2">
+                    <a href="#">罗技G官方旗舰店</a>
+                    <span>京东自营</span>
+                </div>
+                <div class="content_r_3">
+                    <a class="al1" href="#"><img src="img/lk1.png"></a>
+                    <a class="al2" href="#"><img src="img/lk2.png"></a>
+                    <a class="al3" href="#"><img src="img/lk3.png"></a>
+                    <a class="al4" href="#"><img src="img/lk4.png"></a>
+                </div>
+                <div class="content_r_4">
+                    <p>服务支持:</p>
+                    <s></s><a href="#">211限时达</a>
+                    <i></i><a href="#">自提</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 具体商品详情部分 E -->
+</body>
+</html>

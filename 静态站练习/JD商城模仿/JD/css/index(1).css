@@ -1,0 +1,357 @@
+@charset "UTF-8";
+/*页面中部部分 B*/
+.nav {
+    height: 44px;
+    border-bottom: 2px solid #B1191A;
+}
+
+.nav_mid {
+    height: 44px;
+}
+
+.nav_mid .cage {
+    width: 210px;
+    height: 44px;
+    font: 400 14px/44px "MicrosoftYahei";
+    overflow: visible;
+    position: relative;
+    z-index: 50;
+}
+
+.cage_dt {
+    width: 210px;
+    height: 44px;
+    background-color: #B1191A;
+}
+
+.cage_dt a {
+    display: inline-block;
+    width: 190px;
+    height: 44px;
+    padding: 0 10px;
+    font: 400 16px/44px "MicrosoftYahei";
+    color: #fff;
+}
+
+.cage_dd {
+    width: 209px;
+    height: 465px;
+    border-left: 1px solid #B1191A;
+    background-color: #C81623;
+    position: relative;
+}
+
+.cage_item {
+    width: 187px;
+    height: 31px;
+    font: 400 14px/31px "Microsoft Yahei";
+    padding: 0 13px 0 9px;
+}
+
+.cage_item a {
+    color: #fff;
+}
+
+.cage_item i {
+    color: #fff;
+    position: absolute;
+    right: 13px;
+}
+
+.cage_item:hover {
+    background-color: #fff;
+}
+
+.cage_item:hover a {
+    color: #B1191A;
+}
+
+.nav_mid .navitems {
+    width: 728px;
+    height: 44px;
+    overflow: hidden;
+}
+
+.nav_mid .navitems li {
+    float: left;
+    padding: 0 20px;
+}
+
+.navitems li a {
+    font: 400 16px/44px "MicrosoftYahei";
+    color: #333;
+}
+
+.navitems li:hover a {
+    color: #B1191A;
+}
+
+/*页面中部部分 E*/
+/*页面两侧大背景部分 B*/
+.bigbg a {
+    position: absolute;
+    width: 100%;
+    height: 644px;
+    background: url(../img/bg-banner.jpg) no-repeat top center;
+}
+
+/*页面两侧大背景部分 E*/
+/*页面主体部分 B*/
+.main {
+    height: 454px;
+    margin-top: 9px;
+    position: relative;
+}
+
+.main .slider {
+    width: 730px;
+    height: 454px;
+    margin-left: 220px;
+    position: relative;
+}
+
+.slider ul {
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    margin-left: -66px;
+}
+
+.slider ul li {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 9px;
+    float: left;
+    margin: 0 2px;
+    background-color: #3E3E3E;
+    color: #fff;
+    cursor: pointer;
+}
+
+.slider .current {
+    background-color: #B61B1F;
+}
+
+.tody .switch .s_l, .tody .switch .s_r,
+.slider .switch a {
+    width: 28px;
+    height: 62px;
+    text-align: center;
+    font: 400 25px/62px simsun;
+    color: white;
+    background-color: gray;
+    opacity: 0.5;
+    position: absolute;
+}
+
+.tody .switch .s_l,
+.slider .switch .s_l {
+    top: 50%;
+    left: 0;
+    margin-top: -31px;
+}
+
+.tody .switch .s_r,
+.slider .switch .s_r {
+    top: 50%;
+    right: 0;
+    margin-top: -31px;
+}
+
+.main .extra {
+    width: 250px;
+    height: 454px;
+}
+
+.extra .news {
+    width: 248px;
+    height: 163px;
+    border: 1px solid #E4E4E4;
+}
+
+.news .mt {
+    width: 218px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 15px;
+    border-bottom: 1px dotted #E4E4E4;
+}
+
+.news .mt h2 {
+    float: left;
+    font: 400 16px/32px consolas;
+}
+
+.news .mt a {
+    float: right;
+}
+
+.news .mc {
+    width: 233px;
+    height: 125px;
+    padding: 5px 0 0 15px;
+}
+
+.news .mc span {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.news .mc li {
+    line-height: 24px;
+}
+
+.extra .lifeserv {
+    width: 248px;
+    height: 208px;
+    border: 1px solid #E4E4E4;
+    border-top: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.lifeserv ul {
+    width: 255px;
+}
+
+.lifeserv li {
+    float: left;
+    width: 62px;
+    height: 70px;
+    border-right: 1px solid #E8E8E7;
+    border-bottom: 1px solid #E8E8E7;
+    position: relative;
+    text-align: center;
+}
+
+.lifeserv li a {
+    display: inline-block;
+    width: 62px;
+    height: 28px;
+    padding-top: 42px;
+}
+
+.lifeserv i {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    /* background: url(../img/lifeserv.png) no-repeat 0 0; */
+}
+
+.extra .right_pic {
+    width: 250px;
+    height: 75px;
+    margin-top: 5px;
+}
+
+/*页面主体部分 E*/
+/*今日推荐部分 B*/
+.tody {
+    height: 151px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tody .tody_l {
+    width: 210px;
+    position: relative;
+}
+
+.tody .tody_r {
+    width: 1000px;
+    position: relative;
+}
+
+.tody_r a {
+    width: 249px;
+    float: left;
+    margin-right: 1px;
+    overflow: hidden;
+}
+
+/*今日推荐部分 E*/
+/*底部部分 B*/
+.footer {
+    height: 500px;
+}
+
+.footer .service {
+    height: 294px;
+}
+
+.service .slogan {
+    height: 94px;
+    background-color: #F5F5F5;
+}
+
+.slogan .slogan_mid {
+    height: 94px;
+    position: relative;
+}
+
+.slogan_mid .sp1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+}
+
+.slogan_mid .slo1 {
+    margin-left: -604px;
+}
+
+.slogan_mid .slo2 {
+    margin-left: -303px;
+}
+
+.slogan_mid .slo4 {
+    margin-left: 305px;
+}
+
+.link {
+    height: 186px;
+    padding-top: 16px;
+}
+
+.link dl {
+    float: left;
+    width: 199px;
+}
+
+.link .d_1 {
+    width: 100px;
+}
+
+.cover_dt,
+.link dl dt {
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    color: #666;
+
+}
+
+.cover_dd,
+.link dl dd {
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+    color: #666;
+}
+
+.link .cover {
+    width: 202px;
+    height: 168px;
+    margin-right: 48px;
+    background: url(../img/china.png) no-repeat 0 -131px;
+}
+
+.footer .bottom {
+    height: 195px;
+    background-color: blue;
+}
+
+/*底部部分 E*/
