@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input v-model="messsage" > <!--input绑定实例中data中的message-->
+    <div >
+        <child v-bind:my-message="messsage"></child> <!--子组件绑定实例中data中的message-->
+    </div>
+
+</div>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    //先声明组件,再创建vue实例
+    Vue.component('child',{
+        props: ['myMessage'], //VUE实例中myMessage 等价于my-message
+        template: '<span>{{ myMessage }}</span><br>'
+    });
+    var vm = new Vue({
+        el: '#app',
+        data:{
+            messsage:'hello you are a good boy!'
+        }
+    });
+</script>
+</body>
+</html>

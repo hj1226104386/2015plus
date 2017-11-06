@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript闭包</title>
+</head>
+<body>
+<script>
+    function f1() {
+        var num = 66;
+        function f2() {
+            alert(num);//66
+        }
+    };
+    //f2函数能访问到外层f1函数内部的所有局部变量
+
+    //如果我们要访问一个函数的内部的变量，是没法直接访问的，上面的例子就是一个闭包，
+    //但是我们可以通过返回一个函数来访问f1函数内部的变量
+    function f3() {
+        var sum = '啊哈';
+        return function f4() {
+            alert(sum);
+        }
+    }
+    //var getSum = f3();
+    //getSum();
+
+    /**
+     * 闭包的作用
+     * 1、读取函数内部变量
+     * 2、保护私有变量
+     */
+
+    var name = "指向window";
+    var object = {
+        name : "指向我所在的对象",
+        getNameFunc : function(){
+            return function(){
+                return this.name;
+            };
+        }
+    };
+    alert(object.getNameFunc()());//闭包函数为常规调用方式，内部this指向window
+
+    var name1 = "指向window";
+    var object1 = {
+        name1 : "指向我所在的对象",
+        getNameFunc : function(){
+            var that = this;
+            return function(){
+                return this.name1;//注意这个闭包函数的调用方式，是上下文调用模式，this指向object1对象
+            };
+        }
+    };
+    alert(object1.getNameFunc().call(object1));//闭包函数内部的that保存的是object1对象
+
+
+</script>
+</body>
+</html>

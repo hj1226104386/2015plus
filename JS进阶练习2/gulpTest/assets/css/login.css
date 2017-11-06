@@ -1,0 +1,180 @@
+/*清除浏览器默认样式*/
+body,div,ul,li,p,img,h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+input,textarea,select,button{
+    outline: none;
+}
+input:focus,textarea:focus,select:focus,button:focus{
+    outline: none;
+}
+li{
+    list-style: none;
+}
+/*公用类名样式*/
+.fr {
+    float: right;
+}
+.fl{
+    float: left;
+}
+/*头部*/
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+}
+header a{
+    display: inline-block;
+    height: 80px;
+    margin-left: 20.1%;
+}
+header>a>img{
+    width: 100%;
+    height: 27px;
+    margin-top: 27px;
+    width: 164px;
+}
+.loginLayout {
+    width: auto;
+}
+/*中间登陆主体*/
+.mainBody {
+    width: 100%;
+    /*min-height: 430px;*/
+    background: url("../images/big-bg.png") no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+    position: relative;
+    position: absolute;
+    top:80px;
+    bottom:273px;
+}
+.mainBody .loginModal {
+    width: 335px;
+    height: 297px;
+    background-color: rgba(0,0,0,.6);
+    padding:0 26px;
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    right:25%;
+}
+.loginModal>.loginTitle{
+    width: 100%;
+    height: 81px;
+    line-height:81px;
+    font-size:20px;
+    color:#fff;
+}
+.loginModal .form-group input{
+    width: 100%;
+    height: 35px;
+    border:none;
+    background-color: #fff;
+    font-size:14px;
+    color:#000;
+    padding-left: 14px;
+    margin-bottom: 18px;
+}
+.loginBtn{
+    text-align: center;
+}
+.loginBtn>p.h-tip{
+    width: 100%;
+    color:red!important;
+    text-align: center;
+    font-style: normal;
+    font-size:12px;
+    margin-bottom: 5px;
+    display: none;
+}
+.loginBtn button {
+    width: 100%;
+    height: 36px;
+    border:none;
+    background-color: #fc6c2e;
+    font-size:14px;
+    color:#fff;
+    cursor: pointer;
+}
+.h-anotherTip{
+    margin-top: 18px;
+    width: 100%;
+    text-align: center;
+    font-size:12px;
+    color:#fff;
+}
+/*底部链接部分*/
+.links {
+    width: 100%;
+    height: 210px;
+    background-color: #fff;
+    padding-top: 26px;
+    position: absolute;
+    bottom:63px;
+}
+.links>ul{
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 18%;
+}
+.links>ul>li{
+    text-align: center;
+    width: 160px;
+    height: 160px;
+}
+.links>ul>li>a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.links li> img{
+    width: 68px;
+    height: 68px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.links li> span{
+    display: block;
+    font-size:16px;
+    color:#333;
+
+}
+/*底部*/
+footer {
+    height: 63px;
+    line-height:63px;
+    width: 100%;
+    /*margin-top: -63px;*/
+    background-color: #282828;
+    position: absolute;
+    bottom:0;
+}
+
+footer p.h-copyRight {
+    width: 470px;
+    font-size: 12px;
+    color: #fff;
+    margin:0 auto;
+}
+/*去除表单自动填充时黄色背景*/
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    border: none!important;
+}

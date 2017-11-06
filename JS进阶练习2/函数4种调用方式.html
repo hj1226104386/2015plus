@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数4中调用方法</title>
+</head>
+<body>
+<script>
+    /**
+     * 函数4种调用方式,内部this指向不同
+     * 1.普通函数调用方式
+     * 2.方法调用方式
+     * 3.构造函数调用方式
+     * 4.上下文调用方式
+     */
+
+        //1.普通函数调用方式
+    var a = 12;
+    function fn(a, b) {
+        console.log(this.a)
+        console.log(a)
+        return a + b;
+    };
+    fn(1, 2);
+
+    //2.方法调用方式
+    var obj = {
+        age: '15',
+        getName: function () {
+            console.log(this.age);
+        }
+    };
+    obj.getName();
+
+    //3.构造函数调用方式
+    function Manager() {
+        this.age = '张三'
+    };
+    var manage = new Manager();
+    console.log(typeof manage);
+
+    //4.上下文调用方式
+    function f1(a, b) {
+        console.log(this.age);
+    };
+    //注意call和apply方法的区别,都是Function.prototype对象中的方法;
+    f1.call(obj, 1, 2);
+    f1.apply(obj, [1, 2]);
+
+</script>
+</body>
+</html>

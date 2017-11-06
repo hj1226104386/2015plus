@@ -1,0 +1,17 @@
+{
+  "name": "vue-today",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "vue": "^2.2.6",
+    "vue-router": "^2.4.0"
+  }
+}

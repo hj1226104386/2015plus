@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>歌曲管理</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            background-color: lightblue;
+        }
+        .content table{
+            border: 2px solid orange;
+            border-collapse: collapse;
+        }
+        table td {
+            width: 80px;
+            height: 30px;
+            text-align: center;
+        }
+        table tbody {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <table>
+        <caption>学生信息列表</caption>
+        <thead>
+            <tr>
+                <td>姓名</td>
+                <td>班级</td>
+                <td>年龄</td>
+                <td>性别</td>
+                <td>家乡</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+        <tbody class="tbodys">
+
+        </tbody>
+    </table>
+</div>
+
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/arttemplate/arttemplate-native.js"></script>
+<script src="js/index.js"></script>
+<script type="text/template" id="RenderTable">
+    <% for(var i = 0;i<message.length;i++){ %>
+        <tr class="rowInfo">
+            <td><%= message[i].name %></td>
+            <td><%= message[i].grade %></td>
+            <td><%= message[i].age %></td>
+            <td><%= message[i].gender %></td>
+            <td><%= message[i].hometown %></td>
+            <td>
+                <button type="button" class="deleteBtn">删除</button>
+            </td>
+        </tr>
+    <% } %>
+</script>
+</body>
+</html>

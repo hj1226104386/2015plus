@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入框+双向数据绑定</title>
+    <link rel="stylesheet" href="./public/node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div id="box">
+    <form class="form-inline">
+        <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+            <div v-if="status" class="input-group">
+                <div class="input-group-addon">输入框</div>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="请输入内容" v-model="inp">
+            </div>
+        </div>
+        <button @click="toggle()" class="btn btn-primary" type="button" value="确定">{{inp}}</button>
+    </form>
+</div>
+
+
+<script src="./public/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./public/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./public/js/vue.js"></script>
+<script>
+    $(function () {
+        /**
+         * vue入门小项目
+         */
+        var vue = new Vue({
+            el: '#box',
+            data:{
+                inp:'请输入',
+                status:false
+            },
+            methods:{
+                toggle:function () {
+                    this.status = !this.status;
+                }
+            }
+        });
+    });
+
+</script>
+</body>
+</html>

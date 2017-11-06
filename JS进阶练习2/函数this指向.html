@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>函数内部this指向</h1>
+  <script type="text/javascript">
+    /**
+     * 1、普通函数调用。this指向window全局
+     * 2、方法调用，this指向函数所在对象
+     * 3、New构造函数调用，this指向构造函数实例
+     * 4、上下文调用，主要是用到apply和call方法，这两个方法差不多，就传参不同，this指向的是apply/call方法传入的对象
+     */
+    
+    //1、普通函数调用。this指向window全局
+    function f1(){
+      console.log(this)
+    }
+    f1()  // 输出Window对象
+
+    //2、方法调用，this指向函数所在对象
+    var obj = {
+      age:18,
+      getThis:function() {
+         console.log(this)
+      }
+    }
+    obj.getThis() // 打印结果为obj对象
+
+
+    //3、调用函数时用new关键字，这个函数就成了构造函数，
+    function Student() {
+       console.log(this)
+    }
+    var stu = new Student() // stu为Student构造函数的一个实例，打印this为指向实例，也就是stu对象
+
+    //4、上下文调用，主要是用到apply和call方法
+    var obj2 = {
+      gender:'男'
+    }
+    function fn() {
+      console.log(this)
+    }
+    fn.apply(obj2) // 输出this结果为obj2对象
+    fn.call(obj2) // 输出this结果为obj2对象
+
+  </script>
+</body>
+</html>

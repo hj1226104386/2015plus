@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试分页-bootstrapPagination</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-pagination.git/bootstrap-pagination.min.css">
+</head>
+<body>
+
+<nav>
+    <ul id="demo1" class="pagination">
+    </ul>
+</nav>
+
+<span style="font-size:14px;">function paging(page){
+            $.ajax({
+               type: "GET",
+               url: "${ctx}/api/v1/user/1/"+(page-1)+"/5",
+               dataType:"json",
+               success: function(msg){
+                 ....//省略（查询出来数据）
+               }
+            });
+            $.ajax({
+                type: "GET",
+                url:"${ctx}/api/v1/user/count/1",
+                dataType:"json",
+                success:function(msg){
+                    var pages = Math.ceil(msg.data/5);//这里data里面有数据总量
+                    var element = $('#pageUl');//对应下面ul的ID
+                    var options = {
+                        bootstrapMajorVersion:3,
+                        currentPage: page,//当前页面
+                        numberOfPages: 5,//一页显示几个按钮（在ul里面生成5个li）
+                        totalPages:pages //总页数
+                    }
+                   element.bootstrapPaginator(options);
+                }
+            });
+        }</span>
+
+<!--引入的资源包-->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./node_modules/bootstrap-pagination.git/bootstrap-pagination.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var demo2 = BootstrapPagination($("#demo1"), {
+            layoutScheme: "lefttext,pagesizelist,firstpage,prevgrouppage,prevpage,pagenumber,nextpage,nextgrouppage,lastpage,pageinput,righttext",
+            //记录总数。
+            total: 101,
+            //分页尺寸。指示每页最多显示的记录数量。
+            pageSize: 20,
+            //当前页索引编号。从其开始（从0开始）的整数。
+            pageIndex: 2,
+            //指示分页导航栏中最多显示的页索引数量。
+            pageGroupSize: 5,
+            //位于导航条左侧的输出信息格式化字符串
+            leftFormateString: "本页{count}条记录/共{total}条记录",
+            //位于导航条右侧的输出信息格式化字符串
+            rightFormateString: "第{pageNumber}页/共{totalPages}页",
+            //页码文本格式化字符串。
+            pageNumberFormateString: "{pageNumber}",
+            //分页尺寸输出格式化字符串
+            pageSizeListFormateString: "每页显示{pageSize}条记录",
+            //上一页导航按钮文本。
+            prevPageText: "上一页",
+            //下一页导航按钮文本。
+            nextPageText: "下一页",
+            //上一组分页导航按钮文本。
+            prevGroupPageText: "上一组",
+            //下一组分页导航按钮文本。
+            nextGroupPageText: "下一组",
+            //首页导航按钮文本。
+            firstPageText: "首页",
+            //尾页导航按钮文本。
+            lastPageText: "尾页",
+            //设置页码输入框中显示的提示文本。
+            pageInputPlaceholder: "GO",
+            //接受用户输入内容的延迟时间。单位：毫秒
+            pageInputTimeout: 800,
+            //分页尺寸列表。
+            pageSizeList: [5, 10, 20, 50, 100, 200],
+            //当分页更改后引发此事件。
+            pageChanged: function (pageIndex, pageSize) {
+//                alert("page changed. pageIndex:" + pageIndex + ",pageSize:" + pageSize)
+            },
+        });
+    });
+</script>
+</body>
+</html>

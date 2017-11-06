@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面向对象</title>
+</head>
+<body>
+<input type="button" value="我是按钮" class="btn">
+
+
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    function jQuery() {
+        return new jQuery.prototype.init();
+    }
+    jQuery.prototype.init = function () {
+        alert('init方法');
+    };
+    jQuery.prototype.other = function () {
+        alert('other方法');
+    };
+    jQuery.prototype.init.prototype = jQuery.prototype;//将jQuery的原型对象的地址赋值给init方法的原型;
+    jQuery().other();
+
+</script>
+</body>
+</html>

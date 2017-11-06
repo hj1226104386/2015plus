@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+      *{
+        margin:0;
+        padding:0;
+      }
+      #hd{
+        height:50px;
+        background: #666;
+        text-align: center;
+    }
+#middle{
+    float:left;
+    width:100%;/*左栏上去到第一行*/     
+    height:100px;
+    background:blue;
+}
+#left{
+    float:left;
+    width:180px;
+    height:100px;
+    margin-left:-100%;
+    background:#0c9;
+}
+#right{
+    float:left;
+    width:200px;
+    height:100px;
+    margin-left:-200px;
+    background:#0c9;
+}
+
+/*给内部div添加margin，把内容放到中间栏，其实整个背景还是100%*/ 
+#inside{
+    margin:0 200px 0 180px;
+    height:100px;
+}
+#footer{  
+   clear:both; /*记得清除浮动*/  
+   height:50px;     
+   background: #666;    
+   text-align: center; 
+} 
+  </style>
+</head>
+<body>
+ <div id="hd">头部</div> 
+  <div id="middle">
+    <div id="inside">中间</div>
+  </div>
+  <div id="left">左侧</div>
+  <div id="right">右侧</div>
+  <div id="footer">底部</div>
+</body>
+</html>

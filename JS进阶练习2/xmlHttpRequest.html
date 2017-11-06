@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var xml = new xmlHttpRequest();
+    xml.open('GET','http://www.baidu.com');
+    xml.send(null);
+    xml.onreadystatechange = function(){
+      if(xml.readyState===4&&xml.status==200){
+        alert('success');
+      }
+      else{
+        alert('failed');
+      }
+    }
+  </script>
+</body>
+</html>

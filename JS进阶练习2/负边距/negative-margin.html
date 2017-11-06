@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>负边距</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .m-b-30{
+            margin-bottom: 30px;
+        }
+        .block{
+            width: 100%;
+            height: 50px;
+            background-color: orange;
+        }
+        .text{
+            background-color: lightblue;
+            margin-bottom: 30px;
+        }
+        .parent{
+            width: 400px;
+            background-color: lightblue;
+            margin:0 auto;
+        }
+        .son{
+            height: 100px;
+            background-color: orange;
+            margin-bottom: -50px;
+        }
+        .boxs{
+            width: 390px;
+            border:3px solid black;
+            overflow: hidden;
+        }
+        .boxs>ul{
+            /*height: 300px;*/
+            margin-right: -10px;
+            overflow: hidden;
+        }
+        .boxs li{
+            list-style: none;
+            width: 90px;
+            height: 90px;
+            float: left;
+            background-color: orange;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="block">我是块状元素，位置根据文档流排布</div>
+<p class='text'>我是下面的元素，我是下面的元素，我是下面的素，我是下面的元素，我是下面的元素，我是下面的元素，</p>
+
+<div class="parent">
+    <div class="son"></div>
+</div>
+<div class="boxs m-b-30">
+    <ul>
+        <li>子元素1</li>
+        <li>子元素2</li>
+        <li>子元素3</li>
+        <li>子元素4</li>
+        <li>子元素5</li>
+        <li>子元素6</li>
+        <li>子元素7</li>
+        <li>子元素8</li>
+        <li>子元素8</li>
+        <li>子元素8</li>
+        <li>子元素8</li>
+        <li>子元素8</li>
+        <li>子元素8</li>
+    </ul>
+</div>
+
+
+</body>
+</html>

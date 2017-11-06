@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue导航菜单</title>
+    <link rel="stylesheet" href="./public/node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="vueBox" id="tab">
+    <button v-on:click="onMe('我是按钮1')" class="btn btn-primary">按钮1</button>
+    <button v-on:click="onMe('我是按钮2')"  class="btn btn-success">按钮2</button>
+    <button v-on:click.="onMe('我是按钮3')"  class="btn btn-danger">按钮3</button>
+    <input @keyup.enter="submit()" >测试按钮</input>
+    <div class="tabContent">
+        <p>当前选择的是:{{select}}</p>
+    </div>
+</div>
+
+
+<script src="./public/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./public/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./public/js/vue.js"></script>
+<script>
+    $(function () {
+        /**
+         * vue入门小项目
+         */
+        var app = new Vue({
+            el: '#tab',
+            data: {
+                select: '我是按钮1'
+            },
+            methods: {
+                onMe: function (item) {
+                    this.select = item;
+                },
+                submit:function () {
+                    alert('enter键被按下了!');
+                }
+            }
+        })
+    });
+
+</script>
+</body>
+</html>

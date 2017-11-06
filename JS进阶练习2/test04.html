@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    /**
+     * 添加歌曲
+     * 删除歌曲
+     * 初始化(渲染页面,绑定事件,预加载歌曲)
+     */
+    function Manager() {
+        this.init();
+    }
+    Manager.prototype = {
+        //将新的原型对象指向Manager;
+        constructor:Manager,
+        //初始化页面
+        init:function () {
+            this.bindEvents();
+            this.addSongs();
+            this.deleteSongs();
+            this.editSongs();
+        },
+        //渲染DOM元素
+        renderDom:function () {
+            
+        },
+        //绑定事件
+        bindEvents:function () {
+            
+        },
+        //添加歌曲
+        addSongs:function () {
+            
+        },
+        //删除歌曲
+        deleteSongs:function () {
+            
+        },
+        //编辑歌曲
+        editSongs:function () {
+            
+        }
+        
+    };
+    //实例化一个Manager对象;
+    var songManager = new Manager();
+</script>
+</body>
+</html>

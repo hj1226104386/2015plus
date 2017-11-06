@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>jQuery插件开发</h1>
+<p>
+    jQuery开发常用<strong>$.extend()、$.fn</strong>来扩展新的方法
+</p>
+<a href="https://www.baidu.com">我是链接</a>
+
+<script src="http://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    //这种方式只适用于简单的操作
+    $.extend({
+        sayHello: function (name) {
+            alert('Hello,' + (name || '黄锦') + '!');
+        }
+    });
+    //$.fn方法指向$.prototype,在这上面扩展方法，可以使用jQuery强大的选择器和其他插件
+    $.fn.run = function () {
+        //this：指向用jQuery选择的元素
+        this.css('color', 'red');
+    };
+    $.fn.addLink = function () {
+        this.css('color', "blue");
+        return this.append(this.attr('href'));
+    };
+
+    //给插件提供一些参数
+    $.fn.changeColor = function (options) {
+        var defaults = {
+            color:'blue',
+            fontSize:'25px'
+        };
+        //如果用户传入了参数，则替换掉默认配置
+        var settings = $.extend(defaults,options);
+        //return  实现保持链式编程
+        return this.css({
+            'color':defaults.color,
+            'fontSize':defaults.fontSize
+        });
+    };
+
+    //上述方法中，默认参数可以被用户修改，现在我们想保留默认参数，创建一个空对象
+    $.fn.changeCss = function (options) {
+        var defaults = {
+            "color":"gold",
+            "fontSize":"22px"
+        };
+        var settings = $.extend({},defaults,options)
+    };
+
+    //面向对象方式来组织代码
+    var Beautifier = function (ele,opt) {
+        this.$ele = ele;
+        var defaults = {
+            "color":"blue",
+            "fontSize":"30px",
+            'description':"默认描述"
+        };
+        this.options = $.extend({},defaults,opt);
+    };
+    Beautifier.prototype = {
+        construtor:Beautifier,
+        beauty:function () {
+            this.$ele.css({
+                'color':this.options.color,
+                'fontSize':this.options.fontSize
+            })
+        }
+    };
+    $.fn.myPlugin = function (opt) {
+        //创建beautifier实例
+        var beautifier = new Beautifier(this,opt);
+        //执行
+        return beautifier.beauty();
+    };
+
+    //为了避免全局变量冲突，保护私有变量，用匿名自执行函数包起来
+    ;(function ($,window,document,undefiend) {
+        //面向对象方式来组织代码
+        var Beautifier = function (ele,opt) {
+            this.$ele = ele;
+            var defaults = {
+                "color":"blue",
+                "fontSize":"30px",
+                'description':"默认描述"
+            };
+            this.options = $.extend({},defaults,opt);
+        };
+        Beautifier.prototype = {
+            construtor:Beautifier,
+            beauty:function () {
+                this.$ele.css({
+                    'color':this.options.color,
+                    'fontSize':this.options.fontSize
+                })
+            }
+        };
+        $.fn.myPlugin = function (opt) {
+            //创建beautifier实例
+            var beautifier = new Beautifier(this,opt);
+            //执行
+            return beautifier.beauty();
+        };
+    })(jQuery,window,document);
+
+
+</script>
+</body>
+</html>

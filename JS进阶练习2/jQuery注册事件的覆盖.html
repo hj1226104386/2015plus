@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件覆盖问题</title>
+</head>
+<body>
+<div class="app">
+    <button class="btn">按钮</button>
+</div>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    $(function () {
+        var btn = document.querySelector('.btn');
+        btn.onclick = function () {
+            alert("我是A");
+        };
+        btn.onclick = function () {
+            //重复注册事件会覆盖上一个相同事件;
+            //jQuery中同一个元素的事件是都放在一个数组里,调用的时候会循环调用,所以不会覆盖;
+            alert("我是B");
+        };
+    })
+</script>
+</body>
+</html>

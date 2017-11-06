@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery扩展插件</title>
+    <style>
+        .box{
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<button class="btn">按钮</button>
+<div class="box"></div>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+
+    //扩展jQuery全局函数，在jq构造函数上添加方法
+    jQuery.showAlert = function () {
+        alert('我是新加的全局函数！');
+        return this;
+    }
+    //jQuery的原型上添加方法
+        jQuery.fn.extend({
+            foo3: function () {
+                alert('我是给jQuery原型添加的一个方法')
+            },
+            changeBgc:function () {
+                $(this).css('backgroundColor', 'blue');
+            }
+        })
+
+
+    $(function () {
+
+        $.showAlert();
+        $('.btn').click(function () {
+            $(this).foo3();
+        })
+        $('.box').click(function () {
+            $(this).changeBgc()
+        })
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var obj = {
+        foo:'bar',
+        func:function () {
+            var self = this;
+            console.log(this.foo);//this指向func函数的调用者
+            console.log(self.foo);//self指向func函数的调用者
+            (function () {
+                console.log(this.foo);//this指向window全局
+                console.log(self.foo);//self指向func函数的调用者
+            })();
+        }
+    };
+    obj.func();
+</script>
+</body>
+</html>

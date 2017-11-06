@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery学习</title>
+</head>
+<body>
+<div class="layout">
+    <span>我是最里面的span标签</span>
+</div>
+
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    //jQuery扩展插件方法
+    ;(function ($) {
+        $.fn.extend({
+            color:function (value) {
+                return this.css('color',value);
+            }
+        })
+    })(jQuery)
+    $(function () {
+        $('.layout').on('click',function () {
+            alert('layout被点击了')
+        })
+
+
+
+        $('span').click(function (e) {
+            e.stopPropagation();//阻止冒泡
+            $(this).color('red');
+        })
+    })
+
+</script>
+</body>
+</html>

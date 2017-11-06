@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../2-面向对象和高程/2-面向对象和高程/01-歌曲管理/js/index.js"></script>
+
+</head>
+<body>
+<div class="box">
+
+</div>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/arttemplate-native/arttemplate-native.js"></script>
+<script id="test" type="text/template">
+    <ul>
+        <% for(var i = 0;i<content.length;i++) { %>
+        <li>
+            <h2><%= content[i].title%></h2>
+            <p><%= content[i].list%></p>
+        </li>
+        <% } %>
+    </ul>
+</script>
+<script>
+    var json = {msg:["大连","三亚","武汉","北京","上海","咸宁"]};
+    var data = {
+        content : [
+        {title: "artTemplate",list: "新一代 javascript 模板引擎",},
+        {title: "特性",list: "性能卓越，执行速度快"}
+            ]
+        };
+    $('.box').append('<ul class="ul"></ul>');
+    /*$.each(json.msg,function (i,v) {
+        $('.ul').append('<li>'+v+'</li>');
+    })*/
+    var html = template('test',data);
+    $('.box').html(html);
+
+
+</script>
+</body>
+</html>

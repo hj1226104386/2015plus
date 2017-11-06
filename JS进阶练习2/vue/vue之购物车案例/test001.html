@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <h2>{{msg}}</h2>
+    <h2 v-text="msg"></h2>
+    <input type="text" v-model="msg" >
+    <button v-on:click="showAlert()">按钮</button>
+</div>
+<script src="./public/node_modules/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'朴新教育'
+        },
+        methods:{
+            showAlert:function () {
+                console.log(this);
+            }
+        },
+        mounted:function () {
+            
+        }
+    })
+</script>
+</body>
+</html>

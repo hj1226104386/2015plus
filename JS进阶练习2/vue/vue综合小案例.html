@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue综合小案例</title>
+    <link rel="stylesheet" href="./public/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        fieldset {
+            width: 500px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .forms {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+
+    <div class="forms">
+        <h2>创建一条新信息</h2>
+        <div class="form-group">
+            <label>姓名:</label>
+            <input type="text" v-model="newPerson.name">
+        </div>
+        <div class="form-group">
+            <label>年龄:</label>
+            <input type="text" v-model="newPerson.age">
+        </div>
+        <div class="form-group">
+            <label>性别:</label>
+            <select name="gender" v-model="newPerson.gender">
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" v-on:click="addOne()">添加</button>
+        </div>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody v-for="(one,index) in list">
+        <tr :class="'center'">
+            <td>{{one.name}}</td>
+            <td>{{one.age}}</td>
+            <td>{{one.gender}}</td>
+            <td v-bind:class="'center'">
+                <button class="btn btn-danger" v-on:click="deleteOne(index)">删除</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="./public/node_modules/vue/dist/vue.js"></script>
+<script>
+    window.onload = function () {
+        var demo = new Vue({
+            el: '#app',
+            data: {
+                newPerson: {
+                    name: '',
+                    age: '',
+                    gender: '男'
+                },
+                list: [
+                    {name: '张三', age: 18, gender: '男'},
+                    {name: '李四', age: 15, gender: '女'},
+                    {name: '光头强', age: 25, gender: '男'}
+                ]
+            },
+            methods: {
+                addOne: function () {
+                    if (this.newPerson.name && this.newPerson.age) {
+                        this.list.push(this.newPerson);
+                    } else {
+                        alert('请填写完整信息哦')
+                        return false;
+                    }
+                },
+                deleteOne: function (index) {
+                    this.list.splice(index, 1);
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue指令</title>
+    <link rel="stylesheet" href="./public/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .pagination ul,
+        .pagination li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .pagination li {
+            width: 50px;
+            height: 40px;
+            display: inline-block;
+            background-color: gainsboro;
+            text-align: center;
+            line-height:40px;
+        }
+        .active {
+            background-color: orange !important;
+        }
+    </style>
+</head>
+<body>
+<!--页面容器-->
+<div id="app">
+    <!--v-if和v-show-->
+    <h2 v-if="age>18">我成年了,我的年龄是:{{age}}岁</h2>
+    <h2 v-else>我未成年,我只有{{age}}岁</h2>
+    <h2 v-show="gender=='男生'">我是{{gender}}</h2>
+    <!--v-for-->
+    <ul v-if=true v-for="food in list">
+        <li>我是{{food.name}},我的价格是{{food.price}}/500g</li>
+    </ul>
+    <!--v-bind:后面跟一个html元素的属性,比如class-->
+    <div class="pagination">
+        <ul v-for="n in pageCount">
+            <li v-bind:class="activeNum==n?'active':''">{{n}}</li>
+        </ul>
+    </div>
+    <!--v-on:监听dom事件,简写@click-->
+    <button v-on:click="onMe('Hi')">v-on指令</button>
+</div>
+<script src="./public/node_modules/vue/dist/vue.js"></script>
+<script>
+    //创建vue实例
+    var demo = new Vue({
+        el: '#app',//view层
+        data: {//model层
+            age: 15,
+            gender: '女生',
+            list: [
+                {
+                    name: '苹果',
+                    price: 15
+                },
+                {
+                    name: '香蕉',
+                    price: 13
+                },
+                {
+                    name: '榴莲',
+                    price: 28
+                }
+            ],
+            activeNum: 1,
+            pageCount: 5
+
+        },
+        methods:{
+            onMe:function (say) {
+                alert(say);
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue之购物车案例</title>
+    <link rel="stylesheet" href="./public/js/iconfont/iconfont.css">
+    <style>
+        .checkbox, .calAmount, .price, p {
+            display: inline-block;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        input[type="text"] {
+            width: 20px;
+        }
+
+        th, td {
+            width: 100px;
+            text-align: center;
+        }
+
+        .pay {
+            text-align: right;
+        }
+
+        input[type="button"] {
+            width: 100px;
+            height: 40px;
+            background-color: orange;
+            text-align: center;
+            border: none;
+        }
+
+        .dagou {
+            color: orange;
+        }
+
+        .checkbox span {
+            cursor: pointer;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h2>购物车案例</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>选择</th>
+            <th>商品</th>
+            <th>数量</th>
+            <th>单价</th>
+            <th>总价</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="(one,index) in allProduct">
+            <td>
+                <div class="checkbox">
+                    <span class=" iconfont icon-dagou" v-bind:class="{'dagou':one.isChecked}"
+                          @click="selectThis(one,index)"></span>
+                </div>
+            </td>
+            <td>
+                <p v-text="one.name"></p>
+            </td>
+            <td>
+                <div class="calAmount">
+                    <a href="javascript:;" @click="reduceOne(one,index)">-</a>
+                    <input type="text" v-model="one.amount">
+                    <a href="javascript:;" @click="addOne(one,index)">+</a>
+                </div>
+            </td>
+            <td>
+                <div class="price">
+                    <span>{{one.price}}元</span>
+                </div>
+            </td>
+            <td>
+                <div class="allPrice">
+                    <span>{{one.price*one.amount}}元</span>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="selectAll">
+        <button @click="selectAll()">全选</button>
+        <button @click="cancleSelectAll()">取消全选</button>
+    </div>
+    <div class="pay">
+        <strong>总计:{{totalMoney}}元</strong>
+        <input type="button" value="去付款" @click="goPay()">
+    </div>
+</div>
+
+
+<script src="./public/node_modules/vue/dist/vue.js"></script>
+<script src="./public/node_modules/vue-router/dist/vue-router.js"></script>
+<script src="./public/node_modules/vue-resource/dist/vue-resource.js"></script>
+<script>
+    /**
+     * 笔记
+     * 1.vue.$set()在data里没有监听,可以手动去添加监听;
+     */
+    new Vue({
+        el: '#app',
+        data: {
+            allProduct: [
+                {
+                    name: '巧克力',
+                    amount: 1,
+                    price: 16
+                },
+                {
+                    name: '芒果',
+                    amount: 1,
+                    price: 14
+                },
+                {
+                    name: '士力架',
+                    amount: 1,
+                    price: 23
+                },
+                {
+                    name: '益达',
+                    amount: 1,
+                    price: 9
+                },
+            ],
+            totalMoney: 0,
+            selectFlag: false
+        },
+        mounted: function () {
+
+        },
+        methods: {
+            addOne: function (one) {
+                one.amount++;
+                this.calculateAllMoney();
+            },
+            reduceOne: function (one) {
+                //商品数量不能小于1
+                if (one.amount <= 1) {
+                    one.amount = 1;
+                } else {
+                    one.amount--;
+                }
+                this.calculateAllMoney();
+            },
+            selectThis: function (one) {
+                //手动给每个商品添加变量isChecked变量给Vue监听
+                if (typeof one.isChecked == "undefined") {
+                    this.$set(one, 'isChecked', true);
+                } else {
+                    one.isChecked = !one.isChecked;
+                }
+                this.calculateAllMoney();
+            },
+            selectAll: function () {
+                var that = this;
+                //首先判断每个商品中是否有isChecked属性
+                this.allProduct.forEach(function (v, i) {
+                    if (!v.isChecked) {
+                        that.$set(v, 'isChecked', true)
+                    } else {
+                        v.isChecked = true;
+                    }
+
+                })
+                this.calculateAllMoney();
+            },
+            cancleSelectAll: function () {
+                //遍历每个商品,取消选择;
+                this.allProduct.forEach(function (v, i) {
+                    v.isChecked = false;
+                });
+                this.calculateAllMoney();
+            },
+            calculateAllMoney: function () {
+                var that = this;
+                //清空总计数目
+                this.totalMoney = 0;
+                //遍历每个商品,拿到isChecked为true的商品;
+                this.allProduct.forEach(function (v, i) {
+                    if (v.isChecked == true) {
+                        that.totalMoney += v.amount * v.price;
+                    }
+                })
+            },
+            goPay: function () {
+                alert('哈哈,就不让你付款');
+            }
+
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formData对象发ajax上传文件</title>
+</head>
+<body>
+<div class="fileUpload">
+    <form enctype="multipart/form-data" id="uploadForm">
+        <span>上传文件： </span>
+        <input id="choose_file" type="file" name="file"/>
+        <input class="uploadBtn" type="button" value="上传"/>
+    </form>
+</div>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    $(function () {
+        var formData;
+        $('#choose_file').on('change',function () {
+            formData = new FormData($("#uploadForm")[0]);//创建formData对象
+            var reader = new FileReader();//拿到选择的文件的数据
+            reader.readAsDataURL(this.files[0]);//文件读取方式
+            console.log(this.files[0]);
+            reader.onload = function () {
+                var imgData = this.result;//文件的数据流
+                console.log(this);
+                formData.append('image',imgData);//将文件数据流放到formData对象中保存;
+                console.log(formData);
+            }
+        })
+        $('.uploadBtn').click(function () {
+            /*$.ajax({
+                url: '' ,
+                type: 'POST',
+                data: formData,
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (res) {
+
+                },
+                error: function (res) {
+
+                }
+            });*/
+
+        })
+
+    })
+</script>
+</body>
+</html>

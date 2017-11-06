@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue2.0生命周期函数</title>
+</head>
+<body>
+<div id="app">
+    <button @click="flag=!flag">按钮</button>
+    <transition name='slide-fade'>
+        <p v-if="flag">啊啊哈</p>
+    </transition>
+</div>
+<script src="./public/node_modules/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            flag:true,
+            msg:'我是信息'
+        },
+        methods:{
+
+        }
+
+    })
+</script>
+</body>
+</html>

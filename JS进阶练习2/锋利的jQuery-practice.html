@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>锋利的jQuery</title>
+    <style>
+        .box3 p {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <!--<input id="inp" type="checkbox">
+    <label for="inp">我同意以上制度</label>-->
+    <p>大家好,我来自湖北咸宁</p>
+</div>
+<div class="box1">
+    <ul>
+        <li>11</li>
+        <li>22</li>
+        <li>33</li>
+        <li>44</li>
+    </ul>
+</div>
+<div class="box2">
+    <input id="inp1" type="checkbox"><label for="inp1">男</label>
+    <input id="inp2" type="checkbox" checked><label for="inp2">女</label>
+    <input id="inp3" type="checkbox" checked><label for="inp3">男女</label>
+</div>
+<div class="box3">
+    <p>我叫黄锦,来自武昌理工学院</p>
+</div>
+
+
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        /*var inp = document.querySelector('#inp');
+        inp.onclick = function () {
+            var ifCheck = inp.checked;
+            console.log(ifCheck);
+            if(ifCheck){
+                alert('感谢您的支持,您可以继续了');
+            }
+        }*/
+        /*$('#inp').on('click',function () {
+            /!*if($(this).prop('checked')){
+                alert('感谢您的支持,你可以继续了');
+            }*!/
+            if($(this).is(':checked')){
+                alert('感谢你的支持');
+            }
+        })*/
+
+        //jQuery选择器获取到的永远是一个伪数组(对象)
+        /*if($('.inp').length>0){
+            alert('找到元素了');
+        }else{
+            alert('没有找到元素哦');
+        }
+*/
+
+        //拿到索引大于0的li元素并设置颜色为red
+//    $('.box1 li:gt(0)').css('color','red');
+        //$('.box1 li:nth-child(even)').css("color","blue");
+        //拿到被选中的input元素并打印出来;
+    /*var $inps = $('.box2>input:checked');
+        console.log($inps);*/
+
+    //通过选择器来判断p元素是否是隐藏的;/*
+    /*var $p = $('.box3>p');
+    if($p.is(":hidden")){
+        alert('没错,我就是隐藏着的')
+    }else{
+        alert('我没有隐藏哦')
+    }*/
+
+
+
+
+
+    })
+</script>
+</body>
+</html>

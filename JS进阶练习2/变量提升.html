@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>变量提升</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // es5
+    var name = '黄锦';
+    function f1() {
+      console.log(name)
+      console.log(age)
+      if(!name){
+          var name = 'hello';
+          console.log(name);
+          alert('aaa')
+      }else{
+        alert('bbb')
+        var name = 'world';
+        var age = '18';
+        console.log(name);
+      }
+    }
+    // f1();
+    
+
+    // ES6 出现了块级作用域
+    'use strict';
+    let gender = 'man';
+    function f2() {
+      console.log(gender)
+      if(!gender){
+          let gender = 'hello';
+          console.log(gender);
+          alert('aaa')
+      }else{
+        alert('bbb')
+        var gender = 'world';
+        console.log(gender);
+      }
+    }
+
+
+    console.log(code); // 报错 code is not defined
+    let code = '啊哈';
+  </script>
+</body>
+</html>

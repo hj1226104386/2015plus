@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+      *{
+        margin:0;
+        padding:0;
+      }
+      #hd{
+        height:50px;
+        background: #666;
+        text-align: center;
+      }
+      #bd{
+          /*左右栏通过添加负的margin放到正确的位置了，此段代码是为了摆正中间栏的位置*/
+          padding:0 200px 0 180px;
+          height:100px;
+      }
+      #middle{
+          float:left;
+          width:100%;/*左栏上去到第一行*/
+          height:100px;
+          background:blue;
+      }
+      #left{
+          float:left;
+          width:180px;
+          height:100px;
+          margin-left:-100%;
+          background:#0c9;
+          /*中间栏的位置摆正之后，左栏的位置也相应右移，通过相对定位的left恢复到正确位置*/
+           position:relative;
+          left:-180px; 
+      }
+      #right{
+          float:left;
+          width:200px;
+          height:100px;
+          margin-left:-200px;
+          background:#0c9;
+          /*中间栏的位置摆正之后，右栏的位置也相应左移，通过相对定位的right恢复到正确位置*/
+           position:relative;
+          right:-200px; 
+      }
+      #footer{
+          height:50px;
+          background: #666;
+          text-align: center;
+        }
+  </style>
+</head>
+<body>
+ <div id="hd">我是头部</div>
+<div id="bd">
+  <div id="middle">我是中间部分</div>
+  <div id="left">我是左侧</div>
+  <div id="right">我是右侧</div>
+</div>
+<div id="footer">底部</div>
+</body>
+</html>

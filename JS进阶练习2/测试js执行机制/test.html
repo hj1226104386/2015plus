@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dtgrid/jquery.dtGrid.css">
+</head>
+<body>
+<div>
+    <div id="dtGridContainer_2_1_2" class="dt-grid-container go-stu-manage-wrapper"></div>
+    <div id="dtGridToolBarContainer_2_1_2" class="dt-grid-toolbar-container"></div>
+</div>
+<!-- <button id="btn">触发事件</button> -->
+<script src="./jquery/jquery-1.9.1.min.js"></script>
+<script src="./dtgrid/jquery.dtGrid.min.js"></script>
+<script src="./dtgrid/i18n/zh-cn.js"></script>
+<script>
+    
+    $(function () {
+        function f1() {
+            console.log('我是fn，我是fn');
+        };
+
+        var data = [
+            {
+                name:'黄锦',
+                age:'啊啊啊'
+            },
+            {
+                name:'黄锦',
+                age:'啊啊啊'
+            },
+            {
+                name:'黄锦',
+                age:'啊啊啊'
+            }
+        ]
+        var init = {
+            initTable:function () {
+                var dtGridColumns_2_1_2 = [
+                    {id: 'name',title: '课程名称',type: 'string',columnClass: 'text-left h-blue-link'},
+                    {id: 'age', title: '课时数', type: 'string', columnClass: 'text-left'},
+                    {id: 'operation',title: '操作',type: 'string',columnClass: 'text-left',resolution: function (value, record, column, grid, dataNo, columnNo) {
+                            var content = '';
+                            content += '<button class="btn btn-warning" onclick="f1">修改</button>';
+                            return content;
+                        }
+                    },
+                ];
+                var dtGridOption_2_1_2 = {
+                    lang: 'zh-cn',
+                    ajaxLoad: false,
+                    datas:data,
+                    exportFileName: '课程列表',
+                    columns: dtGridColumns_2_1_2,
+                    gridContainer: 'dtGridContainer_2_1_2',
+                    toolbarContainer: 'dtGridToolBarContainer_2_1_2',
+                    tools: '',
+                    pageSize: 15,
+                    pageSizeLimit: [15, 20, 50]
+                };
+                var grid_2_1_2 = $.fn.DtGrid.init(dtGridOption_2_1_2);
+                grid_2_1_2.load();
+            }
+        };
+        //执行初始化操作
+        init.initTable();
+    });
+</script>
+</body>
+</html>

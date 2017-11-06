@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a{
+            text-decoration: none;
+            display: block;
+            height: 50px;
+            line-height:50px;
+        }
+        .active{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="collection">
+        <a href="#!" class="collection-item"
+           v-for="gameName in gameNames"
+           @click="selected(gameName)"
+           :class="{active: activeName == gameName}">{{gameName}}</a>
+    </div>
+</div>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            gameNames: ['魔兽世界', '暗黑破坏神Ⅲ', '星际争霸Ⅱ', '炉石传说', '风暴英雄',
+                '守望先锋'
+            ],
+            activeName: ''
+        },
+        methods: {
+            selected: function(gameName) {
+                this.activeName = gameName
+            }
+        }
+    })
+</script>
+</body>
+</html>

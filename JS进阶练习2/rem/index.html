@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            font-size:12px;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .layout{
+            width: 100%;
+            height: 100%;
+            padding:0.1rem;
+            background-color: lightgray;
+        }
+        .box{
+            width: 3.55rem;
+            height: 0.43rem;
+            line-height:0.43rem;
+            padding-left: 0.43rem;
+            background-color: orange;
+            font-family: PingFangSC-Regular;
+            font-size: 0.16rem;
+            color: #FFF;
+            letter-spacing: -0.39px;
+            border-top-left-radius:5px;
+            border-top-right-radius:5px;
+        }
+        .items>li{
+            list-style: none;
+            width: 100%;
+            height: 0.5rem;
+            background-color: #fff;
+            padding:0 0.28rem 0 0.17rem;
+        }
+        .items>li>span{
+            width: 0.26rem;
+            height: 0.26rem;
+            background-color: orange;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            margin-top: 0.12rem;
+        }
+        .items>li>i{
+            width: 0.26rem;
+            height: 0.26rem;
+            background-color: lightblue;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            margin-top: 0.12rem;
+        }
+        .items>li>dl{
+            margin-top: 0.07rem;
+            margin-left: 0.18rem;
+        }
+        dl>dt{
+            font-family: PingFangSC-Regular;
+            font-size: .14rem;
+            color: #4381E4;
+            letter-spacing: 0;
+        }
+        dl>dd{
+            font-family: PingFangSC-Light;
+            font-size: .12rem;
+            color: #898989;
+            letter-spacing: 0;
+        }
+    </style>
+    <script src="./alibaba-rem.js"></script>
+</head>
+<body>
+<!--布局容器-->
+<div class="layout">
+    <h2 class="box">
+        活动任务详情
+    </h2>
+    <ul class="items">
+        <li>
+            <span class='fl'></span>
+            <dl class='fl'>
+                <dt>英语 there be 句型</dt>
+                <dd>2017-06-02</dd>
+            </dl>
+            <i class='fr'></i>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

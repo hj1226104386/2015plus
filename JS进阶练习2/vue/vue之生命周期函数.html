@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue2.0生命周期函数</title>
+</head>
+<body>
+<div id="app">
+    <h2 v-text="newMsg"></h2>
+</div>
+<script src="./public/node_modules/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'这里是武昌理工广播台,声音就是力量!'
+        },
+        beforeCreate:function () {
+            console.log('组件被创建之前,el和data并未初始化');
+        },
+        created:function () {
+            console.log('组件已被创建,data数据完成初始化,el没有');
+        },
+        beforeMount:function () {
+            console.log('挂载之前,完成了virtual DOM和data的初始化');
+        },
+        mounted:function () {
+            console.log('完成了组件挂载');
+        },
+        computed:{
+            newMsg:function () {
+                console.log("我是计算属性computed");
+                return this.msg+'---啊哈啊哈';
+            }
+        },
+        template:"<div>我是模板</div>"
+
+    })
+</script>
+</body>
+</html>

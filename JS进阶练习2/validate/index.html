@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .invalid-form-error-message {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+
+
+<form class="demo-form" data-parsley-validate="">
+    <div class="first">
+        <label for="firstname">姓名:</label>
+        <input type="text" class="form-control" name="firstname" data-parsley-length="[3, 20]"
+               data-parsley-group="block1"><br>
+        <div class="invalid-form-error-message"></div>
+        <label for="lastname">小名:</label>
+        <input type="text" class="form-control" name="lastname" data-parsley-length="[3, 20]"
+               data-parsley-group="block1">
+    </div>
+    <div class="invalid-form-error-message"></div>
+    <div class="second">
+        <label for="fullname">学校:</label>
+        <input type="text" class="form-control" name="fullname" data-parsley-length="[8, 40]"
+               data-parsley-group="block2">
+    </div>
+    <div class="invalid-form-error-message"></div>
+    <input type="submit" class="btn btn-default validate">
+</form>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/parsleyjs/dist/parsley.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.demo-form').parsley().on('form:validate', function (formInstance) {
+            var ok = formInstance.isValid({group: 'block1', force: true}) && formInstance.isValid({
+                    group: 'block2',
+                    force: true
+                });
+            $('.invalid-form-error-message')
+                .html(ok ? '' : '填写不正确哦！')
+                .toggleClass('filled', !ok);
+            if (!ok){
+                formInstance.validationResult = false;
+                alert('验证不通过')
+            }else{
+                formInstance.validationResult = true;
+                alert('恭喜，验证通过')
+            }
+
+        });
+    });
+</script>
+</body>
+</html>

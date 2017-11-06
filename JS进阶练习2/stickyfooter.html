@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>sticky footer</title>
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+
+    body {
+        margin-bottom: 60px;
+    }
+    nav{
+      height: 60px;
+      width: 100%;
+      background-color: gray;
+      position:fixed;
+      top:0;
+    }
+    main{
+      padding-top: 60px;
+      background-color:orange;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 60px;
+        background-color: pink;
+    }
+    </style>
+</head>
+
+<body>
+    <nav>我是头部导航栏</nav>
+    <main>
+      <p>我是中间部分</p>
+      <p>我是中间部分</p>
+      <p>我是中间部分</p>
+      <p>我是中间部分</p>
+      <p>我是中间部分</p>
+      <p>我是中间部分</p>
+      <p>我是中间部分</p>
+      <p>我是中间部分</p>
+      <p>我是中间部分</p>
+      <p>我是中间部分</p>
+      <p>我是中间部分</p>
+      <p>我是中间部分</p>
+      <p>我是中间部分</p>
+    </main>
+    <footer>我是底部部分</footer>
+</body>
+
+</html>

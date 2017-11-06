@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var system = function(){
+
+      //弹窗提醒
+      var a1 = function(){
+        alert('我的弹窗哦!');
+      }
+      //控制台输出
+      var b1 = function(){
+        console.log('我在控制台输出了哦');
+      }
+
+      return {
+        init:function(){
+          a1();
+        },
+        bindEvents:function(){
+          b1();
+        }
+      }
+    }();//自调用函数-->即闭包
+
+    //初始化的时候弹窗提醒;
+    system.init();
+    //初始化事件绑定
+    system.bindEvents();
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单数据绑定</title>
+</head>
+<body>
+<div id="app">
+    <select name="水果" v-model="select">
+        <option value="香蕉">香蕉</option>
+        <option value="葡萄">葡萄</option>
+        <option value="榴莲">榴莲</option>
+        <option value="苹果">苹果</option>
+    </select>
+    <p>{{select}}</p>
+</div>
+<script src="./public/node_modules/vue/dist/vue.js"></script>
+<script src="./public/node_modules/vue-router/dist/vue-router.js"></script>
+<script src="./public/node_modules/vue-resource/dist/vue-resource.js"></script>
+<script>
+new Vue({
+    el:'#app',
+    data:{
+        select:''
+    }
+})
+</script>
+</body>
+</html>

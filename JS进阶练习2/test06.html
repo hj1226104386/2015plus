@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data-*自定义属性</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="testBox" data-uname="黄锦" data-uage="18">
+    我是测试盒子
+</div>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    //要做事,先找人
+    var box = document.getElementsByClassName('box')[0];
+    $(box).attr('data-uname','张三');
+    var result = box.getAttribute('data-uname');
+    console.log(result);
+    var result01 = box.dataset.uage;
+    console.log(result01);
+    var getNode = document.querySelector('[data-uage="18"]');
+    console.log(getNode);
+</script>
+</body>
+</html>

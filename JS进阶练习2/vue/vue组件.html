@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue组件</title>
+    <link rel="stylesheet" href="./public/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .link {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .link a {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            border-radius: 5px;
+            background-color: orange;
+            text-align: center;
+            line-height:50px;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <my-component></my-component>
+    <div class="link">
+        <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+        <router-link to="/home">去首页</router-link>
+        <router-link to="/other">去其他</router-link>
+    </div>
+
+    <div class="view-comtent">
+        <!-- 路由匹配到的组件将渲染在这里 -->
+        <router-view></router-view>
+    </div>
+</div>
+
+<script src="./public/node_modules/vue/dist/vue.js"></script>
+<script src="./public/node_modules/vue-router/dist/vue-router.js"></script>
+<script src="./public/js/home.js"></script>
+<script src="./public/js/other.js"></script>
+<script src="./public/js/main.js"></script>
+</body>
+</html>

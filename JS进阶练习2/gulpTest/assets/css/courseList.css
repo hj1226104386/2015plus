@@ -1,0 +1,205 @@
+body{
+    min-width: 1200px !important;
+}
+.mainBody {
+    background-color: #edf0f5;
+    padding: 80px 0 63px;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.h-list {
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.h-list > ul {
+    /*消除空白*/
+    font-size: 0;
+    height: auto;
+    width: auto;
+    margin-right: -20px;
+    padding-top: 51px;
+}
+
+.h-list > ul > li {
+    display: inline-block;
+    width: 285px;
+    height: 352px;
+    background-color: #fff;
+    margin: 0 20px 20px 0;
+}
+
+.oneItem .avatorMsg {
+    width: 100%;
+    height: 159px;
+    overflow: hidden;
+    position: relative;
+}
+
+.oneItem .avatorMsg > img {
+    width: 100%;
+    height: 186px;
+    transition: all .4s ease;
+}
+
+.avatorMsg:hover img {
+    transform: scale(1.2);
+}
+
+.oneItem .avatorMsg > span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 33px;
+    line-height: 33px;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, .5);
+
+
+    font-size: 14px;
+    color: #fff;
+    padding: 0 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.h-status{
+    width: 23px;
+    height: 42px;
+    position: absolute;
+    top:0;
+    right:8px;
+}
+.h-status>span{
+    font-size:14px;
+}
+.courseMsg {
+    clear: both;
+    padding: 0 16px;
+}
+
+.courseMsg > .courseTime {
+    margin-top: 18px;
+    margin-bottom: 28px;
+    font-size: 14px;
+}
+
+.courseMsg > .courseTime {
+    color: #333;
+}
+
+.courseMsg .progressBar {
+    position: relative;
+    height: 15px;
+    background-color: #ececec;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.progressBar span {
+    position: absolute;
+    width: 50%;
+    background-color: #ff5733;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: width .6s ease;
+    border-radius: 12px;
+}
+@keyframes progress-bar-stripes {
+
+    from {
+        background-position: 60px 0
+    }
+
+    to {
+        background-position: 0 0
+    }
+
+}
+@-webkit-keyframes progress-bar-stripes {
+    from {
+        background-position: 60px 0
+    }
+
+    to {
+        background-position: 0 0
+    }
+}
+.courseMsg .studyProgress {
+    overflow: hidden;
+}
+
+.courseMsg .studyProgress span {
+    font-size: 14px;
+    color: #666;
+    margin-left: 12px;
+}
+.h-left>i{
+    color:#fe4b2c;
+}
+.h-right>i{
+    color:#ccc;
+    font-size:18px;
+}
+.courseMsg > button {
+    height: 35px;
+    width: 100%;
+    text-align: center;
+    line-height: 33px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    margin-top: 20px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.courseMsg > button.btnWithRedFont:hover{
+    background-color: #fe4b2c!important;
+    color: #fff!important;
+}
+footer {
+    height: 63px;
+    line-height:63px;
+    width: 100%;
+    margin-top: -63px;
+    background-color: #282828;
+}
+
+footer p.h-copyRight {
+    width: 470px;
+    font-size: 12px;
+    color: #fff;
+    margin:0 auto;
+}
+
+.startToStudy {
+    cursor: pointer;
+}
+
+/*空页面样式*/
+.h-empty {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+}
+
+.h-empty p {
+    font-size: 16px;
+    margin-top: 15px;
+    color: #333;
+}
+

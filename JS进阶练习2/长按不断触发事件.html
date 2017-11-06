@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="box">
+    <button class="btn">按钮</button>
+</div>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(".btn").on({
+            touchstart: function(e){
+                timeOutEvent = setTimeout("longPress()",500);
+//                e.preventDefault();
+            },
+            touchmove: function(){
+                console.log('我的滑板鞋，摩擦摩擦');
+                clearTimeout(timeOutEvent);
+                timeOutEvent = 0;
+            },
+            touchend: function(){
+                clearTimeout(timeOutEvent);
+                if(timeOutEvent!=0){
+                    alert("你这是点击，不是长按");
+                }
+                return false;
+            }
+        })
+    });
+    function longPress(){
+        timeOutEvent = 0;
+        console.log("长按事件触发了");
+    };
+
+</script>
+</body>
+</html>

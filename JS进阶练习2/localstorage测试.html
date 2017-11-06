@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>本地存储</title>
+</head>
+<body>
+<script>
+    var storage = window.sessionStorage;
+    storage.setItem('a', '我是张三');
+    storage.setItem('b', '我是李四');
+    storage.setItem('c', '我是光头强');
+    console.log(storage.getItem('c'));
+//    storage.removeItem('jfVersion');
+</script>
+</body>
+</html>

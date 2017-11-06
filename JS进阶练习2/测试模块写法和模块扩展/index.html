@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>测试模块写法</title>
+</head>
+
+<body>
+    <input type="text" id='v1' />
+    <select id='calcType'>
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select>
+    <input type="text" id='v2' />
+    <button id='btn'>等于</button>
+    <input type="text" id='result' />
+    <script src="./index.js"></script>
+    <script type="text/javascript">
+    // 给calc模块扩展乘法和除法，要遵循开闭原则
+    var calc = (function(calc) {
+        // 乘法
+        calc.multiplication = function(v1, v2) {
+            return v1 * v2
+        }
+        // 除法
+        calc.division = function(v1, v2) {
+            return v1 / v2
+        }
+        calc.test = function() {
+            console.log(this.division)
+        }
+        return calc
+
+    })(calc || {})
+    // 现在的calc就是扩展后的calc
+    calc.test()
+
+
+
+
+    var btn = document.getElementById('btn');
+    var result = document.getElementById('result');
+    btn.onclick = function() {
+        var v1 = document.getElementById('v1').value - 0;
+        var v2 = document.getElementById('v2').value - 0;
+        var type = document.getElementById('calcType').value;
+        switch (type) {
+            case '+':
+                result.value = calc.add(v1, v2);
+                break;
+            case '-':
+                result.value = calc.reduce(v1, v2);
+                break;
+            case '*':
+                result.value = calc.multiplication(v1, v2);
+                break;
+            case '/':
+                result.value = calc.division(v1, v2);
+                break;
+        }
+    }
+    </script>
+</body>
+
+</html>

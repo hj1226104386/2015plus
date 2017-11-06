@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input v-model="messsage"> <!--input绑定实例中data中的message-->
+    <h3>
+        <child :msg=messsage></child>
+    </h3>
+
+
+</div>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    Vue.component('child',{
+        //声明props
+        props:['msg'],
+        template:'<span>{{msg}}</span>'
+    })
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            messsage: 'hello you are a good boy!'
+        },
+        //过滤器一般用来转换文本，用于插值和v-bind中
+        filters: {
+            testFilter: function (value) {
+                console.log(value);
+            }
+        }
+    });
+</script>
+</body>
+</html>

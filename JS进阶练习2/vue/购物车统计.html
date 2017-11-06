@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入框+双向数据绑定</title>
+    <link rel="stylesheet" href="./public/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        #box {
+            width: 300px;
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(50%);
+        }
+
+        .list-group .list-group-item {
+            cursor: pointer;
+        }
+
+        .list-group .list-group-item:hover {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <a class="list-group-item active disabled">
+        商品总金额:{{total}}
+    </a>
+    <ul class="list-group">
+        <template v-if="ok">
+            <li @click="updatePrice(food)" class="list-group-item" v-for="food in foods">
+                <span class="badge">¥{{food.price}}</span>
+                {{food.name}}
+            </li>
+        </template>
+    </ul>
+</div>
+
+
+<script src="./public/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./public/js/vue.js"></script>
+<script>
+    $(function () {
+        var data = {
+            ok: 1, total: 0, foods: [
+                {
+                    name: '苹果',
+                    status: false,
+                    price: 15,
+                    isClick: false
+                },
+                {
+                    name: '梨子',
+                    status: false,
+                    price: 10,
+                    isClick: false
+                },
+                {
+                    name: '殷桃',
+                    status: false,
+                    price: 22,
+                    isClick: false
+                },
+                {
+                    name: '西瓜',
+                    status: false,
+                    price: 13,
+                    isClick: false
+                }
+            ]
+        };
+        var vue = new Vue({
+            el: '#box',
+            data: data,
+            methods: {
+                updatePrice: function (food) {
+                    if (food.status === false) {//状态为false的时候是未添加总计的
+                        this.total += Math.abs(food.price);
+                    } else {
+                        this.total -= Math.abs(food.price);
+                    }
+                    food.status = !food.status;
+                }
+            }
+        });
+
+
+    });
+
+</script>
+</body>
+</html>

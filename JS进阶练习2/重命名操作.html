@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重命名操作</title>
+    <style>
+        .inp {
+            border: none;
+            width: 150px;
+            height: 24px;
+            font-size: 18px;
+            margin-right: 100px;
+        }
+
+        .inp[disabled] {
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="rename">
+    <input class="inp" type="text" value="前端books" disabled>
+    <button class="btn" type="button">点击重命名</button>
+
+</div>
+
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    $(function () {
+        /**
+         * 1.点击按钮可以实现重命名
+         * 2.双击也可以实现重命名
+         */
+
+            //1.点击按钮实现重命名
+        var fileRename = function () {
+            var $inpContent, $inp, $inpAttrData;
+            //拿到input元素;
+            $inp = $('.inp');
+            $('.btn').on('click', function () {
+                $inpContent = $inp.val();
+                $inp.prop('disabled', false);
+                $inp.attr('data-dirname', $inpContent);
+                $inp.focus();
+                $inp.select();
+            });
+            $inp.on('blur', function () {
+                $inpAttrData = $inp.attr('data-dirname');
+                $inpContent = $inp.val();
+                if ($inpAttrData != $inpContent) {
+                    alert('文件名修改了并保存成功');
+                    $inp.attr('data-dirname', $inpContent);
+                } else {
+                    throw '文件未做修改哦';//手动抛出一个错误
+                }
+                $inp.prop('disabled',true);
+            });
+        };
+        fileRename();
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>解决margin塌陷的方法</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        .parent{
+            width: 100%;
+            background-color: orange;
+            /*方法一：给父元素设置边框*/
+            /*border:1px solid red;*/
+
+            /*方法二：给父元素设置overflow：hidden*/
+            overflow: hidden;
+
+            /*方法三：给父元素设置一个固定的高度*/
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin:0 auto;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="son"></div>
+</div>
+</body>
+</html>

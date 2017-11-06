@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+<h1>开发一个控制字体样式的插件</h1>
+<p>终于会开发jQuery插件了，哈哈</p>
+
+<script src="http://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    //面向对象模式开发jQuery插件
+    ;(function ($,window,document) {
+        var Beauty = function (ele,opt) {
+            this.$element = ele;
+            var defaults = {
+                'color':'red',
+                'fontSize':'20px',
+                'description':'默认文本'
+            };
+            //如果用户传参了，就会改变默认参数
+            this.options = $.extend({},defaults,opt);
+        };
+        Beauty.prototype = {
+            constructor:Beauty,
+            beautify:function () {
+                 this.$element.css({
+                    'color':this.options.color,
+                    'fontSize':this.options.fontSize
+                }).append('('+this.options.description+')');
+            }
+        };
+        //添加方法到jQuery原型中
+        $.fn.beauty = function (opt) {
+            var beau = new Beauty(this,opt);
+            //执行
+            return beau.beautify();
+        };
+    })(jQuery,window,document)
+</script>
+</body>
+</html>

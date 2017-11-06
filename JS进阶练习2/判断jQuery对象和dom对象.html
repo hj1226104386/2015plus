@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="box">
+    啊哈哈
+</div>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    var dom = document.querySelector('.box');
+    var jq = $('.box');
+    if(dom[0]){
+        alert('这是jQuery对象')
+    }else{
+        alert('这是dom对象')
+    }
+
+</script>
+</body>
+</html>

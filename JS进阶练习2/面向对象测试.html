@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面向对象开发方式测试</title>
+</head>
+<body>
+
+<script>
+    function JD() {
+        this.init();
+    };
+    //扩展JD的原型对象
+    JD.prototype = {
+        constructor:JD,
+        //初始化
+        init:function () {
+            this.banner();
+            this.search();
+            this.downTime();
+        },
+        //轮播图
+        banner:function () {
+            alert('轮播图模块');
+        },
+        //搜索
+        search:function () {
+            alert('搜索模块');
+        },
+        //倒计时
+        downTime:function () {
+            alert('倒计时模块');
+            console.log('黄锦')
+        }
+    };
+
+    //实例化JD;
+    var jd = new JD();
+
+</script>
+</body>
+</html>

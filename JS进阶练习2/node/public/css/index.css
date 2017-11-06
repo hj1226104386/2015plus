@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.content {
+  background-color: lightgreen; }
+
+thead td {
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  font-weight: 700; }
+
+tbody td {
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  text-align: center;
+  color: purple; }
+
+table tr {
+  border-bottom: 1px solid orange; }
+
+.btn {
+  border: none;
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  background-color: orange;
+  line-height: 30px;
+  font-size: 15px;
+  border-radius: 8px;
+  margin-top: 50px;
+  margin-left: 100px; }
+
+
+
+/*# sourceMappingURL=index.css.map */

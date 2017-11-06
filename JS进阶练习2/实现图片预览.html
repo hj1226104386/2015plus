@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>实现图片预览和上传</title>
+</head>
+<body>
+    <input id="fileId1" type="file" multiple="multiple" name="file" />
+    <div>
+      <img id="img" src="">
+    </div>
+    <button class="btn">上传图片</button>
+
+    <script src="http://cdn.staticfile.org/jquery/3.2.1/jquery.js"></script>
+    <script type="text/javascript">
+      $('#fileId1').on('change',function(){
+        //解决兼容性问题
+       let urlObj = window.URL || window.webkitURL;
+       //获取文件对象的url
+       let src = urlObj.createObjectURL(this.files[0]);
+       $('#img').attr('src',src); 
+      })
+      //图片的上传
+    $('.btn').on('click',function(){
+         var file = document.querySelector('#img').files[0];//拿到内容
+         var formData = new FormData();//H5中的专门来做异步表单数据传输的对象
+         formData.append('pic',file);//需要发送二进制数据才行
+         console.log(formData)
+           $.ajax({
+            url:'/upload',
+            type:'post',
+            contentType:false,  //默认会在传输的时候加上文本类型
+            processData:false,  //传输的过程中会将二进制数据类型尝试着转换成文本数据类型
+            data:formData,
+            dataType:'json',
+            success:function(data){
+               
+            }
+         })
+           })
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<!-- arttemplate在html文件中编译使用 -->
+<div id="content"></div>
+<!-- arttemplate在js文件中编译使用 -->
+<div id="box"></div>
+
+
+<script id='tpl' type='text/html'>
+<h1>{{title}}</h1>
+<ul>
+    {{each list value i}}
+    <li>索引 {{i + 1}} ：{{value}}</li>
+    {{/each}}
+</ul>
+</script>
+
+<script src="./lib/template-web.js"></script>
+<script src="./js/test.js"></script>
+<script>
+    var data = {
+        title: '标签22',
+        list: ['文艺', '博客', '摄影', '电影', '民谣', '旅行', '吉他']
+    };
+    var html = template('tpl', data);
+    document.getElementById("content").innerHTML = html;
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试分页-bootstrapPaginator</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style type="text/css">
+        .pagination li {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<!--装数据的盒子-->
+<div class="allData">
+
+</div>
+
+<!--用来装分页的盒子-->
+<ul class="pagination"></ul> <!--bootstrap3版本用ul包裹-->
+
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./node_modules/bootstrap-paginator/build/bootstrap-paginator.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        function AjaxPaginator(obj) {
+            $.ajax({
+                type: 'POST',
+                url: '',
+                dataType: 'JSON',
+                success: function (data) {
+                    var currentPage = data.currentPage | 1;
+                    var totalPages = data.totalPages | 10;
+                    var options = {
+                        currentPage: currentPage, //当前页
+                        totalPages: totalPages, //总页数
+                        numberOfPages: 5, //设置控件显示的页码数
+                        bootstrapMajorVersion: 3,//如果是bootstrap3版本需要加此标识，并且设置包含分页内容的DOM元素为UL,如果是bootstrap2版本，则DOM包含元素是DIV
+                        useBootstrapTooltip: false,//是否显示tip提示框
+                        itemTexts: function (type, page, current) {//文字翻译
+                            switch (type) {
+                                case "first":
+                                    return "首页";
+                                case "prev":
+                                    return "上一页";
+                                case "next":
+                                    return "下一页";
+                                case "last":
+                                    return "尾页";
+                                case "page":
+                                    return page;
+                            }
+                        },
+                        onPageClicked: function (event, originalEvent, type, page) {
+                            $.ajax({
+                                url: '/getData?CurrentPage=' + page, //点击分页提交当前页码
+                                success: function (data) {
+                                    if (data != null) {
+                                        //DOM操作
+                                    }
+                                }
+                            })
+                        }
+                    }
+                    obj.bootstrapPaginator(options);
+                }
+            })
+        }
+
+        AjaxPaginator($('.pagination'));
+    })
+</script>
+</body>
+</html>

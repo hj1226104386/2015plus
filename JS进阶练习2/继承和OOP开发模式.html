@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+    /**
+     * 扩展原型对象实现继承
+     */
+    function F1(name) {
+        this.name = name;
+    }
+
+    F1.prototype.run = function () {
+        alert('我在奔跑');
+    }
+
+    /**
+     * 替换原型对象实现继承
+     */
+    var obj = {
+        age:18,
+        name:'黄锦',
+        run:function () {
+            console.log('跑路');
+        }
+    };
+    function F2(name) {
+        this.name = name;//实例属性
+    }
+    F2.prototype = obj;
+    F2.prototype.constructor = F2;//重新指向原构造函数，不破坏原有原型结构
+
+    /**
+     * 混入继承（就是将其他对象的属性方法拷贝到构造原型中，也叫拷贝继承）
+     */
+    var obj2 = {
+        name:'皮皮宝',
+        age:15
+    };
+    function F3(name) {
+        this.name = name;//实例属性
+    }
+    for(var key in obj2){//将obj2中的属性方法拷贝到F3构造函数中
+        F3.prototype[key] = obj2[key];
+    }
+
+    /**
+     * 原型+混入继承（感觉跟混入是一样的）
+     */
+
+    /**
+     * 经典继承（道格拉斯提出的继承模型）
+     */
+    var obj3 = {
+        name:'皮皮宝',
+        age:15
+    };
+    function F4(name) {
+        this.name = name;
+    }
+    F4.prototype = obj3;
+
+    var f4 = new F4;
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

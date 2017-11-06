@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用bus进行简单的组件间通信</title>
+</head>
+<body>
+<div id="app">
+
+</div>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    var bus = new Vue();
+    Vue.component('increment',{
+        template:`<button @click="add">+</button>`,
+        data:function () {
+            return {
+                count:0
+            }
+        },
+        methods:{
+            add:function () {
+                bus.$emit('inc',this.count++);
+            }
+        }
+    })
+
+    var vm = new Vue({
+        el:'#app'
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面试题</title>
+</head>
+<body>
+
+<script>
+    /**
+     * 编写一个javscript函数 fn，该函数有一个参数 n（数字类型），其返回值是一个数组，
+     * 该数组内是 n 个随机且不重复的整数，且整数取值范围是 [2, 32]。
+     */
+    function fn(n) {
+        var arr = [], num;
+        //判断用户传入的参数
+        if (n && typeof n == "number" && n > 0) {
+            for (var i = 0; i < n; i++) {
+                num = Math.floor(Math.random() * 30+2);
+                //判断随机数是否在需求区间
+                if (num >= 2 && num <= 32) {
+                    var flag = true;//假设没有相等的
+                    for (var j = 0; j < arr.length; j++) {
+                        if (arr[j] == num) {
+                            flag = false;
+                            break;
+                        }
+                    }
+                    if (flag) {
+                        arr.push(num);
+                    } else {
+                        i--;
+                    }
+                } else {
+                    i--;
+                    continue;
+                }
+            }
+        } else {
+            throw '请传入一个正确的参数,谢谢';
+        }
+        //返回数组;
+        return arr;
+    }
+    var result = fn(10);
+    console.log(result);
+</script>
+
+</body>
+</html>

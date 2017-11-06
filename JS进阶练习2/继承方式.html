@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>测试</title>
+</head>
+<body>
+
+
+
+  <script type="text/javascript">
+
+  /**
+   * Sub构造函数继承Super构造函数写法
+   */
+    var Super = function(name,age){};
+    Super.name = "父类构造函数";
+    Super.age = "父类构造函数age";
+
+
+     function Sub(gender){
+      //this指向Sub实例,实例继承了Super构造函数
+      Super.call(this);
+      this.gender = gender;
+     };
+      //将Sub的原型指向Super的一个实例(Object.create方法是创建实例)
+     Sub.prototype = Object.create(Super.prototype);
+     Sub.prototype.constructor = Sub;
+     Sub.prototype.cat = "我是Sub的原型中定义的方法";
+
+     /**
+      * 多重继承,同时继承多个对象
+      */
+     function M1() {
+       this.hello = "hello";
+     };
+     function M2() {
+       this.world = "world";
+     }
+    
+     function S(){
+      M1.call(this);
+      M2.call(this);
+     }
+      //继承M1
+      S.prototype = Object.create(M1.prototype);
+      //接着继承M2
+        Object.assign(S.prototype,M2.prototype);
+      //指定S构造函数原型
+      S.prototype.constructor = S;
+      var s = new S();
+
+
+
+     /**
+      * JavaScript模块写法
+      */
+     
+     //1 利用构造函数 实现模块写法
+     function Student(){
+      var buff = [];
+     }
+     Student.prototype = {
+      constructor:Student,
+      name:"hj";
+      homework:function() {
+        console.log('我要完成作业');
+      }
+     }
+     
+
+     
+     
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>node.js</title>
+    <link rel="stylesheet" href="public/css/index.css">
+</head>
+<body>
+<div class="content">
+    <table>
+        <caption align="center">个人信息展示</caption>
+        <!--表格头部-->
+        <thead>
+        <tr>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>性别</td>
+        </tr>
+        </thead>
+        <!--表格主体-->
+        <tbody id="dataShow">
+
+        </tbody>
+        <!--表格底部-->
+        <tfoot>
+
+        </tfoot>
+    </table>
+</div>
+<button class="btn" type="button">点击我</button>
+
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/arttemplate/arttemplate-native.js"></script>
+<script id="getData" type="text/template">
+    <% for(var i = 0;i<message.length;i++){ %>
+        <tr>
+            <td><%= message[i].age%></td>
+            <td><%= message[i].gender%></td>
+            <td><%= message[i].name%></td>
+        </tr>
+    <% } %>
+
+</script>
+<script type="text/javascript">
+    $(function () {
+        $('.btn').on('click', function () {
+            $.ajax({
+                type: 'GET',
+                url: '/query',
+                dataType: 'json',
+                success: function (data) {
+                    var html = template('getData', data);
+                    document.getElementById('dataShow').innerHTML = html;
+                },
+                error: function () {
+                    alert('请求出错啦!');
+                }
+            })
+        })
+    })
+</script>
+</body>
+</html>

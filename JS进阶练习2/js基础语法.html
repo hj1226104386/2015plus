@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js基础语法</title>
+</head>
+
+<body>
+<script type="text/javascript">
+  /**
+   * 冒泡排序
+   */
+  function calc (arr) {
+    for (var i = 0; i < arr.length - 1; i++) {
+      for (var k = 0; k < arr.length - 1 - i; k++) {
+        if (arr[k] > arr[k + 1]) {
+          var tem = arr[k]
+          arr[k] = arr[k + 1]
+          arr[k + 1] = tem
+        }
+      }
+    }
+    return arr
+  }
+
+  var arr = [7, 5, 1, 8, 0, -5, 4, -1]
+  calc(arr)
+
+  /**
+   * 声明函数的三种方式
+   * function命令
+   * 变量赋值（函数表达式）
+   * Function来构造一个函数实例
+   */
+  function f1 () {
+
+  }
+
+  var f2 = function () {
+
+  }
+  //括号中最后一个是函数体，前面都是参数；不常用
+  var add = new Function('x', 'y', 'return x + y')
+
+  /**
+   * 继承
+   * 1、原型链继承：扩展原型对象
+   * 2、构造函数继承，
+   * 3、组合继承
+   * 4、原型式继承
+   * 4、寄生式继承
+   */
+
+    //1、原型链继承：直接扩展构造函数的原型对象
+  var Student = function () {}
+  Student.prototype.run = function () {}
+  var stu = new Student()
+  stu.run()
+
+  //2、构造函数继承：通过call、apply方法将当前构造函数继承另一个构造函数
+  //解决了
+  var Student = function (age) {
+    this.name = '黄锦'
+    this.age = age
+  }
+
+  function Teacher (age) {
+    Student.call(this, age)
+  }
+  var teacher = new Teacher(18)
+  console.log(teacher.age)//18;
+
+  //3、组合继承
+  var Student = function (age) {
+    this.name = '黄锦'
+    this.age = age
+  }
+  Student.prototype.run = function () {};
+  function Teacher (age) {
+    Student.call(this, age);//改变上下文，Teacher继承Student；
+  }
+  Teacher.prototype = new Student(18);//原型链继承
+    var teacher = new Teacher();
+    teacher.run();
+
+    //5、寄生组合式继承
+
+
+</script>
+</body>
+
+</html>

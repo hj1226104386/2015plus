@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单序列化</title>
+</head>
+<body>
+<form class="forms">
+    <div class="form-group">
+        <label>用户名:</label>
+        <input type="text" placeholder="请输入用户名" name="username" value="">
+    </div>
+    <div class="form-group">
+        <label>密码:</label>
+        <input type="password" placeholder="请输入密码" name="psw"  value="">
+    </div>
+    <div class="form-group">
+        <label>最喜欢:</label>
+        <input type="radio" name="favorite" value="english">英语
+        <input type="radio" name="favorite" value="math">数学
+        <input type="radio" name="favorite" value="biology">生物
+        <input type="radio" name="favorite" value="geographies">地理
+    </div>
+    <div class="form-group">
+        <label>最想去:</label>
+        <input type="checkbox" name="1" value="readbook">看书
+        <input type="checkbox" name="2" value="tour">旅游
+        <input type="checkbox" name="3" value="swim">游泳
+        <input type="checkbox" name="4" value="climb">爬山
+    </div>
+</form>
+<button class="btn">
+    我是按钮
+</button>
+<button class="btn01">
+    清空表单
+</button>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('.btn').click(function () {
+            var params = $('.forms').serialize();
+            var params1 = $('.forms').serializeArray();
+            console.log(params);
+            console.log(params1);
+        })
+        $('.btn01').click(function () {
+            $('.forms')[0].reset();
+        })
+    })
+</script>
+</body>
+</html>

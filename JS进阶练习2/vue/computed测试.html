@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>computed</title>
+</head>
+<body>
+<div id="app">
+    <h2>{{msg}}</h2>
+    <h2>{{newMsg}}</h2>
+</div>
+<script src="./public/node_modules/vue/dist/vue.js"></script>
+<script src="./public/node_modules/vue-resource/dist/vue-resource.js"></script>
+<script src="./public/node_modules/vue-router/dist/vue-router.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'这里是武昌理工学院广播台'
+        },
+        computed:{
+            newMsg:function () {
+                return this.msg.split('').splice(1,5).join('');
+            }
+        },
+        methods:{
+
+        }
+    })
+</script>
+</body>
+</html>
