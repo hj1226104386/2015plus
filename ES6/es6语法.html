@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>es6</title>
+</head>
+
+<body>
+    <div class="boxs">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+    </div>
+    <script type="text/javascript">
+    var getBtns = document.querySelectorAll('button');
+
+    // 用闭包解决
+    /*function toclick(i) {
+      var f = function() {
+        alert(i)
+      }
+      return f;
+    }
+    for(var i = 0;i<getBtns.length;i++){
+      getBtns[i].onclick = toclick(i)
+    }*/
+
+    // 通过es6 let块级作用域来解决
+    for (let k = 0; k < getBtns.length; k++) {
+        getBtns[k].onclick = function() {
+            alert(k + 1)
+        }
+    }
+
+    // 类 Class
+    class Animal {
+        constructor() {
+            this.type = 'animal'
+        }
+        say(text) {
+            console.log(this)
+            console.log(this.type)
+            alert('我要说：' + text)
+        }
+    }
+    let animal = new Animal()
+
+    // 继承
+    class Cat extends Animal {
+      constructor(){
+        super()
+        this.type = '猫咪'
+      }
+    }
+    var cat = new Cat()
+
+
+    // 函数参数默认值
+    var m = (name='hj')=>{
+      console.log(name);
+    }
+    m('黄锦');
+    </script>
+</body>
+
+</html>

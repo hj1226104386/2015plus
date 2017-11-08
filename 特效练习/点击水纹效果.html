@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>点击水纹效果</title>
+  <style type="text/css">
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .box{
+      margin-top: 100px;
+      text-align: center;
+    }
+    .btn{
+      position: relative;
+      margin:0 auto;
+      border:none;
+      border-radius: 5px;
+      width: 120px;
+      height: 50px;
+      line-height: 50px;
+      background-color: orange;
+      cursor:pointer;
+      outline:none;
+      overflow:hidden;
+    }
+    .waves{
+      content:'';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      z-index: 10;
+      border-radius: 50%;
+      background-color: rgba(0,0,0,.5);
+      transform:scale(0);
+      transform-origin: center center;
+      /*animation: waves 1s linear;*/
+    }
+    @keyframes waves{
+      0%{
+        transform:scale(0);
+        opacity:1;
+      }
+      100%{
+        transform:scale(1);
+         opacity:0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <button class="btn">按钮1</button>
+  </div>
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    // 动态添加span标签
+    $('.btn').click(function(e) {
+      var $this = $(this);
+        $this.append('<span class="waves"></span>');
+        var $waveBtn = $this.children('.waves');
+        $waveBtn.css({
+          top:e.offsetY-150 + 'px',
+          left:e.offsetX-150 + 'px',
+          animation:'waves .6s linear forwards'
+        })
+       setTimeout(function() {
+          $waveBtn.remove();
+       },600)
+    })
+
+
+  })
+    
+  </script>
+</body>
+</html>
