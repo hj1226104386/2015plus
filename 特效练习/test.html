@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+    <title>Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div,
+        a,
+        button,
+        h1 {
+            background: blue;
+            height: 50px;
+            line-height: 50px;
+            color: #fff;
+            text-align: center;
+            width: 200px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-family: "微软雅黑", "Arial Narrow"
+        }
+        
+        a {
+            display: block;
+        }
+        /* 插件样式 */
+        
+        [data-ripple="ripple"] {
+            position: relative;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -moz-webkit-user-select: none;
+            -ms-user-select: none;
+        }
+        
+        [data-ripple="ripple"] .ripple {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 888;
+            background: rgba(255, 255, 255, .5);
+            transform: scale(0);
+            animation: ripple .6s 0s linear;
+        }
+        
+        @keyframes ripple {
+            100% {
+                opacity: 0;
+                transform: scale(2.5);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div data-ripple="ripple" style="cursor: pointer;">
+        div标签
+    </div>
+
+    <a data-ripple="ripple" style="cursor: pointer;">
+        a标签
+    </a>
+
+    <h1 data-ripple="ripple" style="cursor: pointer;">
+        h1标签
+    </h1>
+
+
+
+    <script src="a.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+        new Ripple({
+            opacity: 0.6, //水波纹透明度
+            speed: 1, //水波纹扩散速度
+            bgColor: "#fff", //水波纹颜色
+            cursor: true //是否显示手型指针
+        })
+    </script>
+</body>
+
+</html>
