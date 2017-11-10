@@ -38,7 +38,9 @@
                         n.stopPropagation();
                         var i = t.getPosition.call(this, n),
                             o = e.createElement("span");
-                        o.className = "ripple", o.style.top = i.y + "px", o.style.left = i.x + "px", o.style.width = i.range + "px", o.style.height = i.range + "px", o.style.animationDuration = t.option.speed + "s", o.style.background = t.option.bgColor, o.style.opacity = t.option.opacity, o.addEventListener("animationend", function() { this.parentNode.removeChild(this) }, !1), this.appendChild(o)
+                        o.className = "ripple", o.style.top = i.y + "px", o.style.left = i.x + "px", o.style.width = i.range + "px", o.style.height = i.range + "px", o.style.animationDuration = t.option.speed + "s", o.style.background = t.option.bgColor, o.style.opacity = t.option.opacity, 
+                        o.addEventListener("animationend", function() {
+                             this.parentNode.removeChild(this) }, !1), this.appendChild(o)
                     }, !1)
             }
         },

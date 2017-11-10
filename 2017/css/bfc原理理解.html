@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BFC理解</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .box {
+            width: 100%;
+            height: 200px;
+            background-color: lightblue;
+        }
+        
+        .son {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+        
+        .son2 {
+            height: 200px;
+            background-color: lightgreen;
+            overflow: hidden;
+        }
+        
+        .son3 {
+            float: right;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+        
+        .son2>div {
+            margin: 50px;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+        }
+        
+        .box2 {
+            background-color: lightgoldenrodyellow;
+        }
+        
+        .box2>.container {
+            overflow: hidden;
+        }
+        
+        .box2>.container>div {
+            margin: 50px;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+        }
+        
+        .box3 {
+            border: 2px solid orange;
+            overflow: hidden;
+        }
+        
+        .box3>div {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 三栏布局(两侧固定，中间宽度自适应) -->
+    <div class="box">
+        <div class="son">子元素</div>
+        <div class="son3">子元素3</div>
+        <div class="son2">
+            <div>s1</div>
+            <div>s2</div>
+        </div>
+    </div>
+    <!-- 解决margin合并 -->
+    <div class="box2">
+        <div class="container">
+            <div>s1</div>
+        </div>
+        <div class="container">
+            <div>s2</div>
+        </div>
+    </div>
+    <!-- 解决浮动的问题（清除浮动） -->
+    <div class="box3">
+        <div>s3</div>
+    </div>
+</body>
+
+</html>
