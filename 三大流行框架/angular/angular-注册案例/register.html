@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>注册案例</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<!--创建控制器-->
+<div ng-controller="myController">
+    <form role="form">
+        <div class="form-group">
+            <label>用户名:</label>
+            <input type="email" class="form-control" placeholder="输入用户名" ng-model="username">
+        </div>
+        <div class="form-group">
+            <label>密码:</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="输入密码"
+                   ng-model="password">
+        </div>
+        <div class="form-group">
+            <label>确认密码:</label>
+            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="确认密码"
+                   ng-model="confirmPw">
+        </div>
+        <div class="form-group">
+            <input type="checkbox" ng-model="isAgree">
+            <label>是否同意注册协议</label>
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="register()">注册</button>
+        <p>{{msg}}</p>
+    </form>
+</div>
+
+
+<script src="node_modules/angular/angular.min.js"></script>
+<script>
+    var app = angular.module('myApp', []);//创建模块
+    //创建控制器
+    app.controller('myController', ['$scope', function ($scope) {
+        $scope.username = '';
+        $scope.password = '';
+        $scope.confirmPw = '';
+        $scope.isAgree = false;
+        $scope.msg = '';
+        $scope.register = function () {
+            //做一些基本的判断;
+            //判断用户名是否大于6位,小于12位
+            if ($scope.username.length < 6 || $scope.username.length > 12) {
+                $scope.msg="用户名长度在6到12位之间哦";
+                return;//中断后面的操作
+            }
+            //判断密码是否一致;
+            if($scope.password !=$scope.confirmPw){
+                $scope.msg="两次密码不一致哦";
+                return;
+            }
+            //是否点击了同意
+            if(!$scope.isAgree){
+                $scope.msg="请点击同意吧";
+                return;
+            }
+            //构造一个model来操作数据
+            var user = new Users({username:$scope.username,password:$scope.password});
+            var isOk = user.save();
+            if(isOk){
+                $scope.msg = "恭喜注册成功";
+            }else{
+                $scope.msg = "用户名已存在";
+            }
+
+        };
+    }]);
+    //操作数据
+function Users(user) {
+    this.username = user.username;
+    this.password = user.password;
+}
+Users.prototype.save = function () {//保存数据
+    //将数据保存进本地存储localstorage;
+    var getUser = localStorage.getItem("user");
+    //假设第一次存储,存储列表就是空;
+    var arr = JSON.parse(getUser||'[]');
+    for(var i = 0;i<arr.length;i++){
+        if(arr[i].username===this.username){
+            //如果存储的用户中,有一个用户名与当前相同就返回FALSE;
+            return false;
+        }
+    };
+
+    arr.push({
+        username:this.username,
+        password:this.password
+    });
+    //走到这里,要么是一个空数组,要么是就是数组中没有同名的用户名
+    localStorage.setItem("userInfo",JSON.stringify(arr));
+    return true;
+}
+
+
+</script>
+
+</body>
+</html>

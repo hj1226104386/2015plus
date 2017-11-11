@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" value="按钮" id="btn"/>
+<script>
+    var btn = document.querySelector("#btn");
+    /*btn.onclick = function () {
+        alert("啊哈啊哈111");
+    };
+    btn.onclick = function () {
+        alert("啊哈啊哈222");//会覆盖第一个事件 ,这样的事件被称为普通事件
+    };*/
+    btn.addEventListener("click.btn", function fn() {
+        alert("啊哈111");
+    });
+    btn.addEventListener("click.btn", function fn1() {
+        alert("啊哈222");
+    });
+    //btn.removeEventListener("click",".btn");//通过命名空间批量移除事件;
+</script>
+</body>
+</html>

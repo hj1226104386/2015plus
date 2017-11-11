@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script >
+    //查找0-10000中数字0出现的次数;
+    var arr = [];
+    for(var i = 0;i<1000;i++){
+        arr.push(i);
+    };
+    var str = arr.join("");
+    var sum = 0;
+    for(var j = 0;j<str.length;j++){
+        if(str[j]==0){
+            sum++;
+        };
+    };
+    console.log(sum);
+</script>
+</body>
+</html>

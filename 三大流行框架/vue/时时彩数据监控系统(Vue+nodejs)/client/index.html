@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>数据监控</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/dashboard.css">
+    <link rel="stylesheet" href="./public/css/index.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--dtgrid资源包-->
+
+</head>
+<body>
+
+<div id="app">
+    <!--头部导航-->
+    <top-nav></top-nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <!--侧边栏-->
+                <side-bar></side-bar>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <!-- 路由匹配到的组件将渲染在这里 -->
+                <router-view></router-view>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<!--引入资源包-->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./public/lib/ECharts/echarts.min.js"></script>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script src="./node_modules/vue-router/dist/vue-router.js"></script>
+<script src="./node_modules/vue-resource/dist/vue-resource.js"></script>
+<script src="./public/component/common/top.js"></script>
+<script src="./public/component/common/sidebar.js"></script>
+<script src="./public/component/others/contectMe.js"></script>
+<script src="./public/component/others/dataList.js"></script>
+<script src="./public/component/others/tableView.js"></script>
+
+<script src="./public/main.js"></script>
+
+</body>
+</html>
