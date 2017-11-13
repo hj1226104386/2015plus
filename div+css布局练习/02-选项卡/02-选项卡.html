@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            color: #333;
+            font-size: 16px;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: #333;
+        }
+    </style>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="taps">
+        <a href="javascript:;">首页</a>
+        <a href="javascript:;">新闻</a>
+        <a href="javascript:;">国际</a>
+    </div>
+    <div class="content">
+        <div>我是首页模块</div>
+        <div>我是国际模块</div>
+        <div>我是新闻模块</div>
+    </div>
+</div>
+</body>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+$(document).ready(function () {
+    var taps = $(".taps").find("a");
+    var content = $(".content").children();
+    taps.on("click", function () {
+        var index = $(this).index();
+        $(this).css("backgroundColor","red").siblings().css("backgroundColor","lightblue");
+        content.eq(index).show().siblings().hide();
+    })
+
+
+
+});
+</script>
+</html>

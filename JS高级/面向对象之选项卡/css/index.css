@@ -1,0 +1,52 @@
+.tapContainer {
+  width: 210px;
+  height: 400px;
+  position: relative;
+}
+.tapContainer .tap-top {
+  width: 210px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tapContainer .tap-top a {
+  display: block;
+  float: left;
+  width: 70px;
+  border-right: 1px solid blue;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  background-color: orange;
+  border-radius: 5px;
+}
+.tapContainer .tap-top a:first-of-type {
+  background-color: pink;
+}
+.tapContainer .tap-bottom {
+  width: 210px;
+  height: 350px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 1px solid blue;
+  border-top: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: pink;
+}
+.tapContainer .tap-bottom div {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.tapContainer .tap-bottom div:first-of-type {
+  display: block;
+}

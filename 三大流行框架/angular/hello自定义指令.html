@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div ng-controller="myController">
+
+</div>
+<hello></hello>
+<script src="node_modules/angular/angular.min.js"></script>
+<script>
+    angular.module("myApp",[])
+        .directive('hello',function () {
+            return {
+                restrict:'AEMC',
+                template:'<h2>hello</h2>',
+                replace:true
+            }
+        })
+
+    }
+</script>
+</body>
+
+</html>

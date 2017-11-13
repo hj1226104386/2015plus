@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<div ng-controller="myController">
+    <!--<input type="text" ng-model="txt" ng-minlength="4">
+    <div class="box">{{txt}}</div>-->
+    <form name="signUp" ng-submit="submitForm()">
+        <div class="form-group">
+            <lable>用户名:</lable>
+            <input name="username" type="text" required class="form-controll" ng-minlength="2">
+            <input type="submit" value="注册">
+            <div ng-if="submitForm.username.$invalid">您的输入有误</div>
+
+        </div>
+    </form>
+</div>
+<script src="../node_modules/angular/angular.min.js"></script>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("myController", ["$scope", function ($scope) {
+
+        $scope.submitForm = function () {
+            console.log("表单提交啦");
+        }
+
+
+    }]);
+</script>
+</body>
+</html>

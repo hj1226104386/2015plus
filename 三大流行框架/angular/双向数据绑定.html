@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .ng-cloak{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div ng-controller="myController">
+<span class="ng-cloak">{{text}}</span>
+</div>
+
+<script src="node_modules/angular/angular.min.js"></script>
+<script>
+    var app=angular.module('myApp',[]);
+    app.controller('myController',["$scope",function ($scope) {
+        $scope.text = "测试ing";
+    }])
+</script>
+</body>
+</html>

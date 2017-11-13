@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            background-color: orange;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .err{
+            color:red;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div ng-controller="myController">
+    <form name="signUp" ng-submit="submitForm()">
+        <div class="form-group">
+            <label>用户名:</label>
+            <input type="text" name="username" class="form-controll">
+            <p class="err">出错了哦</p>
+        </div>
+
+        <div class="form-group">
+            <label>登录密码:</label>
+            <input type="password" name="password" class="form-controll">
+            <p class="err">出错了哦</p>
+        </div>
+
+        <div class="form-group">
+            <label>确认密码:</label>
+            <input type="password1" name="password1" class="form-controll">
+            <p class="err">出错了哦</p>
+        </div>
+    </form>
+</div>
+<script src="../node_modules/angular/angular.min.js"></script>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("myController", ["$scope", function ($scope) {
+        $scope.username = "";
+        $scope.submitForm = function () {
+            console.log("表单提交啦");
+        }
+
+
+    }]);
+</script>
+</body>
+</html>
