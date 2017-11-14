@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>读书-JavaScript的mvc思想</title>
+    <style>
+        .list {
+            padding: 15px;
+            background-color: lightblue
+        }
+        
+        .list>li {
+            margin: 15px 0;
+            width: 50px;
+            height: 25px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>读书-JavaScript的mvc设计思想</h1>
+    <button class="btn">按钮</button>
+    <ul class="list">
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <li>列表4</li>
+    </ul>
+    <script>
+        // mvc设计思想/模式在前端web开发中的应用
+        // M、V、C三者应该要解耦
+
+        /**
+         * 第一部分：类的继承，js是基于原型的编程语言，可以用个new关键字来模拟类的实现
+         */
+
+        // 原生实现事件委托
+        var getBtn = document.querySelector('.btn');
+        var getList = document.querySelector('.list');
+        getList.addEventListener('click', function(e) {
+            console.log(e.target.tagName.toLowerCase() === 'li');
+            if (e.target.tagName.toLowerCase() === 'li') {
+                alert('我点击的是子元素')
+                var newLi = document.createElement('li');
+                newLi.innerText = '新Li';
+                getList.appendChild(newLi);
+            }
+        })
+    </script>
+</body>
+
+</html>
