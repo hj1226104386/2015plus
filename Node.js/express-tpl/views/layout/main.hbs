@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <script src="./public/lib/jquery/dist/jquery.min.js"></script>
+    <script src="./public/js/home.js"></script>
+</head>
+<body>
+<!--头部部分-->
+{{> header}}
+<div class="main-body">
+    <!--侧边栏部分-->
+    {{> aside}}
+    <main>
+        <!-- 渲染主体部分 -->
+        {{{body}}}
+    </main>
+</div>
+</body>
+</html>
