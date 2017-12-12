@@ -1,0 +1,56 @@
+<html>
+<title>图片预加载</title>
+
+<body>
+    <script>
+        //判断浏览器
+        var Browser = new Object();
+        Browser.userAgent = window.navigator.userAgent.toLowerCase();
+        Browser.ie = /msie/.test(Browser.userAgent);
+        Browser.Moz = /gecko/.test(Browser.userAgent);
+
+        //判断是否加载完成
+        function Imagess(url, imgid, callback) {
+            var val = url;
+            var img = new Image();
+            if (Browser.ie) {
+                img.onreadystatechange = function() {
+                    if (img.readyState == "complete" || img.readyState == "loaded") {
+                        callback(img, imgid);
+                    }
+                }
+            } else if (Browser.Moz) {
+                img.onload = function() {
+                    if (img.complete == true) {
+                        callback(img, imgid);
+                    }
+                }
+            }
+            //如果因为网络或图片的原因发生异常，则显示该图片
+            img.onerror = function() {
+                img.src = 'http://www.baidu.com/img/baidu_logo.gif'
+            }
+            img.src = val;
+        }
+
+        //显示图片
+        function checkimg(obj, imgid) {
+            document.getElementById(imgid).src = obj.src;
+        }
+        //初始化需要显示的图片，并且指定显示的位置
+        window.onload = function() {
+            Imagess("http://hiphotos.baidu.com/lovebyakuya/pic/item/01cf20088f9506f063d98653.jpg", "img1", checkimg);
+            Imagess("http://hiphotos.baidu.com/lovebyakuya/pic/item/7b7b19c70d62f4fdd0006050.jpg", "img2", checkimg);
+            Imagess("http://hiphotos.baidu.com/joanne728/pic/item/892557641806d20eaa184c71.jpg", "img3", checkimg);
+            Imagess("http://www.neocha.com/-/res/Camilla/20071204181216078845_h.jpg", "img4", checkimg);
+            Imagess("http://www.neocha.com/-/res/Camilla/20071204181216d078845_h.", "img5", checkimg);
+        }
+    </script>
+    <img id="img1" src="loading.gif" width="100" height="100" />
+    <img id="img2" src="loading.gif" width="100" height="100" />
+    <img id="img3" src="loading.gif" width="100" height="100" />
+    <img id="img4" src="loading.gif" width="100" height="100" />
+    <img id="img5" src="loading.gif" width="100" height="100" />
+</body>
+
+</html>
