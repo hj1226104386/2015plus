@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>谷歌地图调用示例</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+            width: 120px;
+            height: 100%;
+            background-color: orange;
+        }
+        
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p>测试搜索</p>
+        <input id="Search_input" type="text">
+        <button id="Search">搜索</button>
+    </div>
+    <div id="map"></div>
+    <script>
+        var image = './a.jpg';
+
+        function initMap() {
+            var uluru = {
+                lat: 32.42,
+                lng: 104.21
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru,
+                disableDefaultUI: true
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+                title: '这里是澳大利亚!',
+                icon: image
+            });
+            var geocoder = new google.maps.Geocoder;
+
+            // 绑定事件,点击搜索
+            document.getElementById('Search').addEventListener('click', function() {
+                geocodeAddress(geocoder, map);
+            });
+
+            function geocodeAddress(geocoder, resultsMap) {
+                var address = document.getElementById('Search_input').value;
+                geocoder.geocode({
+                    'address': address
+                }, function(results, status) {
+                    console.log(results)
+                    if (status === 'OK') {
+                        resultsMap.setZoom(15);
+                        resultsMap.setCenter(results[0].geometry.location);
+                        var marker = new google.maps.Marker({
+                            map: resultsMap,
+                            title: results[0].formatted_address,
+                            position: results[0].geometry.location
+                        });
+                    } else {
+                        alert('定位失败: ' + status);
+                    }
+                });
+
+            }
+        }
+    </script>
+    <script async defer src="http://ditu.google.cn/maps/api/js?key=AIzaSyBmy0wm98zcQoT-1Av3Lt6Dki0k9erkYYc&region=cn&language=zh-CN&callback=initMap">
+    </script>
+    <script>
+        var apiKey = "AIzaSyBmy0wm98zcQoT-1Av3Lt6Dki0k9erkYYc";
+    </script>
+</body>
+
+</html>

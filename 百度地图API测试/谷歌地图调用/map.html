@@ -1,0 +1,378 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>API3_DrawCircle</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="http://www.google.com/uds/css/gsearch.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.google.com/uds/solutions/localsearch/gmlocalsearch.css" />
+    <script src="https://maps-api-ssl.google.com/maps/api/js?v=3&sensor=true" type="text/javascript"></script>
+    <script type="text/javascript" language="JavaScript">
+        var map = null;
+        var cicles = new Array(); //所有圆集合  
+        function displayMap() {
+            var myOptions = {
+                zoom: 12,
+                center: new google.maps.LatLng(22.54077580925294, 114.04699606323243),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById("map"), myOptions);
+            google.maps.event.addListener(map, 'click', function(event) {
+                if (event) {
+                    createCircle(new google.maps.LatLng(event.latLng.lat(), event.latLng.lng()), 500, 800, map);
+                }
+            });
+
+            google.maps.event.addListener(map, 'rightclick', function(event) {
+                if (event) {
+                    cicles.pop().remove();
+                }
+            });
+        }
+
+
+        var metric = false;
+        var singleClick = false;
+        var infowindow = new google.maps.InfoWindow({
+            content: ""
+        });
+
+        function createCircle(point, radius1, radius2, map) {
+            singleClick = false;
+            var geoQuery = new GeoQuery();
+            geoQuery.initializeCircle(radius1, radius2, point, map);
+            geoQuery.render(); //圆的渲染   
+            cicles.push(geoQuery);
+        }
+
+        /**   
+         *   
+         * 算法:通过原点、角度和距离计算目标点的坐标   
+         * orig:原点坐标   
+         * hdng:角度   
+         * dist:原点的到目标点的距离   
+         * @return 目标点坐标   
+         *    
+         */
+        function destination(orig, hdng, dist) {
+            var R = 6371; // earth's mean radius in km    
+            var oX, oY;
+            var x, y;
+            var d = dist / R; // d = angular distance covered on earth's surface    
+            hdnghdng = hdng * Math.PI / 180; // degrees to radians    
+            oX = orig.lng() * Math.PI / 180;
+            oY = orig.lat() * Math.PI / 180;
+
+            y = Math.asin(Math.sin(oY) * Math.cos(d) + Math.cos(oY) * Math.sin(d) * Math.cos(hdng));
+            x = oX + Math.atan2(Math.sin(hdng) * Math.sin(d) * Math.cos(oY), Math.cos(d) - Math.sin(oY) * Math.sin(y));
+
+            yy = y * 180 / Math.PI;
+            xx = x * 180 / Math.PI;
+            return new google.maps.LatLng(y, x);
+        }
+
+        /**   
+         *   
+         * 算法:计算两个坐标点的距离   
+         * point1:坐标点1   
+         * point2:坐标点2   
+         * @return 两点的距离    
+         *   
+         */
+        function distance(point1, point2) {
+            var R = 6371; // earth's mean radius in km    
+            var lon1 = point1.lng() * Math.PI / 180;
+            var lat1 = point1.lat() * Math.PI / 180;
+            var lon2 = point2.lng() * Math.PI / 180;
+            var lat2 = point2.lat() * Math.PI / 180;
+
+            var deltaLat = lat1 - lat2
+            var deltaLon = lon1 - lon2
+
+            var step1 = Math.pow(Math.sin(deltaLat / 2), 2) + Math.cos(lat2) * Math.cos(lat1) * Math.pow(Math.sin(deltaLon / 2), 2);
+            var step2 = 2 * Math.atan2(Math.sqrt(step1), Math.sqrt(1 - step1));
+            return step2 * R;
+        }
+
+        /**   
+         * 画圆的类   
+         *   
+         */
+        function GeoQuery() {}
+
+
+
+        function MyMap(map, cricle, polylines, markers) {
+            this.prototype._map = map;
+            this.prototype._circle = circle;
+            this.polylines = polylines;
+            this.markers = markers;
+        }
+
+
+        GeoQuery.prototype.CIRCLE = 'circle'; //画的形状    
+        GeoQuery.prototype.COLORS = ["#0000ff", "#00ff00", "#ff0000"]; //圆的颜色    
+        var COLORI = 0; //默认颜色为0    
+
+        GeoQuery.prototype = new GeoQuery();
+        GeoQuery.prototype._map;
+        GeoQuery.prototype._type;
+        GeoQuery.prototype._radius;
+        GeoQuery.prototype._dragHandle;
+        GeoQuery.prototype._centerHandle;
+        GeoQuery.prototype._polyline1;
+        GeoQuery.prototype._polyline2;
+        GeoQuery.prototype._color;
+        GeoQuery.prototype._control;
+        GeoQuery.prototype._points1;
+        GeoQuery.prototype._points2;
+        GeoQuery.prototype._dragHandlePosition;
+        GeoQuery.prototype._centerHandlePosition;
+        GeoQuery.prototype.markers;
+        GeoQuery.prototype.centers;
+        GeoQuery.prototype.polylines;
+        /**   
+         *   
+         * 圆的加载   
+         *   
+         */
+        GeoQuery.prototype.initializeCircle = function(radius1, radius2, point, map) {
+            this._type = this.CIRCLE; //圆形     
+            this._radius1 = radius1; //半径1  
+            this._radius2 = radius2; //半径2  
+            this._map = map; //地图  
+
+            //计算扩大圆的点的位置    
+            var distance1 = this._radius1 / 1000;
+            var newPoint = destination(point, 180, distance1);
+            distancedistance1 = distance(point, newPoint);
+
+
+
+            this._dragHandlePosition = destination(point, 90, distance1);
+            //设置扩大圆的点的样式    
+            this._dragHandle = new google.maps.Marker({
+                position: this._dragHandlePosition,
+                map: map,
+                draggable: true,
+                icon: "resizeArrow.png"
+            });
+            //中心点的位置    
+            this._centerHandlePosition = point;
+            //设置中心点的样式    
+            this._centerHandle = new google.maps.Marker({
+                position: this._centerHandlePosition,
+                map: map,
+                draggable: true,
+                flat: false
+            });
+
+            //随机获取颜色    
+            this._color = this.COLORS[(COLORI++) % 3];
+
+            //在地图上加载圆形    
+            this._dragHandle.setMap(map);
+            this._centerHandle.setMap(map);
+
+            var myObject = this;
+            //扩大圆的点的拖拽事件    
+            google.maps.event.addListener(myObject._dragHandle, 'drag', function() {
+                myObject.updateCircle(1);
+            });
+
+
+            //跳出的infowindow  
+            google.maps.event.addListener(myObject._dragHandle, 'drag', function() {
+                myObject.updateCircle(1);
+            });
+
+            //圆的中心点的点击事件    
+            google.maps.event.addListener(myObject._centerHandle, 'click', function() {
+                infowindow.setContent("我的窗口");
+                infowindow.open(myObject._centerHandle.get('map'), myObject._centerHandle);
+            });
+            //圆的中心点的拖拽停止事件  
+            /*  
+ google.maps.event.addListener(myObject._centerHandle, 'dragend', function() {    
+  myObject.updateCircle(2);    
+      
+  alert(myObject._dragHandlePosition);    
+  alert(myObject._radius);    
+ });  
+*/
+            //圆的中心点的拖拽事件    
+            google.maps.event.addListener(myObject._centerHandle, 'drag', function() {
+                myObject.updateCircle(2);
+            });
+            var flightPlanCoordinates = [
+                new google.maps.LatLng(37.772323, -122.214897),
+                new google.maps.LatLng(21.291982, -157.821856),
+                new google.maps.LatLng(-18.142599, 178.431),
+                new google.maps.LatLng(-27.46758, 153.027892)
+            ];
+            new google.maps.Marker({
+                position: new google.maps.LatLng(37.772323, -122.214897),
+                map: map,
+                title: "Hello World!"
+            });
+            new google.maps.Marker({
+                position: new google.maps.LatLng(21.291982, -157.821856),
+                map: map,
+                title: "Hello World!"
+            });
+            new google.maps.Marker({
+                position: new google.maps.LatLng(-18.142599, 178.431),
+                map: map,
+                title: "Hello World!"
+            });
+            new google.maps.Marker({
+                position: new google.maps.LatLng(-27.46758, 153.027892),
+                map: map,
+                title: "Hello World!"
+            });
+            new google.maps.Polyline({
+                path: flightPlanCoordinates,
+                strokeColor: "#FF0000",
+                strokeOpacity: 1.0,
+                strokeWeight: 2,
+                map: map
+            });
+        }
+
+        /**   
+         *   
+         * 圆的修改  
+         * type:1为扩大缩小点，其他为中心点   
+         *   
+         */
+        GeoQuery.prototype.updateCircle = function(type) {
+                this._polyline1.setMap(null);
+                this._polyline2.setMap(null);
+                if (type == 1) {
+                    this._dragHandlePosition = this._dragHandle.getPosition();
+                    this._radius1 = distance(this._centerHandlePosition, this._dragHandlePosition) * 1000;
+                    this._radius2 = distance(this._centerHandlePosition, this._dragHandlePosition) * 1000;
+                    this.render();
+                } else {
+                    this._centerHandlePosition = this._centerHandle.getPosition();
+                    this.render();
+                    this._dragHandle.setPosition(this.getEast());
+                }
+            }
+            /**   
+             *   
+             * 圆的渲染   
+             *   
+             */
+        GeoQuery.prototype.render = function() {
+            if (this._type == this.CIRCLE) {
+                this._points1 = [];
+                this._points2 = [];
+
+                //var dis = distance(this._points[0],this._points[1])/2;    
+                //var newPoint = destination(this._points[0],180,dis);    
+
+                var distance1 = this._radius1 / 1000;
+                var distance2 = this._radius2 / 1000;
+
+                for (i = 0; i < 72; i++) {
+                    this._points1.push(destination(this._centerHandlePosition, i * 360 / 72, distance1));
+                }
+                for (i = 0; i < 72; i++) {
+                    this._points2.push(destination(this._centerHandlePosition, i * 360 / 72, distance2));
+                }
+                this._polyline1 = new google.maps.Polygon({
+                    paths: this._points1,
+                    strokeColor: "#00FF00",
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: "#00FF00",
+                    fillOpacity: 0.35
+                });
+                this._polyline1.setMap(this._map);
+                this._polyline2 = new google.maps.Polygon({
+                    paths: this._points2,
+                    strokeColor: "#FF0000",
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: "#FF0000",
+                    fillOpacity: 0.35
+                });
+                this._polyline2.setMap(this._map);
+                /*  
+                google.maps.event.addListener(this, 'drag', function() {  
+                    this._radius+=100;  
+                });  
+                */
+            }
+        }
+
+
+        /**   
+         *   
+         * 圆的删除   
+         *   
+         */
+        GeoQuery.prototype.remove = function() {
+            this._polyline1.setMap(null);
+            this._polyline2.setMap(null);
+            this._dragHandle.setMap(null);
+            this._centerHandle.setMap(null);
+        }
+
+        GeoQuery.prototype.getRadius = function() {
+            return this._radius;
+        }
+
+        GeoQuery.prototype.getHTML = function() {
+            return "<span><font color='" + this._color + "''>" + this.getDistHtml() + "</font></span>";
+        }
+        GeoQuery.prototype.getDistHtml = function() {
+            result = "<img src='http://jfno.net/images/close.gif' onClick='myQueryControl.remove(" + this._control.getIndex(this) + ");'/>Radius ";
+            if (metric) {
+                if (this._radius < 1000) {
+                    result += "in meters : " + this._radius.toFixed(1);
+                } else {
+                    result += "in kilometers : " + (this._radius / 1000).toFixed(1);
+                }
+            } else {
+                var radius = this._radius * 3.2808399;
+                if (radius < 5280) {
+                    result += "in feet : " + radius.toFixed(1);
+                } else {
+                    result += "in miles : " + (radius / 5280).toFixed(1);
+                }
+            }
+            return result;
+        }
+
+        GeoQuery.prototype.getNorth = function() {
+            return this._points[0];
+        }
+
+        GeoQuery.prototype.getSouth = function() {
+            return this._points[(72 / 2)];
+        }
+
+        GeoQuery.prototype.getEast = function() {
+
+            var dis = distance(this._points1[0], this._points1[1]) / 2;
+            var newPoint = destination(this._points1[0], 180, dis);
+            return newPoint;
+            //return this._points[(72/4)];    
+        }
+
+        GeoQuery.prototype.getWest = function() {
+            return this._points1[(72 / 4 * 3)];
+        }
+    </script>
+</head>
+
+<body onload="displayMap();" style="width: 100%; height: 100%; margin: 0px;">
+    <div id="map" style="width: 100%; height: 95%;"></div>
+    <!--<div style="font-family: arial, sans-serif;">Made by <a href="http://www.3rdcrust.com">3rdCrust.com</a></div>    
+ <div id="QueryControl"></div>    
+ <div id="ads">    
+ </div -->
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Ajax</title>
@@ -10,11 +11,11 @@
             padding: 0;
             background-color: #F7F7F7;
         }
-
+        
         h3 {
             text-align: center;
         }
-
+        
         .chatbox {
             width: 500px;
             height: 500px;
@@ -23,7 +24,7 @@
             background-color: #FFF;
             border-radius: 5px;
         }
-
+        
         .messages {
             height: 350px;
             padding: 20px 40px;
@@ -31,39 +32,41 @@
             border-bottom: 1px solid #CCC;
             overflow: scroll;
         }
-
+        
         .messages h5 {
             font-size: 20px;
             margin: 10px 0;
         }
-
+        
         .messages p {
             font-size: 16px;
             margin: 0;
         }
-
+        
         .self {
             text-align: left;
         }
-
+        
         .other {
             text-align: right;
         }
-
+        
         .form {
             height: 150px;
         }
-
+        
         .form .input {
             height: 110px;
             padding: 10px;
             box-sizing: border-box;
         }
+        
         .form .btn {
             height: 40px;
             box-sizing: border-box;
             border-top: 1px solid #CCC;
         }
+        
         .form textarea {
             display: block;
             width: 100%;
@@ -74,9 +77,11 @@
             outline: none;
             font-size: 16px;
         }
-        h5{
-        	color:pink;
+        
+        h5 {
+            color: pink;
         }
+        
         .form input {
             display: block;
             width: 100px;
@@ -85,53 +90,57 @@
             margin-right: 20px;
             float: right;
         }
+        
         .btn input {
-        	width:120px;
-        	background:lightblue;
+            width: 120px;
+            background: lightblue;
         }
     </style>
     <script src="jquery-1.12.4.min.js"></script>
     <script src="template-native.js"></script>
     <script type="text/template" id="temId">
         <%%>
-        <div class="<%= self%>">
-            <h5>专属小公主</h5>
-            <p><%= chatContent%></p>
-        </div>
-        <%%>
+            <div class="<%= self%>">
+                <h5>专属小公主</h5>
+                <p>
+                    <%= chatContent%>
+                </p>
+            </div>
+            <%%>
     </script>
     <script type="text/template" id="chatId">
         <%%>
-        <div class="other">
-            <h5>小哥哥</h5>
-            <p><%= message%></p>
-        </div>
-        <%%>
+            <div class="other">
+                <h5>小哥哥</h5>
+                <p>
+                    <%= message%>
+                </p>
+            </div>
+            <%%>
     </script>
 </head>
-<body>
-<h3>小公主别怕,小哥哥在这里陪你哦</h3>
-<div class="chatbox">
-    <!-- 这里放置 聊天内容 -->
-    <div class="messages">
-    </div>
-    <!-- 表单 -->
-    <div class="form">
-        <!-- 输入框 -->
-        <div class="input">
-            <!--我要发送的消息-->
-            <textarea>
 
-            </textarea>
+<body>
+    <h3>小公主别怕,小哥哥在这里陪你哦</h3>
+    <div class="chatbox">
+        <!-- 这里放置 聊天内容 -->
+        <div class="messages">
         </div>
-        <!-- 按钮 -->
-        <div class="btn">
-            <input autofocus type="button" value="亲爱的点我发送">
+        <!-- 表单 -->
+        <div class="form">
+            <!-- 输入框 -->
+            <div class="input">
+                <!--我要发送的消息-->
+                <textarea></textarea>
+            </div>
+            <!-- 按钮 -->
+            <div class="btn">
+                <input autofocus type="button" value="亲爱的点我发送">
+            </div>
         </div>
     </div>
-</div>
-<!--模板，我要写到页面上面的内容的 模板.-->
-<!--
+    <!--模板，我要写到页面上面的内容的 模板.-->
+    <!--
    <div class="self">
         <h5>我说</h5>
         <p>你好</p>
@@ -141,51 +150,52 @@
         <p>你好</p>
     </div>
 -->
-<script>
-    $(function () {
-       $(".btn>input").on("click", function () {
-           autoChat();
-       });
-        //用户按按钮提交回话也可以按enter健实现;
-        $(document).on("keyup", function (ev) {
-            if(ev.keyCode==13){
+    <script>
+        $(function() {
+            $(".btn>input").on("click", function() {
                 autoChat();
-            }
-        })
-    });
-
-    //封装成一个函数;
-    function autoChat(){
-        var chatContent = $("textarea").val();
-        //将用户输入的内容显示到message里面
-        if(chatContent.trim().length==0){
-            return;
-        }else{
-            var obj = {
-                chatContent:chatContent
-            }
-            var html01 = template("temId",obj);
-            $(".messages").append(html01);
-            $("textarea").val("");
-        }
-
-        //点击发送之后,发送http请求
-        $.ajax({
-            url:"http://op.juhe.cn/robot/index?info="+chatContent+"&key=30757ce965a55b0f0538adc32982c2c2",
-            type:"get",
-            //跨域请求要添加一个dataType参数;
-            dataType:"jsonp",
-            success: function (data) {
-                console.log(data);
-                var otherDate = {
-                    message:data.result.text
+            });
+            //用户按按钮提交回话也可以按enter健实现;
+            $(document).on("keyup", function(ev) {
+                if (ev.keyCode == 13) {
+                    autoChat();
                 }
-                console.log(otherDate);
-                var html02 = template("chatId",otherDate);
-                $(".messages").append(html02);
+            })
+        });
+
+        //封装成一个函数;
+        function autoChat() {
+            var chatContent = $("textarea").val();
+            //将用户输入的内容显示到message里面
+            if (chatContent.trim().length == 0) {
+                return;
+            } else {
+                var obj = {
+                    chatContent: chatContent
+                }
+                var html01 = template("temId", obj);
+                $(".messages").append(html01);
+                $("textarea").val("");
             }
-        })
-    }
-</script>
+
+            //点击发送之后,发送http请求
+            $.ajax({
+                url: "http://op.juhe.cn/robot/index?info=" + chatContent + "&key=30757ce965a55b0f0538adc32982c2c2",
+                type: "get",
+                //跨域请求要添加一个dataType参数;
+                dataType: "jsonp",
+                success: function(data) {
+                    console.log(data);
+                    var otherDate = {
+                        message: data.result.text
+                    }
+                    console.log(otherDate);
+                    var html02 = template("chatId", otherDate);
+                    $(".messages").append(html02);
+                }
+            })
+        }
+    </script>
 </body>
+
 </html>
