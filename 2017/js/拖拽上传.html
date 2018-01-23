@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽上传</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .upload-wrapper{
+            margin:0 auto;
+            width: 300px;
+        }
+        .upload{
+            width: 100%;
+            height: 300px;
+            border:4px dotted #ccc;
+            background-clip: content-box;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+<div class="upload-wrapper">
+    <div class="upload"></div>
+    <p class='text'>未选择任何文件</p>
+</div>
+<script>
+    window.onload = function () {
+        // 要做事，先找人
+        var getUploadEle = document.querySelector('.upload');
+        var text = document.querySelector('.text');
+        // 进入
+        getUploadEle.addEventListener("dragenter", function( e ) {
+            this.style.borderColor = '#333';
+            e.preventDefault(); // 禁止浏览器默认行为
+        });
+        // 拖动
+        getUploadEle.addEventListener("dragover", function( e ) {
+            e.preventDefault(); // 禁止浏览器默认行为
+        });
+        // 离开
+        getUploadEle.addEventListener("dragleave", function( e ) {
+            this.style.borderColor = '#ccc';
+            e.preventDefault(); // 禁止浏览器默认行为
+        });
+        // 松开
+        getUploadEle.addEventListener("drop", function( e ) {
+            this.style.borderColor = '#ccc';
+            console.log(e.dataTransfer.files);
+            text.innerText = e.dataTransfer.files[0].name;
+            e.preventDefault(); // 禁止浏览器默认行为
+        });
+    }
+</script>
+</body>
+</html>
