@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #box,#box2,#box3{
+            width: 100%;
+            height: 500px;
+        }
+        #box{
+            background-color: orange;
+        }
+        #box2{
+            background-color: lightgreen;
+        }
+        #box3{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+<a class='btn' href="javascript:;" data-to='box'>我要跳到box的位置</a>
+<a class='btn' href="javascript:;" data-to='box2'>我要跳到box2的位置</a>
+<a class='btn' href="javascript:;" data-to='box3'>我要跳到box3的位置</a>
+<div id="box"></div>
+<div id="box2"></div>
+<div id="box3"></div>
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('.btn').click(function (e) {
+            var target =  e.target;
+            var id  = $(target).data('to');
+            console.log($(target).data('to'));
+            $('html,body').animate({scrollTop:$('#'+id).offset().top}, 800);
+        })
+    })
+</script>
+</body>
+</html>
