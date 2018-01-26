@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .links-box{
+            margin-bottom: 1000px;
+        }
+        .boxes>li{
+            height: 80px;
+            width: 100%;
+            border:2px solid lightgreen;
+        }
+    </style>
+</head>
+<body>
+<div class="links-box"></div>
+<ul class="boxes"></ul>
+<script>
+    window.onload = function () {
+        var links='',boxes='';
+        var linksWrapper = document.querySelector('.links-box');
+        var boxesWrapper = document.querySelector('.boxes');
+        for(var i = 0;i<4;i++){
+            links+=`<a name="#box${i+1}">to盒子${i+1}</a>`;
+            boxes+=`<li id="#box${i+1}">我是盒子${i+1}</li>`;
+        }
+        linksWrapper.innerHTML = links;
+        boxesWrapper.innerHTML = boxes;
+    }
+</script>
+</body>
+</html>
