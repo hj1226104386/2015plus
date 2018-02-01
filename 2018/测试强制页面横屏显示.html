@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>h5 手机游戏开发</title>
+    <link rel="stylesheet" href="css/test.css" />
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <style type="text/css">
+    @media screen and (orientation: portrait) {
+        html {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            overflow: hidden;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            overflow: hidden;
+        }
+        #print {
+            position: absolute;
+            background-color: yellow;
+        }
+    }
+
+    @media screen and (orientation: landscape) {
+        html {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+        }
+        #print {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: yellow;
+        }
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    #print p {
+        margin: auto;
+        margin-top: 20px;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body class="webpBack">
+    <div id="print">
+        <p>啊哈哈啊哈哈哈</p>
+    </div>
+    <script type="text/javascript">
+    var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+    window.addEventListener(evt, function() {
+        console.log(evt);
+        var width = document.documentElement.clientWidth;
+        var height = document.documentElement.clientHeight;
+        $print = $('#print');
+        if (width > height) {
+
+            $print.width(width);
+            $print.height(height);
+            $print.css('top', 0);
+            $print.css('left', 0);
+            $print.css('transform', 'none');
+            $print.css('transform-origin', '50% 50%');
+        } else {
+            $print.width(height);
+            $print.height(width);
+            $print.css('top', (height - width) / 2);
+            $print.css('left', 0 - (height - width) / 2);
+            $print.css('transform', 'rotate(90deg)');
+            $print.css('transform-origin', '50% 50%');
+        }
+
+    }, false);
+    </script>
+</body>
+
+</html>
