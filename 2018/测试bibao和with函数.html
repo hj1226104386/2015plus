@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="btn-box">
+        <button class="btn">按钮1</button>
+        <button class="btn">按钮2</button>
+        <button class="btn">按钮3</button>
+        <button class="btn">按钮4</button>
+        <button class="btn">按钮5</button>
+        <button class="btn">按钮6</button>
+    </div>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    var btns = document.querySelectorAll('.btn');
+    // 闭包解决
+    // for(var i = 0;i<btns.length;i++){
+    //   btns[i].onclick = function(n){
+    //     return function(){
+    //       alert(n);
+    //     }
+    //   }(i)
+    // }
+    // with函数解决
+    for (var i = 0; i < btns.length; i++) {
+        with({ n: i }) {
+            btns[i].onclick = function() {
+                alert(n);
+            }
+        }
+    }
+    </script>
+
+</html>
