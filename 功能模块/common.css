@@ -1,0 +1,364 @@
+/*******************************
+    清除浏览器默认样式
+*******************************/
+
+body,
+div,
+ul,
+ol,
+li,
+p,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+tbody,
+thead,
+tfoot,
+tr,
+th,
+td,
+button {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+}
+
+input,
+textarea,
+select,
+button {
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/*******************************
+    公用类名样式
+*******************************/
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.hide {
+    display: none;
+}
+
+.btnWithRedFont {
+    border: 1px solid #ff3117 !important;
+    background: none !important;
+    color: #ff3117 !important;
+    cursor: pointer;
+}
+
+.btnWithGrayFont {
+    border: 1px solid #ccc !important;
+    background: none !important;
+    color: #ccc !important;
+}
+/*我的视频课详情*/
+.btnWithGrayBg{
+    color: #bfbfbf;
+    border:none;
+    background-color: #ececec;
+}
+/*进度条的过渡背景色*/
+
+.normalProgress {
+    background-image: linear-gradient(-45deg, #ff3117 20%, #ff4b28 20%, #ff4b28 40%, #ff3117 40%, #ff3117 60%, #ff4b28 60%, #ff4b28 80%, #ff3117 80%, #ff3117);
+}
+
+.grayProgress {
+    background-image: linear-gradient(-45deg, #e1e1e1 20%, #e7e7e7 20%, #e7e7e7 40%, #e1e1e1 40%, #e1e1e1 60%, #e7e7e7 60%, #e7e7e7 80%, #e1e1e1 80%, #e1e1e1) !important;
+}
+
+/*课程状态（直播、录播）*/
+
+.blueBg {
+    background: url("../../images/sprite.png") -30px 0 no-repeat;
+}
+
+.orangeBg {
+    background: url("../../images/sprite.png") 0 0 no-repeat;
+}
+
+/*视频列表滑过背景色*/
+
+.videoListBg {
+    background-color: #505050 !important;
+}
+
+/*视频列表能播放按钮样式*/
+
+.videoBtnOrangeBg {
+    background-color: #fe4b2c !important;
+    cursor: pointer;
+}
+
+.videoBtnGrayBg {
+    background: none !important;
+    border: 1px solid #aaa !important;
+    color: rgba(255, 255, 255, .4) !important;
+}
+
+/*清除浮动*/
+
+.clearfix {
+    overflow: auto;
+    _height: 1%
+}
+
+/*******************************
+    头部和侧边栏公用样式
+*******************************/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    min-width: 1200px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 3px 6px #E2E5EE;
+    -moz-box-shadow: 0 3px 6px #E2E5EE;
+    box-shadow: 0 3px 6px #E2E5EE;
+    border-bottom: 1px solid #E2E5EE;
+    box-sizing: content-box;
+}
+
+header > .h-center {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.h-center a {
+    height: 80px;
+    line-height: 80px;
+}
+
+.h-center > a > img {
+    width: 164px;
+    height: 27px;
+    margin-top: 27px;
+    border: none;
+}
+
+.h-center .nav-bars {
+    margin-left: 204px;
+}
+
+.h-center .nav-bars > a {
+    display: inline-block;
+    width: 92px;
+    height: 80px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 76px;
+    color:#999;
+    border-top: 4px solid transparent;
+}
+/*头部导航选中时的样式*/
+a.active-nav {
+    display:inline-block;
+    color: #506197!important;
+    background-color: #f4f5fd;
+    border-top-color: #506197!important;
+}
+.h-msg {
+    height: 80px;
+    line-height: 80px;
+}
+
+.h-msg > a.logout {
+    text-decoration: none;
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    vertical-align: middle;
+}
+
+.h-msg > img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.h-avatarWrapper {
+    width: 38px;
+    height: 38px;
+    line-height: 1;
+    margin-top: 21px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.h-avatarWrapper > .h-wrapper {
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../../images/wrapper.png") no-repeat;
+    z-index: 2;
+}
+
+.h-avatarWrapper > img.h-avatar {
+    height: 38px;
+    width: 38px;
+}
+
+.h-username {
+    height: 80px;
+    line-height: 80px;
+    font-size: 14px;
+    color: #999;
+    margin: 0 35px 0 13px;
+}
+
+.logout > span {
+    color: #ff6241;
+    font-size: 25px;
+}
+
+/*文件/各种文件的图标颜色*/
+
+.iconfont.icon-document {
+    color: #f8d34a !important;
+    font-size: 32px;
+}
+
+.iconfont.icon-email {
+    color: #ED9B58 !important;
+    font-size: 32px;
+}
+
+.iconfont.icon-what {
+    color: #4CA9CB !important;
+    font-size: 32px;
+}
+
+.iconfont.icon-vadio {
+    color: #85C17E !important;
+    font-size: 32px;
+}
+
+.iconfont.icon-music {
+    color: #9A8AB7 !important;
+    font-size: 32px;
+}
+
+.iconfont.icon-pdf {
+    color: #E12410 !important;
+    font-size: 32px;
+}
+
+.iconfont.icon-ppt {
+    color: #CCCCFF !important;
+    font-size: 32px;
+}
+
+.iconfont.icon-word {
+    color: #024D9F !important;
+    font-size: 32px;
+}
+
+.iconfont.icon-picture {
+    color: lightseagreen !important;
+    font-size: 32px;
+}
+
+.iconfont.icon-excel {
+    color: #027836 !important;
+    font-size: 32px;
+}
+
+/*加载中loading*/
+
+#loadingWrapper {
+    position: fixed;
+    top: 42%;
+    left: 50%;
+    margin-left: -80px;
+    border-radius: 5px;
+    width: 160px;
+    height: 130px;
+    background-color: rgba(0, 0, 0, .3);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    zoom: 1;
+    z-index: 9999;
+    display: none;
+}
+
+#loadingWrapper img {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+}
+
+/*四种背景色，我的视频课模块*/
+.deepBlue {
+    background-color: #3b67b2;
+}
+
+.blue {
+    background-color: #42aaf7;
+}
+
+.orange {
+    background-color: #fe6d3b;
+}
+
+.yellow {
+    background-color: #f3a81a;
+}

@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多图上传</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="../../jQuery自定义组件/style.css">
+    <style>
+        /*********************************************************************
+            多图上传导入框样式
+        *********************************************************************/
+        .fl{
+            float: left;
+        }
+        .clearfix{
+            overflow: hidden;
+        }
+        .pics-container {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .pics-container > li {
+            position: relative;
+            display: inline-block;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            width: 150px;
+            height: 150px;
+            line-height:150px;
+            border:1px solid #f2f2f2;
+            overflow: hidden;
+        }
+
+        .pics-container > li > span.text-danger {
+            display: block;
+            position: absolute;
+            top: -25px;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .6);
+            color: #de815c;
+            cursor: pointer;
+            transition: top .2s ease;
+        }
+
+        .pics-container > li:hover > span.text-danger {
+            top: 0;
+        }
+
+        .pics-container > li > img {
+            width: 100%;
+            height: 100%;
+        }
+        .pics-container > li>span.pic-uploading-tip{
+            display: inline-block;
+            width: 100%;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .5);
+            color: #fff;
+
+        }
+
+        /*********************************************************************
+            多图上传导入框样式
+        *********************************************************************/
+        .img-container {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .img-container > li {
+            position: relative;
+            display: inline-block;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            width: 150px;
+            height: 150px;
+            line-height:150px;
+            border:1px solid #f2f2f2;
+            overflow: hidden;
+        }
+
+        .img-container > li > span.text-danger {
+            display: block;
+            position: absolute;
+            top: -25px;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .6);
+            color: #de815c;
+            cursor: pointer;
+            transition: top .2s ease;
+        }
+
+        .img-container > li:hover > span.text-danger {
+            top: 0;
+        }
+
+        .img-container > li > img {
+            width: 100%;
+            height: 100%;
+        }
+        .img-container > li>span.pic-uploading-tip{
+            display: inline-block;
+            width: 100%;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .5);
+            color: #fff;
+
+        }
+        .pic-upload-wrapper {
+            margin: 0 15px;
+            padding: 15px 0 0 15px;
+            border: 3px dashed #e6e6e6;
+        }
+
+        .pictures-upload {
+            margin:0 15px 15px 0;
+            padding: 15px;
+            width: 180px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+
+        .pictures-upload > .pic-bg {
+            margin: 0 auto;
+            width: 88px;
+            height: 75px;
+        }
+
+        .pictures-upload > .pic-add-btn {
+            margin: 10px auto 0 auto;
+            position: relative;
+            width: 100%;
+            height: 35px;
+            background-color: #5cafde;
+            border-radius: 5px;
+        }
+
+        .pic-add-btn > input {
+            display: block;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+
+        .pic-add-btn > label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            line-height: 35px;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="pic-upload-wrapper clearfix">
+    <!--照片容器-->
+    <ul class="pics-container fl">
+        <!--<li><span class='text-danger'>删除</span><img src="__STATIC__/appui/img/avator.jpg"></li>-->
+    </ul>
+    <div class="pictures-upload fl">
+        <div class="pic-bg">
+            <img src="./addPic.png">
+        </div>
+        <div class="pic-add-btn">
+            <input id='upload-pics' type="file" multiple>
+            <label for="upload-pics">选择并自动上传图片</label>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.staticfile.org/jquery/2.1.2/jquery.min.js"></script>
+<script src="../../jQuery自定义组件/publicUse.js"></script>
+<script>
+    $(function () {
+        function Uploading() {
+            this.imgArr = []; // 保存已上传的图片文件名，用于排重
+            this.init();
+        }
+        Uploading.prototype = {
+            constructor:Uploading,
+            init:function () {
+                this.renderDOM();
+                this.bindEvents();
+            },
+            renderDOM:function () {
+                
+            },
+            bindEvents:function () {
+                // 多图片上传
+                this.imgsUpload();
+                // 删除已选中的图片
+                this.deleteImg();
+            },
+            // 多图片上传
+            imgsUpload: function () {
+                // 监听文件选择
+                $('#upload-pics').change(function () {
+                    var $this = $(this);
+                    // 1、判断浏览器是否支持fileReader
+                    if (typeof FileReader === 'undefined') {
+                        return $.showAlert({
+                            type:'fail',
+                            alertText:'抱歉，你的浏览器不支持FileReader'
+                        });
+                    }
+                    $.each(this.files, function (i, v) {
+                        // 判断上传文件格式
+                        if (!(v.name.match(/jpg|png|jpeg|bmp|gif/i))) {
+                            return $.showAlert({
+                                type:'fail',
+                                alertText:'请选择格式为jpg、png、jpeg、bmp、gif格式的图片文件'
+                            });
+                        }
+                        // 去重
+                        console.log(upload.imgArr.indexOf(v.name))
+                        if(upload.imgArr.indexOf(v.name)>-1){ // 已经有了
+                            return $.showAlert({
+                                type:'fail',
+                                alertText:'请勿选择相同的图片'
+                            });
+                        }else{
+                            upload.imgArr.push(v.name);
+                        }
+                        // 开始逐个上传
+                        var formData = new FormData();
+                        // 动态类名，动态匹配图片
+                        var randomClass = 'img_' + Math.floor(Math.random() * 1000);
+                        var thisImgData = ''; // 当前图片对应的fileReader对象
+                        formData.append('file', v);
+                        // 单张图片上传
+                        /*$.ajax({
+                            url: '/admin/team/uploadLineImage',
+                            type: 'POST',
+                            cache: false,
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            beforeSend: function () {
+                                // 先展示出来
+                                var reader = new FileReader();
+                                reader.readAsDataURL(v);
+                                reader.onload = function (e) {
+                                    thisImgData = this.result;
+                                    result = '<li class="' + randomClass + '"><span class="pic-uploading-tip">图片上传中...</span></li>';
+                                    $('.pics-container').append(result); // 添加到容器中
+                                }
+                            },
+                            success: function (res) {
+                                // 上传成功,展示图片
+                                var data = JSON.parse(res);
+                                if (data.state == '1') {
+                                    var imgHtml = '<span class="delete-pic text-danger">删除</span><img src="' + thisImgData + '">';
+                                    $('.' + randomClass).html(imgHtml).attr({
+                                        'data-logoUrl':data.logoUrl,
+                                        'data-fileName':data.filename
+                                    });
+                                    // 动态添加隐藏域，用于提交
+                                    var hiddenHtml = '<input type="hidden" name="image_path[]" value="'+data.filename+'|'+data.logoUrl+'">';
+                                    $('.uploaded-imgs-hidden').append(hiddenHtml);
+                                }
+                            },
+                            error: function () {
+                                showAlertInfo('fail', '服务器报错啦');
+                            }
+                        })*/
+                        // 先展示出来
+                        var reader = new FileReader();
+                        reader.readAsDataURL(v);
+                        reader.onload = function (e) {
+                            thisImgData = this.result;
+                            result = '<li class="' + randomClass + '"><span class="pic-uploading-tip">图片上传中...</span></li>';
+                            $('.pics-container').append(result); // 添加到容器中
+                            setTimeout(function () {
+                                var imgHtml = '<span class="delete-pic text-danger">删除</span><img src="' + thisImgData + '">';
+                                $('.' + randomClass).html(imgHtml);
+                            }, 1000);
+                        }
+                    })
+                })
+            },
+            // 删除已上传的图片
+            deleteImg: function () {
+                $('.pics-container').on('click', 'li>.delete-pic', function () {
+                    var $parentLi = $(this).parent();
+                    var getLogoUrl = $parentLi.attr('data-logoUrl');
+                    // 删除
+                    $parentLi.remove();
+                    // 移除对应的隐藏域
+                    $('.uploaded-imgs-hidden').children().eq($parentLi.index()).remove();
+                    /*$.ajax({
+                        url: '/admin/team/delLineImage',
+                        type: 'POST',
+                        cache: false,
+                        data: {logoUrl: getLogoUrl},
+                        success: function (res) {
+                            if (JSON.parse(res).state == 1) {
+                                // 删除
+                                $parentLi.remove();
+                                // 移除对应的隐藏域
+                                $('.uploaded-imgs-hidden').children().eq($parentLi.index()).remove();
+                            }
+                        },
+                        error: function () {
+                            $.showAlert({
+                                type:'fail',
+                                alertText:'删除失败，服务器报错啦'
+                            });
+                        }
+                    })*/
+                })
+            }
+        }
+        var upload = new Uploading();
+    })
+</script>
+</body>
+</html>

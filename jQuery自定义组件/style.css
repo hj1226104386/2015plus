@@ -1,0 +1,43 @@
+/*********************************************************************
+    alert提示框插件样式 by huangjin on 2018/1/20
+*********************************************************************/
+#_showAlert{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    z-index: 9999;
+    width: 50%;
+    height: 50px;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    overflow: hidden;
+}
+#_showAlert>.alert-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.alert-content>p{
+    height: 100%;
+    line-height:50px;
+    text-align: center;
+    font-size:16px;
+    color:#fff;
+}
+.alert-content>.hide-alert{
+    position: absolute;
+    right:50px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:18px;
+    color:#fff;
+}
+/*状态*/
+.success{
+    background-color: #afde5c;
+    border-color: #afde5c;
+}
+.fail{
+    background-color: #de815c;
+    border-color: #de815c;
+}
