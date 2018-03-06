@@ -1,0 +1,138 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.login>.login-form{
+    flex:1;
+    background-color: #fff;
+}
+.login-form>.login-form-top{
+    position: relative;
+    padding:.33rem 1.15rem .48rem;
+    text-align: center;
+}
+.login-form-top::after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height:.01rem;
+    background-color: #ebebeb;
+    transform:scaleY(.5);
+}
+.login-form-top>p>i{
+    font-size:.24rem;
+    color:#a2a2a2;
+}
+.login-form-top>.login-width-f{
+    margin-top: .4rem;
+    width: 100%;
+    height: .88rem;
+    font-family: SFUIDisplay-Regular;
+    font-size: .3rem;
+    letter-spacing: 0px;
+    color: #fff;
+    background-image: linear-gradient(45deg,
+    #6a409f 0%,
+    #901eb1 100%),
+    linear-gradient(
+            #fd4c9d,
+            #fd4c9d);
+    background-blend-mode: normal,
+    normal;
+    border-radius: .44rem;
+}
+.login-form-bottom{
+    padding-top: .53rem;
+}
+.login-form-bottom>.login-title{
+    margin-bottom: .98rem;
+    text-align: center;
+}
+.login-form-bottom>.login-title>span{
+    display: inline-block;
+    position: relative;
+    font-family: SFUIDisplay-Semibold;
+    font-size: .36rem;
+    letter-spacing: 0px;
+    color: #363636;
+}
+.login-title>span:after{
+    content: '';
+    position: absolute;
+    bottom:-.2rem;
+    left:0;
+    right:0;
+    height: .04rem;
+    background-color: #363636;
+}
+.login>.login-btn{
+    height: 1rem;
+    width: 100%;
+}
+.form-group{
+    padding:0 .6rem;
+    width: 100%;
+}
+.form-group>.form{
+    margin-bottom: .15rem;
+    padding:.16rem 0 .09rem;
+    position: relative;
+    width: 100%;
+}
+.form-group>.form:after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height:.01rem;
+    background-color: #ebebeb;
+}
+.form-group>.form>p{
+    margin-bottom: .1rem;
+    font-family: SFUIDisplay-Regular;
+    font-size: .2rem;
+    letter-spacing: 0px;
+    color: #6f6f6f;
+}
+.form-group>.form>input{
+    width: 95%;
+    height: .38rem;
+    line-height:.38rem;
+    font-family: SFUIDisplay-Regular;
+    font-size: .3rem;
+    letter-spacing: 0px;
+    color: #363636;
+    background: none;
+    border:none;
+}
+.form-group>.form>i{
+    display: block;
+    position: absolute;
+    right:0;
+    bottom:.18rem;
+    font-size:.28rem;
+    color:#b8b8b8;
+}
+.forget{
+    display: block;
+    margin-top: 1.06rem;
+    font-family: SFUIDisplay-Regular;
+    font-size: .24rem;
+    letter-spacing: 0px;
+    color: #6f6f6f;
+    text-align: center;
+}
+.login-btn>button{
+    font-family: SFUIDisplay-Regular;
+    font-size: .3rem;
+    letter-spacing: 0px;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    background-color: #fd4c9d;
+}

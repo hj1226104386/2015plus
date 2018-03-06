@@ -1,0 +1,270 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-size: 12px;
+  -webkit-overflow-scrolling:touch;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+button, input {
+  border: none;
+  outline: none;
+}
+
+input, textarea, select, button {
+  outline: none;
+}
+
+input, select, textarea {
+  border: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: all .3s ease;
+}
+
+input:focus, textarea:focus, select:focus, button:focus {
+  outline: none;
+}
+
+/*表单获取焦点改变边框颜色*/
+input:focus, textarea:focus, select:focus {
+  border-color: #2EA2F8 !important;
+}
+
+*:not(input, select, textArea) {
+  -webkit-user-select: none;
+}
+
+img, a {
+  -webkit-touch-callout: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  text-decoration: none !important;
+}
+
+li {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*解决自动填充的黄色背景色*/
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+/*隐藏全屏下出现的原生视频控制条*/
+video::-webkit-media-controls {
+  display: none !important;
+}
+/*将默认的“x”隐藏掉*/
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  display: none !important;
+}
+
+/*********************************************************************************
+   公用样式
+**********************************************************************************/
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.hide {
+  display: none;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden
+}
+/*slider样式*/
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /*设置为cover会铺满，也可能会隐藏掉一部分*/
+  background-size: 100% 100%!important;
+}
+.rotating {
+  display: inline-block;
+  transform-origin: center center;
+  animation: rotate .6s linear infinite;
+}
+
+/*loading图标旋转动画*/
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*视频播放图标消失动画*/
+.hideIcon {
+  transform-origin: center center;
+  animation: toFadeOut 1s linear .5s;
+}
+
+@keyframes toFadeOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+/*转场动画*/
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .2s ease;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+/*通用转场*/
+.child-view {
+  position: absolute;
+  transition: all .2s cubic-bezier(.55, 0, .1, 1);
+}
+
+.slide-left-enter, .slide-right-leave-active {
+  opacity: 0;
+  -webkit-transform: translate(.3rem, 0);
+  transform: translate(.3rem, 0);
+}
+
+.slide-left-leave-active, .slide-right-enter {
+  opacity: 0;
+  -webkit-transform: translate(-.3rem, 0);
+  transform: translate(-.3rem, 0);
+}
+/*产品展示转场*/
+.child-view3 {
+  position: absolute;
+  transition: all .35s ease-in;
+}
+.slide-left3-enter {
+  opacity: 0;
+  -webkit-transform: translate(70%, 0);
+  transform: translate(70%, 0);
+}
+
+.slide-left3-leave-active{
+  opacity: 0;
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+}
+/*师资列表转场*/
+.child-view2 {
+  position: absolute;
+  transition: all .5s cubic-bezier(.55, 0, .1, 1);
+}
+.slide-top-enter, .slide-bottom-leave-active {
+  opacity: 0;
+  -webkit-transform: translate(0,.5rem);
+  transform: translate(0,.5rem);
+}
+
+.slide-top-leave-active, .slide-bottom-enter {
+  opacity: 0;
+  -webkit-transform: translate(0,-.5rem);
+  transform: translate(0,-.5rem);
+}
+#app{
+  width: 100%;
+  height: 100%;
+}
