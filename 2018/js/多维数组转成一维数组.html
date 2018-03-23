@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr = ['a',['b','c'],['d',['e','f']]];
+		var newArr = [];
+		var transfer = function(array) {
+			for(var i = 0;i<array.length;i++){
+			array[i];
+			if(array[i] instanceof Array && array[i].length>0){
+				transfer(array[i]);
+			}else{
+				newArr.push(array[i]);
+			}
+		}
+		}
+		// debugger;
+		transfer(arr);
+		console.log(newArr);
+
+	</script>
+</body>
+</html>
