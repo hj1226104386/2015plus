@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./vconsole.min.js"></script>
+</head>
+<body>
+	<div class="button-box">
+		<button class='common'>常规打印</button>
+		<button class='obj'>打印对象</button>
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function () {// 初始化vConsole
+			window.vConsole = new window.VConsole();
+			$('.common').click(function () {
+                console.log('常规控制条输出');
+            })
+            $('.obj').click(function () {
+                var obj = {
+                    name:'黄锦',
+					age:18,
+					gender:'man'
+				};
+                console.log(obj);
+            })
+        })
+	</script>
+</body>
+</html>
