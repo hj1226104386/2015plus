@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .hide{
+            display: none;
+        }
+        .chat-box{
+            margin:50px auto 0 auto;
+            width: 600px;
+            min-height: 300px;
+            border:2px solid lightblue;
+        }
+        .chat-box>h4{
+            margin:20px auto 0 auto;
+            width: 200px;
+            text-align: center;
+            border-bottom:1px solid lightblue;
+        }
+        .userNum{
+            font-size: 12px !important;
+        }
+        .chat-list{
+            padding:10px;
+            list-style: none;
+        }
+        .chat-list>li{
+            margin-bottom: 5px;
+        }
+        .chat-list>li.me>span{
+            color:lightblue;
+        }
+        .chat-list>li.system>span{
+            color:lightgreen;
+         }
+        .chat-list>li>span{
+            float: left;
+            font-weight: bold;
+        }
+        .chat-list>li>p{
+            overflow: hidden;
+         }
+        .input-box{
+            margin:0 auto;
+            width: 600px;
+        }
+        .login-mask{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.8);
+        }
+        .mask-body{
+            text-align: center;
+        }
+        .mask-body>h3{
+            margin-bottom: 10px;
+            font-size:20px;
+            color:#fff;
+        }
+        .mask-body>input{
+            padding:12px;
+            border:none;
+            outline: none;
+            text-align: center;
+            color:#fff;
+            font-size:16px;
+            background: none;
+            border-bottom:1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="chat-box hide">
+    <h4>智能聊天室（<span class='userNum'>0人在线</span>）</h4>
+    <ul class="chat-list"></ul>
+</div>
+<div class="input-box hide">
+    <input class='msg' type="text" placeholder='请输入内容'>
+    <button id='sendBtn'>发送</button>
+</div>
+<!--每个用户进入都需要设置唯一的用户名-->
+<div class="login-mask">
+    <div class="mask-body">
+        <h3 class='mask-title'>请随意设置你的昵称</h3>
+        <input class="nick-name" type="text">
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var WeChat = function () {
+        this.socket = null;
+        this.init();
+        this.bindEvents();
+    }
+    // 重写原型
+    WeChat.prototype = {
+        construtor:WeChat,
+        init:function () {
+            var that = this;
+            // 与服务器进行连接
+            that.socket=io.connect();
+            // 监听socket的connect事件，此事件表示连接已经建立
+            this.socket.on('connection', function() {
+                //连接到服务器后，显示昵称输入框
+                $('.mask-title').text('请随意设置你的昵称');
+                $('.nick-name').focus();
+            });
+            this.socket.on('nickNameExisted',function (data) {
+                alert(data+'已存在，换一个试试吧！');
+            })
+            // 设置成功，隐藏遮罩，显示聊天输入框
+            this.socket.on('nickSuccess',function () {
+                $('.login-mask').hide();
+                $('.chat-box,.input-box').removeClass('hide');
+            })
+            // 接收来自系统的信息
+            this.socket.on('system', function(nickName, userCount, type) {
+                //判断用户是连接还是离开以显示不同的信息
+                var msg = nickName + (type == 'login' ? '进入了聊天室' : '离开了聊天室');
+                var html = `
+                    <li class='me'>
+                        <span>${nickName}:</span>
+                        <p>${msg}</p>
+                    </li>
+                `;
+                $('.chat-list').append(html);
+                // 将在线人数显示到页面顶部
+                $('.userNum').text(userCount + '人在线');
+            });
+        },
+        bindEvents:function () {
+            var that = this;
+            // 设置昵称
+            $('.nick-name').keydown(function (e) {
+                if(e.keyCode==13){
+                    var val = $('.nick-name').val();
+                    if(val){
+                        that.socket.emit('setNickName', val);
+                    }else{
+                        alert('请设置你的昵称');
+                    }
+                }
+            })
+            // 发送信息
+            $('#sendBtn').click(function () {
+                var msg = $('.msg').val();
+                if(!msg) return alert('请输入聊天内容');
+                // 填充我说的话
+                var html = `
+            <li class='me'>
+                <span>用户名：</span>
+                <p>${msg}</p>
+            </li>
+        `;
+                $('.chat-list').append(html);
+                $('.msg').val('');
+                setTimeout(function () {
+                    // 发送一个名为sendMsg的事件，并且传递一个字符串数据‘hello’
+                    that.socket.emit('sendMsg', msg);
+                },500)
+            })
+        }
+    }
+    var weChat = new WeChat();
+    weChat.socket.on('returnMsg',function (data) {
+        // 填充系统返回说的话
+        var backContent = `
+            <li class='system'>
+                <span>系统：</span>
+                <p>${data}</p>
+            </li>
+        `;
+        $('.chat-list').append(backContent);
+    })
+</script>
+</body>
+</html>
